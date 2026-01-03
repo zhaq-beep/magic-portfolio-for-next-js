@@ -44,7 +44,7 @@ const social: Social = [
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/-/",
-    essential: true,
+    essential: false,
   },
   {
     name: "Email",
@@ -76,7 +76,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Zhaq, a Muballigh at <Text as="span" size="xl" weight="strong">Depok</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    Hi, I am Zhaq, a Muballigh at one of Majelis Taklim in<Text as="span" size="xl" weight="strong">Depok City</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
 </>
   ),
 };
@@ -186,14 +186,22 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Canva",
+        title: "Designer",
         description: (
-          <>Able to design in Canva and CorelDRAW and Editing photos in Adobe Photoshop or Lightroom.</>
+          <>Able to design in Canva, CorelDRAW and Editing photos in Adobe Photoshop or Adobe Lightroom.</>
         ),
         tags: [
           {
             name: "Canva",
             icon: "canva",
+          },
+          {
+            name: "CorelDRAW",
+            icon: "coreldraw",
+          },
+          {
+            name: "Adobe Photoshop",
+            icon: "adobe-photoshop",
           },
         ],
         // optional: leave the array empty if you don't want to display images
@@ -213,14 +221,14 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
+        title: "Copywriter",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Writing on social media platforms.</>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Medium",
+            icon: "medium",
           },
         ],
         // optional: leave the array empty if you don't want to display images
