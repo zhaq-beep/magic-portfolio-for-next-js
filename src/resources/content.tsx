@@ -76,7 +76,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Zhaq, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Zhaq, a Muballigh at <Text as="span" size="xl" weight="strong">Depok</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
 </>
   ),
 };
@@ -118,28 +118,39 @@ const about: About = {
         role: "Administration Secretary",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Organize a more efficient filing system and enhance the appearance of activity publications
+            with appealing visual designs, displayed on the madin pondok.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Record all financial transactions into the system and
+            report books in an orderly and systematic manner.
+          </>,
+          <>
+            Ensure all received funds are deposited to the
+            institution's staff safely, accurately, on time, neatly, and transparently.
+          </>,
+          <>
+            Coordinate finances and implement the use of institutional funds
+            according to applicable regulations
+          </>,
+          <>
+            Archive letters and/or expenditure receipts neatly and orderly.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "Zhaq Project",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Majelis Taklim Baitul Ihsan",
+        timeframe: "2024 - present",
+        role: "Muballigh",
         achievements: [
           <>
             Developed a design system that unified the brand across multiple platforms, improving
@@ -160,7 +171,7 @@ const about: About = {
     institutions: [
       {
         name: "Universitas Terbuka",
-        description: <>Studied software engineering.</>,
+        description: <>Studied Information System.</>,
       },
       {
         name: "Build the Future",
@@ -175,11 +186,11 @@ const about: About = {
       {
         title: "Canva",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Able to design in Canva and CorelDRAW and Editing photos in Adobe Photoshop or Lightroom.</>
         ),
         tags: [
           {
-            name: "Figma",
+            name: "Canva",
             icon: "figma",
           },
         ],
