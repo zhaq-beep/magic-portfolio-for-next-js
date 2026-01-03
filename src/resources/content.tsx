@@ -2,13 +2,13 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Mufid",
+  lastName: "Zhaqie",
+  name: `Mufid Zhaqie`,
+  role: "Muballigh",
   avatar: "/images/avatar.jpg",
   email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "Asia/Depok", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
 };
 
@@ -25,25 +25,25 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/zhaq-beep",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/-/",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
+    link: "https://www.instagram.com/muadzz.17/",
+    essential: true,
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.threads.com/-/",
     essential: true,
   },
   {
@@ -60,7 +60,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building projects that benefit the community</>,
   featured: {
     display: true,
     title: (
@@ -76,7 +76,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Zhaq, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
 </>
   ),
 };
@@ -102,7 +102,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
+        Mufid Zhaqie is a Depok base Muballigh with a passion for transforming complex challenges
         into simple, elegant design solutions. Her work spans digital interfaces, interactive
         experiences, and the convergence of design and technology.
       </>
@@ -113,9 +113,9 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Ponpes Wali Barokah Kediri",
+        timeframe: "2022 - 2024",
+        role: "Administration Secretary",
         achievements: [
           <>
             Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
@@ -159,7 +159,7 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
+        name: "Universitas Terbuka",
         description: <>Studied software engineering.</>,
       },
       {
@@ -173,7 +173,7 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Canva",
         description: (
           <>Able to prototype in Figma with Once UI with unnatural speed.</>
         ),
