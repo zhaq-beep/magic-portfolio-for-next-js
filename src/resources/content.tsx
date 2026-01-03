@@ -102,9 +102,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Mufid Zhaqie is a Depok base Muballigh with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Mufid Zhaqie is a Muballigh at one of Majelis Taklim in Depok City with a passion
+        for making a positive impact, being influential without being influenced, and providing simple
+        and elegant design solutions. His work includes digital interfaces, interactive experiences,
+        and the convergence of design and technology.
       </>
     ),
   },
@@ -148,18 +149,19 @@ const about: About = {
         ],
       },
       {
-        company: "Majelis Taklim Baitul Ihsan",
+        company: "Majelis Taklim Baitul Ihsan Depok",
         timeframe: "2024 - present",
         role: "Muballigh",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developing interactive learning designs for Generus.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Helping the Generus to learn effectively and systematically.
           </>,
+          <>
+            Creating wall poster designs as a form of learning and knowledge.
+          </>
         ],
         images: [],
       },
@@ -191,7 +193,7 @@ const about: About = {
         tags: [
           {
             name: "Canva",
-            icon: "figma",
+            icon: "canva",
           },
         ],
         // optional: leave the array empty if you don't want to display images
@@ -219,14 +221,6 @@ const about: About = {
           {
             name: "JavaScript",
             icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
           },
         ],
         // optional: leave the array empty if you don't want to display images
