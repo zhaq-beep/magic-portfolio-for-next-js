@@ -186,7 +186,7 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Canva",
+        title: "Designer",
         description: (
           <>Able to design in Canva and CorelDRAW and Editing photos in Adobe Photoshop or Lightroom.</>
         ),
@@ -194,6 +194,36 @@ const about: About = {
           {
             name: "Canva",
             icon: "canva",
+            name: "CorelDRAW",
+            icon: "coreldraw",
+            name: "Photoshop",
+            icon: "photoshop"
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/cover-02.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      title: "Copywriting",
+        description: (
+          <>Able to writing on platform or social media.</>
+        ),
+        tags: [
+          {
+            name: "Medium",
+            icon: "medium",
           },
         ],
         // optional: leave the array empty if you don't want to display images
