@@ -188,7 +188,8 @@ const about: About = {
       {
         title: "Designer",
         description: (
-          <>Able to design in Canva, CorelDRAW and Editing photos in Adobe Photoshop or Adobe Lightroom.</>
+          <>Able to design in Canva and CorelDRAW. Editing photos in Adobe Photoshop
+            or Adobe Lightroom on PC, using PixelLab, Picsay and InShot on Mobile.</>
         ),
         tags: [
           {
@@ -202,6 +203,10 @@ const about: About = {
           {
             name: "Adobe Photoshop",
             icon: "adobe-photoshop",
+          },
+          {
+            name: "Adobe Lightroom",
+            icon: "adobe-lightroom",
           },
         ],
         // optional: leave the array empty if you don't want to display images
@@ -265,9 +270,9 @@ const work: Work = {
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Gallery",
+  label: "Certificates",
   title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  description: `A certificate collection by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
