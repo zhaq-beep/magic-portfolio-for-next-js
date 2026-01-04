@@ -34,7 +34,7 @@ const display: DisplayConfig = {
 // Set password in the .env file, refer to .env.example
 const protectedRoutes: ProtectedRoutesConfig = {
   "/work/automate-design-handovers-with-a-figma-to-code-pipeline": false,
-  "/gallery": true,
+  "/gallery": false,
 };
 
 // Import and set font for each variant
