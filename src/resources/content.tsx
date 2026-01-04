@@ -9,7 +9,7 @@ const person: Person = {
   avatar: "/images/avatar.jpg",
   email: "mufidzhaqie8080@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Indonesia"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -59,16 +59,16 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
+  description: `Portfolio website showcasing my projects as a ${person.role}`,
   headline: <>Building projects that benefit the community</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Zhaq Project</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Featured project
         </Text>
       </Row>
     ),
@@ -76,7 +76,7 @@ const home: Home = {
   },
   subline: (
     <>
-    Hi, I am Zhaq, a Muballigh at one of Majelis Taklim in <Text as="span" size="xl" weight="strong">Depok City</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    Hi, I am Zhaq!. a Muballigh at one of Majelis Taklim in <Text as="span" size="xl" weight="strong">Depok City</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
 </>
   ),
 };
@@ -176,7 +176,7 @@ const about: About = {
         description: <>Studied Information System.</>,
       },
       {
-        name: "Build the Future",
+        name: "Build the Project",
         description: <>Studied online marketing and personal branding.</>,
       },
     ],
@@ -261,7 +261,7 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
+  label: "Project",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
