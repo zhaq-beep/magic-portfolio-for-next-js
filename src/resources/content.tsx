@@ -4,7 +4,7 @@ import { Line, Row, Text } from "@once-ui-system/core";
 const person: Person = {
   firstName: "Mufid",
   lastName: "Zhaqie",
-  name: `Mufid Zhaqie`,
+  name: `Zhaq Project`,
   role: "Muballigh",
   avatar: "/images/avatar.jpg",
   email: "mufidzhaqie8080@gmail.com",
@@ -68,22 +68,22 @@ const home: Home = {
         <strong className="ml-4">Zhaq Project</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured project
+          Main project🚀
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
-    Hi, I am Zhaq!. a Muballigh at one of Majelis Taklim in <Text as="span" size="xl" weight="strong">Depok City</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    Hi, I am Zhaq! a Muballigh at one of Majelis Taklim in <Text as="span" size="xl" weight="strong">Depok City</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
 </>
   ),
 };
 
 const about: About = {
   path: "/about",
-  label: "About",
+  label: "About Me",
   title: `About – ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
@@ -95,7 +95,7 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://wa.me/+62895410071368",
   },
   intro: {
     display: true,
@@ -210,20 +210,20 @@ const about: About = {
           },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+//        images: [
+//          {
+//            src: "/images/projects/project-01/cover-02.jpg",
+//            alt: "Project image",
+//            width: 16,
+//            height: 9,
+//          },
+//          {
+//            src: "/images/projects/project-01/cover-03.jpg",
+//            alt: "Project image",
+//            width: 16,
+//            height: 9,
+//          },
+//        ],
       },
       {
         title: "Copywriter",
@@ -237,14 +237,14 @@ const about: About = {
           },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+//        images: [
+//          {
+//            src: "/images/projects/project-01/cover-04.jpg",
+//            alt: "Project image",
+//            width: 16,
+//            height: 9,
+//          },
+//       ],
       },
     ],
   },
