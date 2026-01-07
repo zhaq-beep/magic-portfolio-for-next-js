@@ -7,9 +7,9 @@ export default function WeddingInvitationPage() {
       {/* Header */}
       <Card radius="l-4" padding="24" border="neutral-alpha-weak">
         <Column gap="12" align="center">
-          <Text size="sm" tone="secondary">Undangan Pernikahan</Text>
-          <Text size="xl" weight="bold">Ahmad & Aisyah</Text>
-          <Text size="sm">Minggu, 12 Mei 2026</Text>
+          <Text size="s" tone="secondary">Undangan Pernikahan</Text>
+          <Text size="s" weight="bold">Ahmad & Aisyah</Text>
+          <Text size="s">Minggu, 12 Mei 2026</Text>
         </Column>
       </Card>
 
@@ -31,15 +31,15 @@ export default function WeddingInvitationPage() {
           <Column gap="8" align="center" style={{ flex: 1 }}>
             <Avatar size="lg" src="/images/groom.jpg" />
             <Text weight="bold">Ahmad</Text>
-            <Text size="sm" tone="secondary">Putra dari Bpk. Fulan & Ibu Fulanah</Text>
+            <Text size="s" tone="secondary">Putra dari Bpk. Fulan & Ibu Fulanah</Text>
           </Column>
 
-          <Text size="xl" weight="bold">&</Text>
+          <Text size="s" weight="bold">&</Text>
 
           <Column gap="8" align="center" style={{ flex: 1 }}>
             <Avatar size="lg" src="/images/bride.jpg" />
             <Text weight="bold">Aisyah</Text>
-            <Text size="sm" tone="secondary">Putri dari Bpk. Fulan & Ibu Fulanah</Text>
+            <Text size="s" tone="secondary">Putri dari Bpk. Fulan & Ibu Fulanah</Text>
           </Column>
         </Row>
       </Card>
@@ -47,7 +47,7 @@ export default function WeddingInvitationPage() {
       {/* Event Details */}
       <Card radius="lg" padding="24" border="neutral-alpha-weak">
         <Column gap="12">
-          <Text size="lg" weight="bold">Detail Acara</Text>
+          <Text size="s" weight="bold">Detail Acara</Text>
           <Row justify="between">
             <Text>Akad Nikah</Text>
             <Text>08.00 WIB</Text>
@@ -56,7 +56,7 @@ export default function WeddingInvitationPage() {
             <Text>Resepsi</Text>
             <Text>11.00 WIB</Text>
           </Row>
-          <Text size="sm" tone="secondary">
+          <Text size="s" tone="secondary">
             Gedung Serbaguna
             <br />Jl. Contoh Alamat No. 123, Jakarta
           </Text>
@@ -72,7 +72,7 @@ export default function WeddingInvitationPage() {
       </Row>
 
       {/* Footer */}
-      <Text size="xs" tone="secondary" align="center">
+      <Text size="s" tone="secondary" align="center">
         Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir
       </Text>
     </Column>
