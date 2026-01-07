@@ -1,4 +1,4 @@
-import { Row, Card, Avatar } from '@/once-ui/components'
+import { Row, Card, Avatar } from "@once-ui-system/core"
 
 export default function Page() {
   return (
