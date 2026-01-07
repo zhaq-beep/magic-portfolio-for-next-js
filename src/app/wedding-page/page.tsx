@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { Column, Row, Card, Avatar, Text, Button } from "@once-ui-system/core";
 
+<Column fillWidth aspectRatio="16/9">
+  aspectRatio: 16 / 9
+</Column>
+
 export default function WeddingInvitationPage() {
   return (
     <Column gap="24" padding="24" style={{ maxWidth: 720, margin: "0 auto" }}>
