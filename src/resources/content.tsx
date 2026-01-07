@@ -242,7 +242,19 @@ const about: About = {
         description: (
           <>Photography enthusiast.</>
           ),
-        // optional: leave the array empty if you don't want to display images
+      },
+      {
+        technical: {
+    display: true, // set to false to hide this section
+    title: "Soft skills",
+    skills: [
+      {
+        title: "Public Speaking",
+        description: (
+          <>Able to design in Canva and CorelDRAW. Editing photos in Adobe Photoshop
+            or Adobe Lightroom on PC, using PixelLab, Picsay and InShot on Mobile.</>
+        ),
+    // optional: leave the array empty if you don't want to display images
 //        images: [
 //          {
 //            src: "/images/projects/project-01/cover-04.jpg",
