@@ -5,7 +5,7 @@ export default function WeddingInvitationPage() {
   return (
     <Column gap="24" padding="24" style={{ maxWidth: 720, margin: "0 auto" }}>
       {/* Header */}
-      <Card radius="lg" padding="24" border="neutral-alpha-weak">
+      <Card radius="l-4" padding="24" border="neutral-alpha-weak">
         <Column gap="12" align="center">
           <Text size="sm" tone="secondary">Undangan Pernikahan</Text>
           <Text size="xl" weight="bold">Ahmad & Aisyah</Text>
