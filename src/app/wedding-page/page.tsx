@@ -7,7 +7,7 @@ export default function WeddingInvitationPage() {
       {/* Header */}
       <Card radius="l-4" padding="24" border="neutral-alpha-weak">
         <Column gap="12" align="center">
-          <Text size="s" tone="secondary">Undangan Pernikahan</Text>
+          <Text size="s" color="secondary">Undangan Pernikahan</Text>
           <Text size="s" weight="bold">Ahmad & Aisyah</Text>
           <Text size="s">Minggu, 12 Mei 2026</Text>
         </Column>
@@ -31,7 +31,7 @@ export default function WeddingInvitationPage() {
           <Column gap="8" align="center" style={{ flex: 1 }}>
             <Avatar size="lg" src="/images/groom.jpg" />
             <Text weight="bold">Ahmad</Text>
-            <Text size="s" tone="secondary">Putra dari Bpk. Fulan & Ibu Fulanah</Text>
+            <Text size="s" color="secondary">Putra dari Bpk. Fulan & Ibu Fulanah</Text>
           </Column>
 
           <Text size="s" weight="bold">&</Text>
@@ -39,7 +39,7 @@ export default function WeddingInvitationPage() {
           <Column gap="8" align="center" style={{ flex: 1 }}>
             <Avatar size="lg" src="/images/bride.jpg" />
             <Text weight="bold">Aisyah</Text>
-            <Text size="s" tone="secondary">Putri dari Bpk. Fulan & Ibu Fulanah</Text>
+            <Text size="s" color="secondary">Putri dari Bpk. Fulan & Ibu Fulanah</Text>
           </Column>
         </Row>
       </Card>
@@ -56,7 +56,7 @@ export default function WeddingInvitationPage() {
             <Text>Resepsi</Text>
             <Text>11.00 WIB</Text>
           </Row>
-          <Text size="s" tone="secondary">
+          <Text size="s" color="secondary">
             Gedung Serbaguna
             <br />Jl. Contoh Alamat No. 123, Jakarta
           </Text>
@@ -72,7 +72,7 @@ export default function WeddingInvitationPage() {
       </Row>
 
       {/* Footer */}
-      <Text size="s" tone="secondary" align="center">
+      <Text size="s" color="secondary" align="center">
         Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir
       </Text>
     </Column>
