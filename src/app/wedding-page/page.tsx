@@ -3,37 +3,22 @@ import { Row, Card, Avatar } from "@once-ui-system/core"
 export default function Page() {
   return (
     <Row maxWidth={24}>
-  <Card radius="l-4" direction="column" border="neutral-alpha-medium">
-    <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
-      <Avatar size="xs" src="/images/avatar.jpg"/>
-      <Text variant="label-default-s">Lorant One</Text>
+      <Card
+        radius="l-4"
+        direction="column"
+        border="neutral-alpha-medium"
+      >
+        <Row
+          fillWidth
+          paddingX="20"
+          paddingY="12"
+          gap="8"
+          vertical="center"
+        >
+          <Avatar size="xs" src="/images/avatar.jpg" />
+          <p>Wedding Page</p>
+        </Row>
+      </Card>
     </Row>
-    <Media
-      border="neutral-alpha-weak"
-      sizes="400px"
-      fillWidth
-      aspectRatio="4 / 3"
-      radius="l"
-      alt="Proxima b"
-      src="/images/card.jpg"
-    />
-    <Column fillWidth paddingX="20" paddingY="24" gap="8">
-      <Text variant="body-default-xl">Proxima b</Text>
-      <Text onBackground="neutral-weak" variant="body-default-s">
-        A planet so cruel on the surface, but once you explore what's underneath, you'll question
-        everything you know. Yet, you vibe with it.
-      </Text>
-    </Column>
-    <Line background="neutral-alpha-medium" />
-    <Row
-      paddingX="20" paddingY="12" gap="8" vertical="center"
-      textVariant="label-default-s" onBackground="neutral-medium">
-      <Icon name="like" size="s" onBackground="neutral-strong" />
-      34
-      <Icon name="chat" size="s" onBackground="neutral-strong" marginLeft="24" />
-      5
-    </Row>
-  </Card>
-</Row>
   )
 }
