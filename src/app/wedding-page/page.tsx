@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Row, Card, Avatar, Image } from "@once-ui-system/core"
 
 export default function Page() {
