@@ -8,7 +8,7 @@ export default function WeddingInvitationPage() {
       <Card radius="l-4" padding="24" border="neutral-alpha-weak">
         <Column gap="12" align="center">
           <Text size="s" color="secondary">Undangan Pernikahan</Text>
-          <Text size="s" weight="bold">Ahmad & Aisyah</Text>
+          <Text size="s" variant="body-default-m">Ahmad & Aisyah</Text>
           <Text size="s">Minggu, 12 Mei 2026</Text>
         </Column>
       </Card>
@@ -30,15 +30,15 @@ export default function WeddingInvitationPage() {
         <Row gap="24" align="center" justify="between">
           <Column gap="8" align="center" style={{ flex: 1 }}>
             <Avatar size="lg" src="/images/groom.jpg" />
-            <Text weight="bold">Ahmad</Text>
+            <Text variant="body-default-m">Ahmad</Text>
             <Text size="s" color="secondary">Putra dari Bpk. Fulan & Ibu Fulanah</Text>
           </Column>
 
-          <Text size="s" weight="bold">&</Text>
+          <Text size="s" variant="body-default-m">&</Text>
 
           <Column gap="8" align="center" style={{ flex: 1 }}>
             <Avatar size="lg" src="/images/bride.jpg" />
-            <Text weight="bold">Aisyah</Text>
+            <Text variant="body-default-m">Aisyah</Text>
             <Text size="s" color="secondary">Putri dari Bpk. Fulan & Ibu Fulanah</Text>
           </Column>
         </Row>
@@ -47,7 +47,7 @@ export default function WeddingInvitationPage() {
       {/* Event Details */}
       <Card radius="lg" padding="24" border="neutral-alpha-weak">
         <Column gap="12">
-          <Text size="s" weight="bold">Detail Acara</Text>
+          <Text size="s" variant="body-default-m">Detail Acara</Text>
           <Row justify="between">
             <Text>Akad Nikah</Text>
             <Text>08.00 WIB</Text>
