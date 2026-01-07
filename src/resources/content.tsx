@@ -172,8 +172,8 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "Univ .........",
-        description: <>Studied Inxxxxxxxxx.</>,
+        name: "Uni XXXXXXXX",
+        description: <>Studied XXXXXXXXXX.</>,
       },
       {
         name: "Build the Project",
