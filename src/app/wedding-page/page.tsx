@@ -14,7 +14,7 @@ export default function WeddingInvitationPage() {
       </Card>
 
       {/* Hero Image */}
-      <Card radius="lg" padding="0" border="neutral-alpha-weak" style={{ overflow: "hidden" }}>
+      <Card radius="l-4" padding="0" border="neutral-alpha-weak" style={{ overflow: "hidden" }}>
         <Image
           src="/images/wedding.jpg"
           alt="Wedding"
@@ -26,7 +26,7 @@ export default function WeddingInvitationPage() {
       </Card>
 
       {/* Couple Section */}
-      <Card radius="lg" padding="24" border="neutral-alpha-weak">
+      <Card radius="l-4" padding="24" border="neutral-alpha-weak">
         <Row gap="24" align="center" justify="between">
           <Column gap="8" align="center" style={{ flex: 1 }}>
             <Avatar size="lg" src="/images/groom.jpg" />
@@ -45,7 +45,7 @@ export default function WeddingInvitationPage() {
       </Card>
 
       {/* Event Details */}
-      <Card radius="lg" padding="24" border="neutral-alpha-weak">
+      <Card radius="l-4" padding="24" border="neutral-alpha-weak">
         <Column gap="12">
           <Text size="s" variant="body-default-m">Detail Acara</Text>
           <Row justify="between">
