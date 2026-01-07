@@ -1,3 +1,12 @@
+export default function Page() {
+  return (
+    <main style={{ padding: '40px', textAlign: 'center' }}>
+      <h1>💍 Wedding Page</h1>
+      <p>Halaman wedding berhasil dibuat</p>
+    </main>
+  )
+}
+
 <Row maxWidth={24}>
   <Card radius="l-4" direction="column" border="neutral-alpha-medium">
     <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
