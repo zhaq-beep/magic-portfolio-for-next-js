@@ -172,7 +172,7 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "Unixxxxxxxxxx",
+        name: "Univ .........",
         description: <>Studied Inxxxxxxxxx.</>,
       },
       {
@@ -236,10 +236,11 @@ const about: About = {
             icon: "medium",
           },
         ],
-        {
-          title: "Photographer",
-          description: (
-            <>Photography enthusiast.</>
+      },
+      {
+        title: "Photographer",
+        description: (
+          <>Photography enthusiast.</>
           ),
         // optional: leave the array empty if you don't want to display images
 //        images: [
