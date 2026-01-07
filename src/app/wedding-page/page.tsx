@@ -1,4 +1,4 @@
-import { Row, Card, Avatar } from "@once-ui-system/core"
+import { Row, Card, Avatar, Image } from "@once-ui-system/core"
 
 export default function Page() {
   return (
@@ -8,7 +8,7 @@ export default function Page() {
         direction="column"
         border="neutral-alpha-medium"
       >
-      <Media
+      <Image
       border="neutral-alpha-weak"
       sizes="400px"
       fillWidth
