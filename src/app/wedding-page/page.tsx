@@ -27,7 +27,7 @@ export default function WeddingInvitationPage() {
 
       {/* Couple Section */}
       <Card radius="l-4" padding="24" border="neutral-alpha-weak">
-        <Row gap="24" align="center" justify="between">
+        <Row gap="24" align="center">
           <Column gap="8" align="center" style={{ flex: 1 }}>
             <Avatar size="lg" src="/images/groom.jpg" />
             <Text variant="body-default-m">Ahmad</Text>
@@ -48,11 +48,11 @@ export default function WeddingInvitationPage() {
       <Card radius="l-4" padding="24" border="neutral-alpha-weak">
         <Column gap="12">
           <Text size="s" variant="body-default-m">Detail Acara</Text>
-          <Row justify="between">
+          <Row>
             <Text>Akad Nikah</Text>
             <Text>08.00 WIB</Text>
           </Row>
-          <Row justify="between">
+          <Row>
             <Text>Resepsi</Text>
             <Text>11.00 WIB</Text>
           </Row>
@@ -64,7 +64,7 @@ export default function WeddingInvitationPage() {
       </Card>
 
       {/* Actions */}
-      <Row gap="12" justify="center">
+      <Row gap="12">
         <Button as="a" href="https://maps.google.com" target="_blank">
           Lihat Lokasi
         </Button>
