@@ -8,14 +8,23 @@ export default function Page() {
         direction="column"
         border="neutral-alpha-medium"
       >
-        <Row
+      <Media
+      border="neutral-alpha-weak"
+      sizes="400px"
+      fillWidth
+      aspectRatio="4 / 3"
+      radius="l"
+      alt="Proxima b"
+      src="/images/horizontal-1.jpg"
+      />
+      <Row
           fillWidth
           paddingX="20"
           paddingY="20"
           gap="8"
-          vertical="left"
+          vertical="center"
         >
-          <Avatar size="xs" src="/images/avatar.jpg" />
+          <Avatar size="xs" src="/images/horizontal-1.jpg" />
           <p>Wedding Page</p>
         </Row>
       </Card>
