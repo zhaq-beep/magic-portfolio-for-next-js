@@ -11,9 +11,9 @@ export default function Page() {
         <Row
           fillWidth
           paddingX="20"
-          paddingY="12"
+          paddingY="20"
           gap="8"
-          vertical="center"
+          vertical="left"
         >
           <Avatar size="xs" src="/images/avatar.jpg" />
           <p>Wedding Page</p>
