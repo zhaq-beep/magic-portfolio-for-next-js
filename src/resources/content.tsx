@@ -31,7 +31,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/-/",
+    link: "https://www.linkedin.com/",
     essential: true,
   },
   {
@@ -43,7 +43,7 @@ const social: Social = [
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/-/",
+    link: "https://www.threads.com/",
     essential: false,
   },
   {
@@ -172,8 +172,8 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "Universitas Terbuka",
-        description: <>Studied Information System.</>,
+        name: "Unixxxxxxxxxx",
+        description: <>Studied Inxxxxxxxxx.</>,
       },
       {
         name: "Build the Project",
@@ -236,6 +236,11 @@ const about: About = {
             icon: "medium",
           },
         ],
+        {
+          title: "Photographer",
+          description: (
+            <>Photography enthusiast.</>
+          ),
         // optional: leave the array empty if you don't want to display images
 //        images: [
 //          {
