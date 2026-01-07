@@ -153,7 +153,7 @@ export const Header = () => {
                     <ToggleButton
                       prefixIcon="eye"
                       href="/wedding-page"
-                      label="Wedding"
+                      label="Wedding Page"
                       selected={pathname.startsWith("/wedding-page")}
                     />
                   </Row>
