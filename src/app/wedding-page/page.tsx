@@ -1,39 +1,80 @@
 import Image from "next/image";
-import { Row, Card, Avatar } from "@once-ui-system/core"
+import { Column, Row, Card, Avatar, Text, Button } from "@once-ui-system/core";
 
-export default function Page() {
+export default function WeddingInvitationPage() {
   return (
-    <Row maxWidth={24}>
-      <Card
-        radius="l-4"
-        direction="column"
-        border="neutral-alpha-medium"
-      >
-    <Image
-        src="/images/horizontal-1.jpg"
-        alt="Wedding"
-        width={400}
-        height={300}
-        sizes="400px"
-        style={{
-        width: "100%",
-        height: "auto",
-        borderRadius: 12,
-        border: "1px solid rgba(0,0,0,0.1)",
-        aspectRatio: "4 / 3",
-        }}
-    />
-      <Row
-          fillWidth
-          paddingX="20"
-          paddingY="20"
-          gap="8"
-          vertical="center"
-        >
-          <Avatar size="xs" src="/images/horizontal-1.jpg" />
-          <p>Wedding Page</p>
+    <Column gap="24" padding="24" style={{ maxWidth: 720, margin: "0 auto" }}>
+      {/* Header */}
+      <Card radius="lg" padding="24" border="neutral-alpha-weak">
+        <Column gap="12" align="center">
+          <Text size="sm" tone="secondary">Undangan Pernikahan</Text>
+          <Text size="xl" weight="bold">Ahmad & Aisyah</Text>
+          <Text size="sm">Minggu, 12 Mei 2026</Text>
+        </Column>
+      </Card>
+
+      {/* Hero Image */}
+      <Card radius="lg" padding="0" border="neutral-alpha-weak" style={{ overflow: "hidden" }}>
+        <Image
+          src="/images/wedding.jpg"
+          alt="Wedding"
+          width={800}
+          height={600}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto", aspectRatio: "4 / 3" }}
+        />
+      </Card>
+
+      {/* Couple Section */}
+      <Card radius="lg" padding="24" border="neutral-alpha-weak">
+        <Row gap="24" align="center" justify="between">
+          <Column gap="8" align="center" style={{ flex: 1 }}>
+            <Avatar size="lg" src="/images/groom.jpg" />
+            <Text weight="bold">Ahmad</Text>
+            <Text size="sm" tone="secondary">Putra dari Bpk. Fulan & Ibu Fulanah</Text>
+          </Column>
+
+          <Text size="xl" weight="bold">&</Text>
+
+          <Column gap="8" align="center" style={{ flex: 1 }}>
+            <Avatar size="lg" src="/images/bride.jpg" />
+            <Text weight="bold">Aisyah</Text>
+            <Text size="sm" tone="secondary">Putri dari Bpk. Fulan & Ibu Fulanah</Text>
+          </Column>
         </Row>
       </Card>
-    </Row>
-  )
+
+      {/* Event Details */}
+      <Card radius="lg" padding="24" border="neutral-alpha-weak">
+        <Column gap="12">
+          <Text size="lg" weight="bold">Detail Acara</Text>
+          <Row justify="between">
+            <Text>Akad Nikah</Text>
+            <Text>08.00 WIB</Text>
+          </Row>
+          <Row justify="between">
+            <Text>Resepsi</Text>
+            <Text>11.00 WIB</Text>
+          </Row>
+          <Text size="sm" tone="secondary">
+            Gedung Serbaguna
+            <br />Jl. Contoh Alamat No. 123, Jakarta
+          </Text>
+        </Column>
+      </Card>
+
+      {/* Actions */}
+      <Row gap="12" justify="center">
+        <Button as="a" href="https://maps.google.com" target="_blank">
+          Lihat Lokasi
+        </Button>
+        <Button variant="secondary">Simpan ke Kalender</Button>
+      </Row>
+
+      {/* Footer */}
+      <Text size="xs" tone="secondary" align="center">
+        Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir
+      </Text>
+    </Column>
+  );
 }
