@@ -9,15 +9,20 @@ export default function Page() {
         direction="column"
         border="neutral-alpha-medium"
       >
-      <Image
-      border="neutral-alpha-weak"
-      sizes="400px"
-      fillWidth
-      aspectRatio="4 / 3"
-      radius="l"
-      alt="Proxima b"
-      src="/images/horizontal-1.jpg"
-      />
+    <Image
+        src="/images/horizontal-1.jpg"
+        alt="Wedding"
+        width={400}
+        height={300}
+        sizes="400px"
+        style={{
+        width: "100%",
+        height: "auto",
+        borderRadius: 12,
+        border: "1px solid rgba(0,0,0,0.1)",
+        aspectRatio: "4 / 3",
+        }}
+    />
       <Row
           fillWidth
           paddingX="20"
