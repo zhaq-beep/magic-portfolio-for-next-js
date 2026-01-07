@@ -27,8 +27,7 @@ export default function Page() {
     <Line background="neutral-alpha-medium" />
     <Row
       paddingX="20" paddingY="12" gap="8" vertical="center"
-      textVariant="label-default-s" onBackground="neutral-medium"
-    >
+      textVariant="label-default-s" onBackground="neutral-medium">
       <Icon name="like" size="s" onBackground="neutral-strong" />
       34
       <Icon name="chat" size="s" onBackground="neutral-strong" marginLeft="24" />
@@ -36,3 +35,5 @@ export default function Page() {
     </Row>
   </Card>
 </Row>
+  )
+}
