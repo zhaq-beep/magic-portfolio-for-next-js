@@ -72,7 +72,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work",
+    href: "/work/poster-dinding/",
   },
   subline: (
     <>
@@ -83,7 +83,7 @@ const home: Home = {
 
 const about: About = {
   path: "/about",
-  label: "About Me",
+  label: "About",
   title: `About – ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
@@ -138,15 +138,15 @@ const about: About = {
             Archive letters and/or expenditure receipts neatly and orderly.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Zhaq Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+//        images: [
+//          // optional: leave the array empty if you don't want to display images
+//          {
+//            src: "/images/projects/project-01/cover-01.jpg",
+//            alt: "Zhaq Project",
+//            width: 16,
+//            height: 9,
+//          },
+//        ],
       },
       {
         company: "Majelis Taklim Baitul Ihsan Depok",
