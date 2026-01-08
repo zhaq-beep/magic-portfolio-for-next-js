@@ -239,7 +239,7 @@ export interface About extends BasePageConfig {
     }>;
   }>;
 };
-}
+  
 /**
  * Blog page configuration.
  * @description Configuration for the Blog page, including metadata and navigation label.
