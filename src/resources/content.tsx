@@ -321,6 +321,5 @@ const gallery: Gallery = {
     },
   ],
 };
-
-const 
+ 
 export { person, social, newsletter, home, about, blog, work, gallery };
