@@ -228,7 +228,7 @@ export interface About extends BasePageConfig {
       }>;
     }>;
   };
-},
+}
   
 /**
  * Blog page configuration.
