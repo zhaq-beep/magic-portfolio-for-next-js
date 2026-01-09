@@ -41,14 +41,16 @@ export default function WeddingPage() {
     <main>
       <h2>Pilih tema kamu</h2>
       
-      <Row maxWidth={24} gap="40">
+      <Row maxWidth={24} gap="40" wrap>
         {weddingCards.map((card, index) => (
           <Card
           key={index}
           radius="m"
           direction="column"
           border="neutral-alpha-medium"
-          paddingX="8" paddingY="8"
+          paddingX="8"
+          paddingY="8"
+          width="8"
         >
           <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
             <Avatar size="m" src="/images/avatar.jpg" />
