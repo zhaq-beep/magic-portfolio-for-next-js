@@ -11,38 +11,46 @@ import {
 
 const weddingCards = [
   {
-    title: "Wedding Theme 01",
+    title: "Wedding Theme 1",
     description:
-      "A planet so cruel on the surface, but once you explore.",
-    image: "/images/projects/project-01/avatar-01.jpg",
+      "Undangan Pernikahan dengan tema classic modern.",
+    image: "/images/wedding-01.jpg",
     likes: 34,
     gifts: 5,
   },
   {
-    title: "Wedding Theme 02",
+    title: "Wedding Theme 2",
     description:
-      "A calm and elegant theme designed for intimate wedding ceremonies.",
-    image: "/images/projects/project-01/avatar-01.jpg",
+      "Undangan Pernikahan simpel dan indah.",
+    image: "/images/wedding-02.jpg",
     likes: 21,
     gifts: 3,
+  },
+  {
+    title: "Wedding Theme 3",
+    description:
+      "Undangan Pernikahan dengan tema adat sunda.",
+    image: "/images/wedding-03.jpg",
+    likes: 30,
+    gifts: 6,
   },
 ];
 
 export default function WeddingPage() {
   return (
     <main>
-      <h2>Wedding Page</h2>
+      <h2>Pilih tema kamu</h2>
       
       <Row maxWidth={24} gap="24">
         {weddingCards.map((card, index) => (
           <Card
           key={index}
-          radius="s-4"
+          radius="m"
           direction="column"
           border="neutral-alpha-medium"
         >
           <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
-            <Avatar size="m" src="/images/avatar-01.jpg" />
+            <Avatar size="m" src="/images/avatar.jpg" />
             <Text variant="label-default-s">{card.title}</Text>
           </Row>
 
@@ -57,7 +65,7 @@ export default function WeddingPage() {
         />
             
           <Column fillWidth paddingX="20" paddingY="24" gap="8">
-            <Text variant="body-default-xl">Wedding Theme 01</Text>
+            <Text variant="body-default-l">Zhaq Wedding</Text>
             <Text onBackground="neutral-weak" variant="body-default-s">
               {card.description}
             </Text>
