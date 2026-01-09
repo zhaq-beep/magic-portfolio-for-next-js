@@ -43,7 +43,7 @@ export default function WeddingPage() {
         >
           <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
             <Avatar size="m" src="/images/avatar-01.jpg" />
-            <Text variant="label-default-s">Zhaq Wedding</Text>
+            <Text variant="label-default-s">{card.title}</Text>
           </Row>
 
           <Media
@@ -76,14 +76,17 @@ export default function WeddingPage() {
             <Icon name="sparkle"
               size="s"
               onBackground="neutral-strong" />
-            {card.count1}
+            {card.likes}
             <Icon name="gift"
               size="s"
               onBackground="neutral-strong"
               marginLeft="24"
             />
-            {card.count2}
-          </Row>
-      </Card>
-    ))}
-  </Row>
+            {card.gifts}
+            </Row>
+          </Card>
+        ))}
+      </Row>
+    </main>
+  );
+}
