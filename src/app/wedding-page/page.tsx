@@ -48,6 +48,7 @@ export default function WeddingPage() {
           radius="m"
           direction="column"
           border="neutral-alpha-medium"
+          paddingX="8" paddingY="8"
         >
           <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
             <Avatar size="m" src="/images/avatar.jpg" />
