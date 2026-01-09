@@ -50,7 +50,7 @@ export default function WeddingPage() {
         border="neutral-alpha-medium"
         paddingX="8"
         paddingY="8"
-        width={{ base: 12, md: 8 }}
+        width="8"
     >
 
           <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
