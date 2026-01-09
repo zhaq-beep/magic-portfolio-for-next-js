@@ -113,6 +113,6 @@ export default function WeddingPage() {
           </Card>
         ))}
       </Row>
-    </main>
+    </Column>
   );
 }
