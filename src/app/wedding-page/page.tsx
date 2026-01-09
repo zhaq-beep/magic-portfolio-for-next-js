@@ -12,7 +12,7 @@ import {
 export default function WeddingPage() {
   return (
     <main>
-      <h1>Wedding Page</h2>
+      <h2>Wedding Page</h2>
 
       <Row maxWidth={24}>
         <Card radius="l-2" direction="column" border="neutral-alpha-medium">
@@ -27,7 +27,7 @@ export default function WeddingPage() {
             fillWidth
             aspectRatio="4 / 3"
             radius="l"
-            alt="Proxima b"
+            alt="Wedding Theme 01"
             src="/images/projects/project-01/avatar-01.jpg"
           />
 
