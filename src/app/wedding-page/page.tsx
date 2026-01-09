@@ -15,7 +15,7 @@ export default function WeddingPage() {
       <h2>Wedding Page</h2>
 
       <Row maxWidth={24}>
-        <Card radius="l-2" direction="column" border="neutral-alpha-medium">
+        <Card radius="s-4" direction="column" border="neutral-alpha-medium">
           <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
             <Avatar size="m" src="/images/avatar.jpg" />
             <Text variant="label-default-s">Zhaq Wedding</Text>
