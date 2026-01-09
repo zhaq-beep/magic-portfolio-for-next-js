@@ -114,6 +114,17 @@ const about: About = {
     title: "Experience",
     experiences: [
       {
+        company: "Magang/PKL",
+        timeframe: "October - November 2018",
+        role: "PLN UPDL (Unit Pelaksana Pendidikan dan Pelatihan) Bogor",
+        achievements: [
+          <>Participating in the daily activities of the implementing unit</>,
+          <>Scanning or digitizing documents using a scanner</>
+          <>Responsible for printing document files using a printer, to produce files for office needs and making copies using a photocopier. </>,
+          <>Implementing general TIK in the field of work.</>
+        ],
+      },
+      {
         company: "Ponpes Wali Barokah Kediri",
         timeframe: "2022 - 2024",
         role: "Administration Secretary",
