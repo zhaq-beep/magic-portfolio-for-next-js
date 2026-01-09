@@ -8,4 +8,4 @@ export { Providers } from "@/components/Providers";
 export { ScrollToHash } from "@/components/ScrollToHash";
 export { ThemeToggle } from "@/components/ThemeToggle";
 export { CustomMDX } from "@/components/mdx";
-export { Carousel } from "@./Carousel";
+export { Carousel } from "@components/Carousel";
