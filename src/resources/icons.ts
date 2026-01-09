@@ -12,9 +12,18 @@ import {
   HiOutlineDocument,
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
-  IoGiftOutline,
   HiOutlineSparkles,
 } from "react-icons/hi2";
+
+import {
+  IoAtOutline,
+  IoFastFoodOutline,
+  IoFlagOutline,
+  IoFootballOutline,
+  IoGiftOutline,
+  IoGlobeOutline,
+  IoPawOutline,
+} from "react-icons/io5";
 
 import {
   PiHouseDuotone,
