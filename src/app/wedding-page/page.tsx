@@ -13,7 +13,7 @@ const weddingCards = [
   {
     title: "Wedding Theme 01",
     description:
-      "A planet so cruel on the surface, but once you explore..",
+      "A planet so cruel on the surface, but once you explore.",
     image: "/images/projects/project-01/avatar-01.jpg",
     likes: 34,
     gifts: 5,
