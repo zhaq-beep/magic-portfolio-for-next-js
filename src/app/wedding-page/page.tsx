@@ -41,7 +41,7 @@ export default function WeddingPage() {
     <main>
       <h2>Pilih tema kamu</h2>
       
-      <Row fillWidth maxWidth={24} gap={{ base: "16", md: "40" }} wrap>
+      <Row fillWidth maxWidth={24} gap="24" wrap>
         {weddingCards.map((card, index) => (
         <Card
         key={index}
@@ -59,7 +59,7 @@ export default function WeddingPage() {
           </Row>
 
           <Media
-            border="neutral-alpha-weak"
+          border="neutral-alpha-weak"
           sizes="400px"
           fillWidth
           aspectRatio="4 / 3"
