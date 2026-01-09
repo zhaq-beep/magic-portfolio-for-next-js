@@ -347,6 +347,7 @@ export default function About() {
                 as="h2"
                 id={about.softskills.title}
                 variant="display-strong-s"
+                marginTop="40"
                 marginBottom="40"
               >
                 {about.softskills.title}
