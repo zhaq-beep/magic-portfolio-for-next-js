@@ -34,7 +34,7 @@ export default function WeddingPage() {
       <h2>Wedding Page</h2>
       
       <Row maxWidth={24} gap="24">
-        {cards.map((card, index) => (
+        {weddingCards.map((card, index) => (
           <Card
           key={index}
           radius="s-4"
