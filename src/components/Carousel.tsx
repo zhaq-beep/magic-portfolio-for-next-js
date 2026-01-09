@@ -1,6 +1,6 @@
 "use client";
 
-import { SpacingToken } from "@/types";
+import type { SpacingToken } from "@once-ui-system/core";
 import { Flex, RevealFx, Scroller, Media, Column, Row, IconButton, Fade, ProgressBar } from ".";
 import { useEffect, useState, useRef } from "react";
 import styles from "./Carousel.module.scss";
