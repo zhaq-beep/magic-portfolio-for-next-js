@@ -212,7 +212,7 @@ export default function About() {
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
                 {about.work.title}
               </Heading>
-              <Column fillWidth gap="l" marginBottom="30">
+              <Column fillWidth gap="l" marginBottom="32">
                 {about.work.experiences.map((experience, index) => (
                   <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
                     <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
@@ -271,7 +271,7 @@ export default function About() {
               <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
                 {about.studies.title}
               </Heading>
-              <Column fillWidth gap="l" marginBottom="30">
+              <Column fillWidth gap="l" marginBottom="32">
                 {about.studies.institutions.map((institution, index) => (
                   <Column key={`${institution.name}-${index}`} fillWidth gap="4">
                     <Text id={institution.name} variant="heading-strong-l">
@@ -296,7 +296,7 @@ export default function About() {
               >
                 {about.technical.title}
               </Heading>
-              <Column fillWidth gap="l" margin bottom="30">
+              <Column fillWidth gap="l" margin bottom="32">
                 {about.technical.skills.map((skill, index) => (
                   <Column key={`${skill}-${index}`} fillWidth gap="4">
                     <Text id={skill.title} variant="heading-strong-l">
@@ -351,7 +351,7 @@ export default function About() {
               >
                 {about.softskills.title}
               </Heading>
-              <Column fillWidth gap="l" marginBottom="30">
+              <Column fillWidth gap="l" marginBottom="32">
                 {about.softskills.skills.map((skill, index) => (
                   <Column key={`${skill}-${index}`} fillWidth gap="4">
                     <Text id={skill.title} variant="heading-strong-l">
