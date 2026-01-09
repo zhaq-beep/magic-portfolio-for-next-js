@@ -1,3 +1,11 @@
+export default function WeddingPage() {
+  return (
+    <main>
+      <h1>Wedding Page</h1>
+    </main>
+  );
+}
+
 <Row maxWidth={24}>
   <Card radius="l-4" direction="column" border="neutral-alpha-medium">
     <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
