@@ -39,8 +39,6 @@ const weddingCards = [
 export default function WeddingPage() {
   return (
     <Column as="main" fillWidth>
-      <h2>Pilih tema kamu</h2>
-
       <Row
         fillWidth
         maxWidth={24}
@@ -51,64 +49,47 @@ export default function WeddingPage() {
         {weddingCards.map((card, index) => (
           <Card
             key={index}
-            radius="m"
+            radius="l-4"
             direction="column"
             border="neutral-alpha-medium"
-            paddingX="8"
-            paddingY="8"
             width="8"
           >
-          <Row 
-            fillWidth paddingX="20" 
-            paddingY="12" 
-            gap="8" 
-            vertical="center">
-            <Avatar 
-              size="m" 
-              src="/images/avatar.jpg" 
+            <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
+              <Avatar size="xs" src="/images/avatar.jpg" />
+              <Text variant="label-default-s">{card.title}</Text>
+            </Row>
+
+            <Media
+              border="neutral-alpha-weak"
+              sizes="400px"
+              fillWidth
+              aspectRatio="4 / 3"
+              radius="l"
+              alt={card.title}
+              src={card.image}
             />
-            <Text 
-              variant="label-default-s">{card.title}
-            </Text>
-          </Row>
 
-          <Media
-          border="neutral-alpha-weak"
-          sizes="400px"
-          fillWidth
-          aspectRatio="4 / 3"
-          radius="l"
-          alt={card.title}
-          src={card.image}
-        />
-            
-          <Column fillWidth paddingX="20" paddingY="24" gap="8">
-            <Text variant="body-default-l">Zhaq Wedding</Text>
-            <Text onBackground="neutral-weak" variant="body-default-s">
-              {card.description}
-            </Text>
-          </Column>
+            <Column fillWidth paddingX="20" paddingY="24" gap="8">
+              <Text variant="body-default-xl">Zhaq Wedding</Text>
+              <Text onBackground="neutral-weak" variant="body-default-s">
+                {card.description}
+              </Text>
+            </Column>
 
-          <Line background="neutral-alpha-medium" />
+            <Line background="neutral-alpha-medium" />
 
-          <Row
-            paddingX="20"
-            paddingY="12"
-            gap="8"
-            vertical="center"
-            textVariant="label-default-s"
-            onBackground="neutral-medium"
-          >
-            <Icon name="sparkle"
-              size="s"
-              onBackground="neutral-strong" />
-            {card.likes}
-            <Icon name="gift"
-              size="s"
-              onBackground="neutral-strong"
-              marginLeft="24"
-            />
-            {card.gifts}
+            <Row
+              paddingX="20"
+              paddingY="12"
+              gap="8"
+              vertical="center"
+              textVariant="label-default-s"
+              onBackground="neutral-medium"
+            >
+              <Icon name="like" size="s" />
+              {card.likes}
+              <Icon name="gift" size="s" marginLeft="24" />
+              {card.gifts}
             </Row>
           </Card>
         ))}
