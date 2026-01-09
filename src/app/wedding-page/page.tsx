@@ -12,13 +12,13 @@ import {
 export default function WeddingPage() {
   return (
     <main>
-      <h1>Wedding Page</h1>
+      <h1>Wedding Page</h2>
 
       <Row maxWidth={24}>
-        <Card radius="l-4" direction="column" border="neutral-alpha-medium">
+        <Card radius="l-2" direction="column" border="neutral-alpha-medium">
           <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
-            <Avatar size="xs" src="/images/avatar.jpg" />
-            <Text variant="label-default-s">Lorant One</Text>
+            <Avatar size="m" src="/images/avatar.jpg" />
+            <Text variant="label-default-s">Zhaq Wedding</Text>
           </Row>
 
           <Media
@@ -28,11 +28,11 @@ export default function WeddingPage() {
             aspectRatio="4 / 3"
             radius="l"
             alt="Proxima b"
-            src="/images/card.jpg"
+            src="/images/projects/project-01/avatar-01.jpg"
           />
 
           <Column fillWidth paddingX="20" paddingY="24" gap="8">
-            <Text variant="body-default-xl">Proxima b</Text>
+            <Text variant="body-default-xl">Wedding Theme 01</Text>
             <Text onBackground="neutral-weak" variant="body-default-s">
               A planet so cruel on the surface, but once you explore what's underneath, you'll
               question everything you know. Yet, you vibe with it.
