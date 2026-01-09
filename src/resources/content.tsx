@@ -189,7 +189,7 @@ const about: About = {
         title: "Designer",
         description: (
           <>Able to design in Canva and CorelDRAW. Editing photos in Adobe Photoshop
-            or Adobe Lightroom on PC, using PixelLab, Picsay and InShot on Mobile.</>
+            or Adobe Lightroom on PC. Using PixelLab, Picsay and InShot on Mobile.</>
         ),
         tags: [
           {
@@ -208,7 +208,38 @@ const about: About = {
             name: "Adobe Lightroom",
             icon: "adobe-lightroom",
           },
+          {
+            name: "PixelLab",
+            icon: "pixellab",
+          },
+          {
+            name: "Picsay Pro",
+            icon: "picsay",
+          },
+          {
+            name: "Inshot",
+            icon: "inshot",
+          },
         ],
+      },
+      {
+        title: "Photographer",
+        description: (
+          <>Photography Enthusiast.</>
+        )
+      },
+      {
+        title: "Copywriter",
+        description: (
+          <>Writing on social media platforms.</>
+        )
+      },
+      {
+        title: "Administration Secretary",
+        description: (
+          <>Skilled in managing financial records, organizing filing systems,
+            and ensuring accurate and transparent reporting of transactions.</>
+        ),
       },
     ],
   },
@@ -217,28 +248,31 @@ const about: About = {
     title: "Soft skills",
     skills: [
       {
-        title: "Communication",
+        title: "Critical Thinking",
         description: (
-          <>Able to communicate well with the public.</>
-        ),
+          <>Able to analyze and evaluate information effectively.</>
+        ), 
       },
       {
-        title: "Copywriter",
+        title: "Public Relations",
         description: (
-          <>Writing on social media platforms.</>
-        ),
-        tags: [
-          {
-            name: "Medium",
-            icon: "medium",
-          },
-        ],
+          <>Able to build and maintain good relationships with the community.</>
+        )
       },
       {
-        title: "Photographer",
+        title: "Public Speaking",
         description: (
-          <>Photography enthusiast.</>
-          ),
+          <>Able to communicate well with the public</>
+        )
+      },
+      {
+        title: "Organization",
+        description: (
+          <>Able to manage time and tasks effectively.</>
+        ),
+      },
+    ],
+  
         // optional: leave the array empty if you don't want to display images
 //        images: [
 //          {
@@ -274,7 +308,7 @@ const work: Work = {
 const gallery: Gallery = {
   path: "/gallery",
   label: "Certificates",
-  title: `Photo gallery – ${person.name}`,
+  title: `Certificates – ${person.name}`,
   description: `A certificate collection by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
