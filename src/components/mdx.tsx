@@ -203,6 +203,7 @@ const components = {
   Icon,
   Media,
   SmartLink,
+  Carousel,
 };
 
 type CustomMDXProps = MDXRemoteProps & {
