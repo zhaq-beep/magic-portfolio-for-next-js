@@ -3,7 +3,7 @@
 import React, { forwardRef } from "react";
 import { Flex } from "@once-ui-system/core";
 import styles from "./Card.module.scss";
-import { ElementType } from "./ElementType";
+import { ElementType } from "@once-ui-system/core";
 import classNames from "classnames";
 
 interface CardProps extends React.ComponentProps<typeof Flex> {
