@@ -28,33 +28,34 @@ export async function generateMetadata() {
 }
 
 export default function About() {
+  const { intro, work, studies, technical, softskills } = about;
   const structure = [
-    {
-      title: about.intro.title,
-      display: about.intro.display,
-      items: [],
-    },
-    {
-      title: about.work.title,
-      display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
-    },
-    {
-      title: about.studies.title,
-      display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
-    },
-    {
-      title: about.technical.title,
-      display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
-    },
-    {
-      title: softskills.title,
-      display: softskills.display,
-      items: softskills.skills.map((skill) => skill.title),
-    },
-  ];
+  {
+    title: intro.title,
+    display: intro.display,
+    items: [],
+  },
+  {
+    title: work.title,
+    display: work.display,
+    items: work.experiences.map((experience) => experience.company),
+  },
+  {
+    title: studies.title,
+    display: studies.display,
+    items: studies.institutions.map((institution) => institution.name),
+  },
+  {
+    title: technical.title,
+    display: technical.display,
+    items: technical.skills.map((skill) => skill.title),
+  },
+  {
+    title: softskills.title,
+    display: softskills.display,
+    items: softskills.skills.map((skill) => skill.title),
+  },
+];
   return (
     <Column maxWidth="m">
       <Schema
@@ -298,7 +299,7 @@ export default function About() {
               </Heading>
               <Column fillWidth gap="l">
                 {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
+                  <Column key={`${skill.title}-${index}`} fillWidth gap="4">
                     <Text id={skill.title} variant="heading-strong-l">
                       {skill.title}
                     </Text>
@@ -353,7 +354,7 @@ export default function About() {
               </Heading>
               <Column fillWidth gap="l">
                 {about.softskills.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
+                  <Column key={`${skill.title}-${index}`} fillWidth gap="4">
                     <Text id={skill.title} variant="heading-strong-l">
                       {skill.title}
                     </Text>
