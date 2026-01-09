@@ -14,7 +14,6 @@ import {
   Row,
   Avatar,
   Line,
-  Carousel,
 } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
