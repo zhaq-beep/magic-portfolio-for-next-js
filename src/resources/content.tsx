@@ -277,7 +277,7 @@ const about: About = {
         )
       },
       {
-        title: "Organization,
+        title: "Organization",
         description: (
           <>Able to organize and manage tasks efficiently.</>
         ),
