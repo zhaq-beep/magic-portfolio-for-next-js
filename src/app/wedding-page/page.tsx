@@ -49,9 +49,9 @@ export default function WeddingPage() {
             textVariant="label-default-s"
             onBackground="neutral-medium"
           >
-            <Icon name="like" size="s" onBackground="neutral-strong" />
+            <Icon name="sparkle" size="s" onBackground="neutral-strong" />
             34
-            <Icon name="chat" size="s" onBackground="neutral-strong" marginLeft="24" />
+            <Icon name="gift" size="s" onBackground="neutral-strong" marginLeft="24" />
             5
           </Row>
         </Card>
