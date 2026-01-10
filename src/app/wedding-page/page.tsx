@@ -55,7 +55,7 @@ export default function WeddingPage() {
             radius="l-4"
             direction="column"
             border="neutral-alpha-medium"
-            minWidth="150"
+            minWidth="m"
             style={{ flex: "1 1 calc(50% - 12px)", maxWidth: "450px" }}
           >
             <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
