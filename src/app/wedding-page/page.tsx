@@ -94,7 +94,11 @@ const weddingCards: WeddingCard[] = [
     gifts: 0,
     href: "/promo/special-wedding",
   },
-];
+]
+
+export default function WeddingPage() {
+  return <div>Wedding Page Content</div>;
+}
 
 /* =======================
    PAGE
