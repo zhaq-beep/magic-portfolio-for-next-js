@@ -38,8 +38,8 @@ const weddingCards: WeddingCard[] = [
   {
     id: "wedding-01",
     title: "Wedding Theme 1",
-    couple: "Andi & Siti",
-    description: "Undangan Pernikahan dengan tema classic modern.",
+    couple: "Tema Klasik Bunga",
+    description: "Undangan Pernikahan dengan tema klasik.",
     image: "/images/wedding-01.jpg",
     likes: 34,
     gifts: 5,
@@ -48,8 +48,8 @@ const weddingCards: WeddingCard[] = [
   {
     id: "wedding-02",
     title: "Wedding Theme 2",
-    couple: "Budi & Rina",
-    description: "Undangan Pernikahan simpel dan indah.",
+    couple: "Tema Minimalis",
+    description: "Undangan Pernikahan dengan tema minimalis.",
     image: "/images/wedding-02.jpg",
     likes: 21,
     gifts: 3,
@@ -58,8 +58,8 @@ const weddingCards: WeddingCard[] = [
   {
     id: "wedding-03",
     title: "Wedding Theme 3",
-    couple: "Dedi & Maya",
-    description: "Undangan Pernikahan dengan tema adat.",
+    couple: "Tema Adat Sunda",
+    description: "Undangan Pernikahan dengan tema adat Sunda.",
     image: "/images/wedding-02.jpg",
     likes: 21,
     gifts: 3,
@@ -68,8 +68,8 @@ const weddingCards: WeddingCard[] = [
   {
     id: "wedding-04",
     title: "Wedding Theme 4",
-    couple: "Zaki & Who?",
-    description: "Undangan Pernikahan spesial.",
+    couple: "Tema Adat Jawa",
+    description: "Undangan Pernikahan dengan tema adat Jawa.",
     image: "/images/wedding-01.jpg",
     likes: 100,
     gifts: 100,
