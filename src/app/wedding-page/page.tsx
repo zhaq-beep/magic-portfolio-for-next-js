@@ -28,7 +28,7 @@ type WeddingCard = {
   couple: string;
   description: string;
   image: string;
-  likes: number;
+  person: number;
   gifts: number;
   href: string;
 };
