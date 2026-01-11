@@ -40,8 +40,8 @@ const weddingCards: WeddingCard[] = [
     couple: "Tema Klasik Bunga",
     description: "Undangan Pernikahan dengan tema klasik.",
     image: "/images/wedding-01.jpg",
-    likes: 34,
-    gifts: 5,
+    person: 0,
+    gifts: 0,
     href: "/wedding/andi-siti",
   },
   {
@@ -50,8 +50,8 @@ const weddingCards: WeddingCard[] = [
     couple: "Tema Minimalis",
     description: "Undangan Pernikahan dengan tema minimalis.",
     image: "/images/wedding-02.jpg",
-    likes: 21,
-    gifts: 3,
+    person: 0,
+    gifts: 0,
     href: "/wedding/budi-rina",
   },
   {
@@ -60,8 +60,8 @@ const weddingCards: WeddingCard[] = [
     couple: "Tema Adat Sunda",
     description: "Undangan Pernikahan dengan tema adat Sunda.",
     image: "/images/wedding-02.jpg",
-    likes: 21,
-    gifts: 3,
+    person: 0,
+    gifts: 0,
     href: "/wedding/dedi-maya",
   },
   {
@@ -70,8 +70,8 @@ const weddingCards: WeddingCard[] = [
     couple: "Tema Adat Jawa",
     description: "Undangan Pernikahan dengan tema adat Jawa.",
     image: "/images/wedding-01.jpg",
-    likes: 100,
-    gifts: 100,
+    person: 0,
+    gifts: 0,
     href: "/promo/special-wedding",
   },
   {
@@ -80,8 +80,8 @@ const weddingCards: WeddingCard[] = [
     couple: "Tema Modern",
     description: "Undangan Pernikahan dengan tema modern.",
     image: "/images/wedding-01.jpg",
-    likes: 100,
-    gifts: 100,
+    person: 0,
+    gifts: 0,
     href: "/promo/special-wedding",
   },
   {
@@ -90,8 +90,8 @@ const weddingCards: WeddingCard[] = [
     couple: "Tema Simpel dan Elegan",
     description: "Undangan Pernikahan dengan tema simpel nan elegan.",
     image: "/images/wedding-01.jpg",
-    likes: 100,
-    gifts: 100,
+    person: 0,
+    gifts: 0,
     href: "/promo/special-wedding",
   },
 ];
@@ -164,8 +164,8 @@ export default function WeddingPage() {
               textVariant="label-default-s"
               onBackground="neutral-medium"
             >
-              <Icon name="gift" size="s" />
-              {card.gifts}
+              <Icon name="person" size="s" />
+              {card.person}
               <Icon name="gift" size="s" />
               {card.gifts}
             </Row>
@@ -184,7 +184,7 @@ export default function WeddingPage() {
           <Column gap="m">
             <Media
               src={activeCard.image}
-              aspectRatio="4 / 3"
+              aspectRatio="16 / 10"
               radius="m"
             />
 
