@@ -60,7 +60,7 @@ export default function WeddingPage() {
               radius="l-4"
               direction="column"
               border="neutral-alpha-medium"
-              fillHeight
+              minHeight
             >
               {/* HEADER */}
               <Row
