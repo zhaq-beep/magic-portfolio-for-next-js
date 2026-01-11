@@ -54,57 +54,13 @@ const weddingCards: WeddingCard[] = [
     gifts: 0,
     href: "/wedding/budi-rina",
   },
-  {
-    id: "wedding-03",
-    title: "Wedding Theme 3",
-    couple: "Tema Adat Sunda",
-    description: "Undangan Pernikahan dengan tema adat Sunda.",
-    image: "/images/wedding-02.jpg",
-    person: 0,
-    gifts: 0,
-    href: "/wedding/dedi-maya",
-  },
-  {
-    id: "wedding-04",
-    title: "Wedding Theme 4",
-    couple: "Tema Adat Jawa",
-    description: "Undangan Pernikahan dengan tema adat Jawa.",
-    image: "/images/wedding-01.jpg",
-    person: 0,
-    gifts: 0,
-    href: "/promo/special-wedding",
-  },
-  {
-    id: "wedding-05",
-    title: "Wedding Theme 5",
-    couple: "Tema Modern",
-    description: "Undangan Pernikahan dengan tema modern.",
-    image: "/images/wedding-01.jpg",
-    person: 0,
-    gifts: 0,
-    href: "/promo/special-wedding",
-  },
-  {
-    id: "wedding-06",
-    title: "Wedding Theme 6",
-    couple: "Tema Simpel dan Elegan",
-    description: "Undangan Pernikahan dengan tema simpel nan elegan.",
-    image: "/images/wedding-01.jpg",
-    person: 0,
-    gifts: 0,
-    href: "/promo/special-wedding",
-  },
-]
-
-export default function WeddingPage() {
-  return <div>Wedding Page Content</div>;
-}
+];
 
 /* =======================
    PAGE
 ======================= */
 
-export default function WeddingPage() {
+export default function Page() {
   const router = useRouter();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -123,7 +79,6 @@ export default function WeddingPage() {
 
   return (
     <Column as="main" fillWidth padding="l" gap="l">
-      {/* ================= GRID ================= */}
       <Grid fillWidth maxWidth="xl" columns={3} gap="m">
         {weddingCards.map((card) => (
           <Card
@@ -132,16 +87,13 @@ export default function WeddingPage() {
             radius="l-4"
             border="neutral-alpha-medium"
             cursor="interactive"
-            onMouseEnter={() => router.prefetch(card.href)}
-            onClick={() => openDialog(card)}   // ✅ FIXED
+            onClick={() => openDialog(card)}
           >
-            {/* HEADER */}
             <Row fillWidth paddingX="s" paddingY="xs" gap="xs" vertical="center">
               <Avatar size="m" src="/images/avatar.jpg" />
               <Text variant="label-default-m">{card.title}</Text>
             </Row>
 
-            {/* IMAGE */}
             <Media
               fillWidth
               aspectRatio="16 / 10"
@@ -150,7 +102,6 @@ export default function WeddingPage() {
               alt={card.title}
             />
 
-            {/* CONTENT */}
             <Column fillWidth padding="s" gap="xs">
               <Text variant="body-default-l">{card.couple}</Text>
               <Text variant="body-default-s" onBackground="neutral-weak">
@@ -160,14 +111,7 @@ export default function WeddingPage() {
 
             <Line background="neutral-alpha-medium" />
 
-            {/* FOOTER */}
-            <Row
-              padding="s"
-              gap="xs"
-              vertical="center"
-              textVariant="label-default-s"
-              onBackground="neutral-medium"
-            >
+            <Row padding="s" gap="xs" vertical="center">
               <Icon name="person" size="s" />
               {card.person}
               <Icon name="gift" size="s" />
@@ -177,7 +121,6 @@ export default function WeddingPage() {
         ))}
       </Grid>
 
-      {/* ================= DIALOG ================= */}
       <Dialog
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
@@ -186,28 +129,15 @@ export default function WeddingPage() {
       >
         {activeCard && (
           <Column gap="m">
-            <Media
-              src={activeCard.image}
-              aspectRatio="16 / 10"
-              radius="m"
-            />
-
+            <Media src={activeCard.image} aspectRatio="16 / 10" radius="m" />
             <Heading size="s">{activeCard.couple}</Heading>
-
-            <Text variant="body-default-s">
-              {activeCard.description}
-            </Text>
+            <Text>{activeCard.description}</Text>
 
             <Row fillWidth horizontal="end" gap="s">
-              <Button
-                variant="secondary"
-                onClick={() => setIsOpen(false)}
-              >
+              <Button variant="secondary" onClick={() => setIsOpen(false)}>
                 Kembali
               </Button>
-              <Button onClick={goToWedding}>
-                Oke mau liat 🚀
-              </Button>
+              <Button onClick={goToWedding}>Oke mau liat 🚀</Button>
             </Row>
           </Column>
         )}
