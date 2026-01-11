@@ -102,9 +102,9 @@ export default function WeddingPage() {
                 textVariant="label-default-s"
                 onBackground="neutral-medium"
               >
-                <Icon name="like" size="s" />
+                <Icon name="like" size="s" marginLeft="m" />
                 {card.likes}
-                <Icon name="gift" size="s" marginLeft="l" />
+                <Icon name="gift" size="s" marginLeft="m" />
                 {card.gifts}
               </Row>
             </Card>
