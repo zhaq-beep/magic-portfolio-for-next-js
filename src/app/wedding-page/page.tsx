@@ -11,8 +11,6 @@ import {
   Icon,
   Dialog,
   Button,
-  AvatarGroup,
-  Flex,
   Heading,
 } from "@once-ui-system/core";
 import "@/components/Card.module.scss";
@@ -60,20 +58,13 @@ const weddingCards = [
 export default function WeddingPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCard, setActiveCard] = useState<any>(null);
-  
+
   return (
     <Column as="main" fillWidth paddingY="l" paddingX="m">
-      <Row
-        fillWidth
-        maxWidth="xl"
-        gap="xs"
-        wrap
-      >
+      {/* CARD GRID */}
+      <Row fillWidth maxWidth="xl" gap="xs" wrap>
         {weddingCards.map((card) => (
-          <Column
-            key={card.id}
-            s={{ fillWidth: true }}
-          >
+          <Column key={card.id} s={{ fillWidth: true }}>
             <Card
               className="wedding-card"
               radius="l-4"
@@ -98,22 +89,22 @@ export default function WeddingPage() {
 
               {/* IMAGE */}
               <Media
-                border="neutral-alpha-weak"
-                sizes="400px"
                 fillWidth
+                sizes="400px"
                 aspectRatio="4 / 3"
                 radius="l"
+                border="neutral-alpha-weak"
                 alt={card.title}
                 src={card.image}
               />
 
               {/* CONTENT */}
-              <Column fillWidth
-                paddingX="s"
-                paddingY="m"
-                gap="xs">
+              <Column fillWidth paddingX="s" paddingY="m" gap="xs">
                 <Text variant="body-default-xl">{card.couple}</Text>
-                <Text onBackground="neutral-weak" variant="body-default-s">
+                <Text
+                  variant="body-default-s"
+                  onBackground="neutral-weak"
+                >
                   {card.description}
                 </Text>
               </Column>
@@ -138,6 +129,51 @@ export default function WeddingPage() {
           </Column>
         ))}
       </Row>
+
+      {/* DIALOG */}
+      <Dialog
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        title="Buka Undangan?"
+        description="Kamu akan melihat detail undangan pernikahan."
+      >
+        {activeCard && (
+          <Column fillWidth gap="12">
+            <Media
+              src={activeCard.image}
+              aspectRatio="4 / 3"
+              radius="m"
+            />
+
+            <Heading size="s">{activeCard.couple}</Heading>
+
+            <Text
+              variant="body-default-s"
+              onBackground="neutral-weak"
+            >
+              {activeCard.description}
+            </Text>
+
+            <Row fillWidth gap="8" horizontal="right">
+              <Button
+                variant="secondary"
+                onClick={() => setIsOpen(false)}
+              >
+                Batal
+              </Button>
+
+              <Button
+                onClick={() => {
+                  setIsOpen(false);
+                  window.location.href = `/wedding/${activeCard.id}`;
+                }}
+              >
+                Lihat Undangan
+              </Button>
+            </Row>
+          </Column>
+        )}
+      </Dialog>
     </Column>
   );
 }
