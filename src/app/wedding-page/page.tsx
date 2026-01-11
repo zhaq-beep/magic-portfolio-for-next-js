@@ -7,6 +7,18 @@ import {
   Column,
   Line,
   Icon,
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+  Button,
+  AvatarGroup,
+  Carousel,
+  Column,
+  Flex,
+  Heading,
+  SmartLink,
+  Text,
 } from "@once-ui-system/core";
 import "@/components/Card.module.scss";
 
