@@ -48,7 +48,6 @@ export default function WeddingPage() {
         maxWidth="xl"
         gap="m"
         wrap
-        horizontal="center"
       >
         {weddingCards.map((card) => (
           <Card
@@ -57,7 +56,11 @@ export default function WeddingPage() {
             radius="l-4"
             direction="column"
             border="neutral-alpha-medium"
-            minWidth="xs"
+            minWidth="m"
+            s={{
+              fill: true,      // ⬅️ mobile: 2 card per row
+              minWidth: "xs", // ⬅️ kunci utama
+            }}
           >
             <Row
               fillWidth
@@ -80,12 +83,7 @@ export default function WeddingPage() {
               src={card.image}
             />
 
-            <Column
-              fillWidth
-              paddingX="m"
-              paddingY="l"
-              gap="xs"
-            >
+            <Column fillWidth paddingX="m" paddingY="l" gap="xs">
               <Text variant="body-default-xl">{card.couple}</Text>
               <Text onBackground="neutral-weak" variant="body-default-s">
                 {card.description}
@@ -102,14 +100,9 @@ export default function WeddingPage() {
               textVariant="label-default-s"
               onBackground="neutral-medium"
             >
-              <Icon name="like" size="s" aria-label="Likes" />
+              <Icon name="like" size="s" />
               {card.likes}
-              <Icon
-                name="gift"
-                size="s"
-                marginLeft="l"
-                aria-label="Gifts"
-              />
+              <Icon name="gift" size="s" marginLeft="l" />
               {card.gifts}
             </Row>
           </Card>
