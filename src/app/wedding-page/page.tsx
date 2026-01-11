@@ -18,8 +18,6 @@ import {
   Grid,
 } from "@once-ui-system/core";
 
-import "@/components/Card.module.scss";
-
 /* =======================
    DATA
 ======================= */
@@ -84,28 +82,25 @@ const weddingCards: WeddingCard[] = [
 
 export default function WeddingPage() {
   const router = useRouter();
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeCard, setActiveCard] = useState<WeddingCard | null>(null);
+
   const openDialog = (card: WeddingCard) => {
     setActiveCard(card);
     setIsOpen(true);
   };
+
   const goToWedding = () => {
     if (!activeCard) return;
     setIsOpen(false);
     router.push(activeCard.href);
   };
-  
+
   return (
     <Column as="main" fillWidth padding="l" gap="l">
-
-      {/* GRID */}
-      <Grid
-        fillWidth
-        maxWidth="xl"
-        columns={4}
-        gap="m"
-      >
+      {/* ================= GRID ================= */}
+      <Grid fillWidth maxWidth="xl" columns={4} gap="m">
         {weddingCards.map((card) => (
           <Card
             key={card.id}
@@ -114,16 +109,10 @@ export default function WeddingPage() {
             border="neutral-alpha-medium"
             cursor="interactive"
             onMouseEnter={() => router.prefetch(card.href)}
-            onClick={() => setActive(card)}
+            onClick={() => openDialog(card)}   // ✅ FIXED
           >
             {/* HEADER */}
-            <Row
-              fillWidth
-              paddingX="s"
-              paddingY="xs"
-              gap="xs"
-              vertical="center"
-            >
+            <Row fillWidth paddingX="s" paddingY="xs" gap="xs" vertical="center">
               <Avatar size="m" src="/images/avatar.jpg" />
               <Text variant="label-default-m">{card.title}</Text>
             </Row>
@@ -164,27 +153,35 @@ export default function WeddingPage() {
         ))}
       </Grid>
 
-      {/* DIALOG */}
+      {/* ================= DIALOG ================= */}
       <Dialog
-        isOpen={!!active}
-        onClose={() => setActive(null)}
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
         title="Lihat undangan?"
         description="Kamu akan melihat detail undangan pernikahan"
       >
-        {active && (
+        {activeCard && (
           <Column gap="m">
-            <Media src={active.image} aspectRatio="4 / 3" radius="m" />
-            <Heading size="s">{active.couple}</Heading>
-            <Text variant="body-default-s">{active.description}</Text>
+            <Media
+              src={activeCard.image}
+              aspectRatio="4 / 3"
+              radius="m"
+            />
+
+            <Heading size="s">{activeCard.couple}</Heading>
+
+            <Text variant="body-default-s">
+              {activeCard.description}
+            </Text>
 
             <Row fillWidth horizontal="end" gap="s">
               <Button
                 variant="secondary"
-                onClick={() => setActive(null)}
+                onClick={() => setIsOpen(false)}
               >
                 Kembali
               </Button>
-              <Button onClick={() => router.push(active.href)}>
+              <Button onClick={goToWedding}>
                 Oke mau liat 🚀
               </Button>
             </Row>
