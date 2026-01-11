@@ -72,8 +72,8 @@ export default function WeddingPage() {
               {/* HEADER */}
               <Row
                 fillWidth
-                paddingX="m"
-                paddingY="s"
+                paddingX="s"
+                paddingY="xs"
                 gap="xs"
                 vertical="center"
               >
@@ -93,7 +93,10 @@ export default function WeddingPage() {
               />
 
               {/* CONTENT */}
-              <Column fillWidth paddingX="m" paddingY="l" gap="xs">
+              <Column fillWidth
+                paddingX="s"
+                paddingY="m"
+                gap="xs">
                 <Text variant="body-default-xl">{card.couple}</Text>
                 <Text onBackground="neutral-weak" variant="body-default-s">
                   {card.description}
