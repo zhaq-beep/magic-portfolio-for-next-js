@@ -13,11 +13,8 @@ import {
   DialogFooter,
   Button,
   AvatarGroup,
-  Carousel,
-  Column,
   Flex,
   Heading,
-  SmartLink,
 } from "@once-ui-system/core";
 import "@/components/Card.module.scss";
 
