@@ -54,13 +54,53 @@ const weddingCards: WeddingCard[] = [
     gifts: 0,
     href: "/wedding/budi-rina",
   },
+  {
+    id: "wedding-03",
+    title: "Wedding Theme 3",
+    couple: "Tema Adat Sunda",
+    description: "Undangan Pernikahan dengan tema adat Sunda.",
+    image: "/images/wedding-02.jpg",
+    person: 0,
+    gifts: 0,
+    href: "/wedding/dedi-maya",
+  },
+  {
+    id: "wedding-04",
+    title: "Wedding Theme 4",
+    couple: "Tema Adat Jawa",
+    description: "Undangan Pernikahan dengan tema adat Jawa.",
+    image: "/images/wedding-01.jpg",
+    person: 0,
+    gifts: 0,
+    href: "/promo/special-wedding",
+  },
+  {
+    id: "wedding-05",
+    title: "Wedding Theme 5",
+    couple: "Tema Modern",
+    description: "Undangan Pernikahan dengan tema modern.",
+    image: "/images/wedding-01.jpg",
+    person: 0,
+    gifts: 0,
+    href: "/promo/special-wedding",
+  },
+  {
+    id: "wedding-06",
+    title: "Wedding Theme 6",
+    couple: "Tema Simpel dan Elegan",
+    description: "Undangan Pernikahan dengan tema simpel nan elegan.",
+    image: "/images/wedding-01.jpg",
+    person: 0,
+    gifts: 0,
+    href: "/promo/special-wedding",
+  },
 ];
 
 /* =======================
    PAGE
 ======================= */
 
-export default function Page() {
+export default function WeddingPage() {
   const router = useRouter();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -79,6 +119,7 @@ export default function Page() {
 
   return (
     <Column as="main" fillWidth padding="l" gap="l">
+      {/* ================= GRID ================= */}
       <Grid fillWidth maxWidth="xl" columns={3} gap="m">
         {weddingCards.map((card) => (
           <Card
@@ -87,13 +128,16 @@ export default function Page() {
             radius="l-4"
             border="neutral-alpha-medium"
             cursor="interactive"
-            onClick={() => openDialog(card)}
+            onMouseEnter={() => router.prefetch(card.href)}
+            onClick={() => openDialog(card)}   // ✅ FIXED
           >
+            {/* HEADER */}
             <Row fillWidth paddingX="s" paddingY="xs" gap="xs" vertical="center">
               <Avatar size="m" src="/images/avatar.jpg" />
               <Text variant="label-default-m">{card.title}</Text>
             </Row>
 
+            {/* IMAGE */}
             <Media
               fillWidth
               aspectRatio="16 / 10"
@@ -102,6 +146,7 @@ export default function Page() {
               alt={card.title}
             />
 
+            {/* CONTENT */}
             <Column fillWidth padding="s" gap="xs">
               <Text variant="body-default-l">{card.couple}</Text>
               <Text variant="body-default-s" onBackground="neutral-weak">
@@ -111,7 +156,14 @@ export default function Page() {
 
             <Line background="neutral-alpha-medium" />
 
-            <Row padding="s" gap="xs" vertical="center">
+            {/* FOOTER */}
+            <Row
+              padding="s"
+              gap="xs"
+              vertical="center"
+              textVariant="label-default-s"
+              onBackground="neutral-medium"
+            >
               <Icon name="person" size="s" />
               {card.person}
               <Icon name="gift" size="s" />
@@ -121,6 +173,7 @@ export default function Page() {
         ))}
       </Grid>
 
+      {/* ================= DIALOG ================= */}
       <Dialog
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
@@ -129,15 +182,28 @@ export default function Page() {
       >
         {activeCard && (
           <Column gap="m">
-            <Media src={activeCard.image} aspectRatio="16 / 10" radius="m" />
+            <Media
+              src={activeCard.image}
+              aspectRatio="16 / 10"
+              radius="m"
+            />
+
             <Heading size="s">{activeCard.couple}</Heading>
-            <Text>{activeCard.description}</Text>
+
+            <Text variant="body-default-s">
+              {activeCard.description}
+            </Text>
 
             <Row fillWidth horizontal="end" gap="s">
-              <Button variant="secondary" onClick={() => setIsOpen(false)}>
+              <Button
+                variant="secondary"
+                onClick={() => setIsOpen(false)}
+              >
                 Kembali
               </Button>
-              <Button onClick={goToWedding}>Oke mau liat 🚀</Button>
+              <Button onClick={goToWedding}>
+                Oke mau liat 🚀
+              </Button>
             </Row>
           </Column>
         )}
