@@ -57,7 +57,7 @@ export default function WeddingPage() {
             radius="l-4"
             direction="column"
             border="neutral-alpha-medium"
-            minWidth="m"
+            minWidth="xs"
           >
             <Row
               fillWidth
