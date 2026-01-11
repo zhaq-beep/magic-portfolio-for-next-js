@@ -8,7 +8,7 @@ import {
   Line,
   Icon,
 } from "@once-ui-system/core";
-import "./Card.moudule.css";
+import "@/components/Card.module.css";
 
 const weddingCards = [
   {
