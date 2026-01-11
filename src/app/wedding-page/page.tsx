@@ -69,7 +69,7 @@ export default function WeddingPage() {
                 vertical="center"
               >
                 <Avatar size="xs" src="/images/avatar.jpg" />
-                <Text variant="label-default-s">{card.title}</Text>
+                <Text variant="label-default-m">{card.title}</Text>
               </Row>
 
               {/* IMAGE */}
@@ -114,3 +114,11 @@ export default function WeddingPage() {
     </Column>
   );
 }
+
+
+<Row fillWidth gap="16" s={{direction: "column"}}>
+  <Background fillWidth height={6} />
+  <Background fillWidth height={6} />
+  <Background fillWidth height={6} />
+</Row>
+
