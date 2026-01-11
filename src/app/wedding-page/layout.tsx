@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Wedding Page",
+  title: "Wedding Page - Zhaq Project",
 };
 
 export default function Layout({
