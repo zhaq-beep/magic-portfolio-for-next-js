@@ -74,6 +74,26 @@ const weddingCards: WeddingCard[] = [
     gifts: 100,
     href: "/promo/special-wedding",
   },
+  {
+    id: "wedding-05",
+    title: "Wedding Theme 5",
+    couple: "Tema Modern",
+    description: "Undangan Pernikahan dengan tema modern.",
+    image: "/images/wedding-01.jpg",
+    likes: 100,
+    gifts: 100,
+    href: "/promo/special-wedding",
+  },
+  {
+    id: "wedding-06",
+    title: "Wedding Theme 6",
+    couple: "Tema Simpel dan Elegan",
+    description: "Undangan Pernikahan dengan tema simpel nan elegan.",
+    image: "/images/wedding-01.jpg",
+    likes: 100,
+    gifts: 100,
+    href: "/promo/special-wedding",
+  },
 ];
 
 /* =======================
