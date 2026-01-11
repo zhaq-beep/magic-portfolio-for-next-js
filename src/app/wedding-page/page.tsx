@@ -73,10 +73,9 @@ export default function WeddingPage() {
               radius="l-4"
               direction="column"
               border="neutral-alpha-medium"
-              interactive
               onClick={() => {
-              setActiveCard(card);
-              setIsOpen(true);
+                setActiveCard(card);
+                setIsOpen(true);
               }}
             >
               {/* HEADER */}
