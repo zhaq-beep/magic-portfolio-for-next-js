@@ -43,7 +43,7 @@ const weddingCards = [
     title: "Wedding Theme 4",
     couple: "Zaki & Who?",
     description: "Undangan Pernikahan dengan tema adat sunda.",
-    image: "/images/wedding-04.jpg",
+    image: "/images/wedding-01.jpg",
     likes: 100,
     gifts: 100,
   },
