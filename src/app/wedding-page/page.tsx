@@ -18,7 +18,6 @@ import {
   Flex,
   Heading,
   SmartLink,
-  Text,
 } from "@once-ui-system/core";
 import "@/components/Card.module.scss";
 
