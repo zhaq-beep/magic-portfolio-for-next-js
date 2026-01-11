@@ -154,7 +154,7 @@ export default function WeddingPage() {
               {activeCard.description}
             </Text>
 
-            <Row fillWidth gap="8" horizontal="right">
+            <Row fillWidth gap="8" horizontal="end">
               <Button
                 variant="secondary"
                 onClick={() => setIsOpen(false)}
