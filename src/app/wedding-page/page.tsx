@@ -8,6 +8,7 @@ import {
   Line,
   Icon,
 } from "@once-ui-system/core";
+import "./wedding.css";
 
 const weddingCards = [
   {
@@ -41,27 +42,28 @@ const weddingCards = [
 
 export default function WeddingPage() {
   return (
-    <Column as="main" fillWidth paddingY="32" paddingX="24">
+    <Column as="main" fillWidth paddingY={32} paddingX={24}>
       <Row
         fillWidth
         maxWidth="xl"
-        gap="24"
+        gap={24}
         wrap
         horizontal="center"
       >
         {weddingCards.map((card) => (
           <Card
             key={card.id}
+            className="wedding-card"
             radius="l-4"
             direction="column"
             border="neutral-alpha-medium"
             minWidth="m"
-            style={{ flex: "1 1 calc(50% - 12px)", maxWidth: "450px" }}
           >
-            <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
+            <Row fillWidth paddingX={20} paddingY={12} gap={8} vertical="center">
               <Avatar size="xs" src="/images/avatar.jpg" />
               <Text variant="label-default-s">{card.title}</Text>
             </Row>
+
             <Media
               border="neutral-alpha-weak"
               sizes="400px"
@@ -71,24 +73,27 @@ export default function WeddingPage() {
               alt={card.title}
               src={card.image}
             />
-            <Column fillWidth paddingX="20" paddingY="24" gap="8">
+
+            <Column fillWidth paddingX={20} paddingY={24} gap={8}>
               <Text variant="body-default-xl">{card.couple}</Text>
               <Text onBackground="neutral-weak" variant="body-default-s">
                 {card.description}
               </Text>
             </Column>
+
             <Line background="neutral-alpha-medium" />
+
             <Row
-              paddingX="20"
-              paddingY="12"
-              gap="8"
+              paddingX={20}
+              paddingY={12}
+              gap={8}
               vertical="center"
               textVariant="label-default-s"
               onBackground="neutral-medium"
             >
               <Icon name="like" size="s" aria-label="Likes" />
               {card.likes}
-              <Icon name="gift" size="s" marginLeft="24" aria-label="Gifts" />
+              <Icon name="gift" size="s" marginLeft={24} aria-label="Gifts" />
               {card.gifts}
             </Row>
           </Card>
