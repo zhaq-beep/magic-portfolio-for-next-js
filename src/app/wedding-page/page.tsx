@@ -32,11 +32,20 @@ const weddingCards = [
   {
     id: "wedding-03",
     title: "Wedding Theme 3",
-    couple: "Dedi & Maya",
+    couple: "Budi & Rina",
+    description: "Undangan Pernikahan simpel dan indah.",
+    image: "/images/wedding-02.jpg",
+    likes: 21,
+    gifts: 3,
+  },
+  {
+    id: "wedding-04",
+    title: "Wedding Theme 4",
+    couple: "Zaki & Who?",
     description: "Undangan Pernikahan dengan tema adat sunda.",
-    image: "/images/wedding-03.jpg",
-    likes: 30,
-    gifts: 6,
+    image: "/images/wedding-04.jpg",
+    likes: 100,
+    gifts: 100,
   },
 ];
 
@@ -46,7 +55,7 @@ export default function WeddingPage() {
       <Row
         fillWidth
         maxWidth="xl"
-        gap="m"
+        gap="xs"
         wrap
       >
         {weddingCards.map((card) => (
@@ -68,7 +77,7 @@ export default function WeddingPage() {
                 gap="xs"
                 vertical="center"
               >
-                <Avatar size="xs" src="/images/avatar.jpg" />
+                <Avatar size="m" src="/images/avatar.jpg" />
                 <Text variant="label-default-m">{card.title}</Text>
               </Row>
 
