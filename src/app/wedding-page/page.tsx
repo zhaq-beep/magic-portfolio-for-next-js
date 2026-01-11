@@ -14,6 +14,7 @@ import {
   Heading,
 } from "@once-ui-system/core";
 import "@/components/Card.module.scss";
+import { useState } from "react";
 
 const weddingCards = [
   {
@@ -55,6 +56,9 @@ const weddingCards = [
 ];
 
 export default function WeddingPage() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCard, setActiveCard] = useState<any>(null);
+  
   return (
     <Column as="main" fillWidth paddingY="l" paddingX="m">
       <Row
