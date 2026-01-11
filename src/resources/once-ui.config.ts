@@ -23,6 +23,7 @@ const routes: RoutesConfig = {
   "/blog": false,
   "/gallery": true,
   "/wedding-page": true,
+  "/quiz": true,
 };
 
 const display: DisplayConfig = {
@@ -34,7 +35,7 @@ const display: DisplayConfig = {
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
 const protectedRoutes: ProtectedRoutesConfig = {
-  "/gallery": true,
+  "/gallery": false,
 };
 
 // Import and set font for each variant
