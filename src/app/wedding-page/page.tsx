@@ -42,107 +42,77 @@ const weddingCards = [
 
 export default function WeddingPage() {
   return (
-    <Column as="main" fillWidth fitHeight gap="xl" s={{direction: "column"}}>
+    <Column as="main" fillWidth paddingY="l" paddingX="m">
       <Row
         fillWidth
-        maxWidth="m"
+        maxWidth="xl"
         gap="m"
         wrap
       >
         {weddingCards.map((card) => (
-          <Card
+          <Column
             key={card.id}
-            className="wedding-card"
-            radius="l-4"
-            direction="column"
-            border="neutral-alpha-medium"
-            minWidth="m"
-            s={{
-              fill: true,      // ⬅️ mobile: 2 card per row
-              minWidth: "xs", // ⬅️ kunci utama
-            }}
+            fill
+            s={{ fillWidth: true }}
           >
-            <Row
-              fillWidth
-              paddingX="m"
-              paddingY="s"
-              gap="xs"
-              vertical="center"
+            <Card
+              className="wedding-card"
+              radius="l-4"
+              direction="column"
+              border="neutral-alpha-medium"
+              fillHeight
             >
-              <Avatar size="xs" src="/images/avatar.jpg" />
-              <Text variant="label-default-s">{card.title}</Text>
-            </Row>
+              {/* HEADER */}
+              <Row
+                fillWidth
+                paddingX="m"
+                paddingY="s"
+                gap="xs"
+                vertical="center"
+              >
+                <Avatar size="xs" src="/images/avatar.jpg" />
+                <Text variant="label-default-s">{card.title}</Text>
+              </Row>
 
-            <Media
-              border="neutral-alpha-weak"
-              sizes="400px"
-              fillWidth
-              aspectRatio="4 / 3"
-              radius="l"
-              alt={card.title}
-              src={card.image}
-            />
+              {/* IMAGE */}
+              <Media
+                border="neutral-alpha-weak"
+                sizes="400px"
+                fillWidth
+                aspectRatio="4 / 3"
+                radius="l"
+                alt={card.title}
+                src={card.image}
+              />
 
-            <Column fillWidth paddingX="m" paddingY="l" gap="xs">
-              <Text variant="body-default-xl">{card.couple}</Text>
-              <Text onBackground="neutral-weak" variant="body-default-s">
-                {card.description}
-              </Text>
-            </Column>
+              {/* CONTENT */}
+              <Column fillWidth paddingX="m" paddingY="l" gap="xs">
+                <Text variant="body-default-xl">{card.couple}</Text>
+                <Text onBackground="neutral-weak" variant="body-default-s">
+                  {card.description}
+                </Text>
+              </Column>
 
-            <Line background="neutral-alpha-medium" />
+              <Line background="neutral-alpha-medium" />
 
-            <Row
-              paddingX="m"
-              paddingY="s"
-              gap="xs"
-              vertical="center"
-              textVariant="label-default-s"
-              onBackground="neutral-medium"
-            >
-              <Icon name="like" size="s" />
-              {card.likes}
-              <Icon name="gift" size="s" marginLeft="l" />
-              {card.gifts}
-            </Row>
-          </Card>
+              {/* FOOTER */}
+              <Row
+                paddingX="m"
+                paddingY="s"
+                gap="xs"
+                vertical="center"
+                textVariant="label-default-s"
+                onBackground="neutral-medium"
+              >
+                <Icon name="like" size="s" />
+                {card.likes}
+                <Icon name="gift" size="s" marginLeft="l" />
+                {card.gifts}
+              </Row>
+            </Card>
+          </Column>
         ))}
       </Row>
     </Column>
   );
 }
-
-<Row maxWidth={24}>
-  <Card radius="l-4" direction="column" border="neutral-alpha-medium">
-    <Row fillWidth paddingX="20" paddingY="12" gap="8" vertical="center">
-      <Avatar size="xs" src="/images/avatar.jpg"/>
-      <Text variant="label-default-s">Lorant One</Text>
-    </Row>
-    <Media
-      border="neutral-alpha-weak"
-      sizes="400px"
-      fillWidth
-      aspectRatio="4 / 3"
-      radius="l"
-      alt="Proxima b"
-      src="/images/card.jpg"
-    />
-    <Column fillWidth paddingX="20" paddingY="24" gap="8">
-      <Text variant="body-default-xl">Proxima b</Text>
-      <Text onBackground="neutral-weak" variant="body-default-s">
-        A planet so cruel on the surface, but once you explore what's underneath, you'll question
-        everything you know. Yet, you vibe with it.
-      </Text>
-    </Column>
-    <Line background="neutral-alpha-medium" />
-    <Row
-      paddingX="20" paddingY="12" gap="8" vertical="center"
-      textVariant="label-default-s" onBackground="neutral-medium"
-    >
-      <Icon name="like" size="s" onBackground="neutral-strong" />
-      34
-      <Icon name="chat" size="s" onBackground="neutral-strong" marginLeft="24" />
-      5
-    </Row>
-  </Card>
-</Row>
