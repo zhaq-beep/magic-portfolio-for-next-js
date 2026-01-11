@@ -100,7 +100,7 @@ export default function WeddingPage() {
   return (
     <Column as="main" fillWidth padding="l" gap="l">
       {/* ================= GRID ================= */}
-      <Grid fillWidth maxWidth="xl" columns={4} gap="m">
+      <Grid fillWidth maxWidth="xl" columns={3} gap="m">
         {weddingCards.map((card) => (
           <Card
             key={card.id}
