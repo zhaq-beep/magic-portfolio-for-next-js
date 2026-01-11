@@ -114,11 +114,3 @@ export default function WeddingPage() {
     </Column>
   );
 }
-
-
-<Row fillWidth gap="16" s={{direction: "column"}}>
-  <Background fillWidth height={6} />
-  <Background fillWidth height={6} />
-  <Background fillWidth height={6} />
-</Row>
-
