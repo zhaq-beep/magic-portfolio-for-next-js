@@ -15,6 +15,7 @@ import {
   Dialog,
   Button,
   Heading,
+  Grid,
 } from "@once-ui-system/core";
 
 import "@/components/Card.module.scss";
@@ -83,117 +84,107 @@ const weddingCards: WeddingCard[] = [
 
 export default function WeddingPage() {
   const router = useRouter();
-
   const [isOpen, setIsOpen] = useState(false);
   const [activeCard, setActiveCard] = useState<WeddingCard | null>(null);
-
   const openDialog = (card: WeddingCard) => {
     setActiveCard(card);
     setIsOpen(true);
   };
-
   const goToWedding = () => {
     if (!activeCard) return;
     setIsOpen(false);
     router.push(activeCard.href);
   };
-
+  
   return (
-    <Column as="main" fillWidth paddingY="l" paddingX="m">
-      {/* ================= CARD GRID ================= */}
-      <Row fillWidth maxWidth="xl" gap="xs" wrap>
-        {weddingCards.map((card) => (
-          <Column key={card.id} s={{ fillWidth: true }}>
-            <Card
-              className="wedding-card"
-              radius="l-4"
-              direction="column"
-              border="neutral-alpha-medium"
-              onMouseEnter={() => router.prefetch(card.href)}
-              onClick={() => openDialog(card)}
-            >
-              {/* HEADER */}
-              <Row
-                fillWidth
-                paddingX="s"
-                paddingY="xs"
-                gap="xs"
-                vertical="center"
-              >
-                <Avatar size="m" src="/images/avatar.jpg" />
-                <Text variant="label-default-m">{card.title}</Text>
-              </Row>
+    <Column as="main" fillWidth padding="l" gap="l">
 
-              {/* IMAGE */}
-              <Media
-                fillWidth
-                sizes="400px"
-                aspectRatio="4 / 3"
-                radius="l"
-                border="neutral-alpha-weak"
-                alt={card.title}
-                src={card.image}
-              />
-
-              {/* CONTENT */}
-              <Column fillWidth paddingX="s" paddingY="m" gap="xs">
-                <Text variant="body-default-xl">{card.couple}</Text>
-                <Text variant="body-default-s" onBackground="neutral-weak">
-                  {card.description}
-                </Text>
-              </Column>
-
-              <Line background="neutral-alpha-medium" />
-
-              {/* FOOTER */}
-              <Row
-                paddingX="m"
-                paddingY="s"
-                gap="xs"
-                vertical="center"
-                textVariant="label-default-s"
-                onBackground="neutral-medium"
-              >
-                <Icon name="like" size="s" />
-                {card.likes}
-                <Icon name="gift" size="s" marginLeft="m" />
-                {card.gifts}
-              </Row>
-            </Card>
-          </Column>
-        ))}
-      </Row>
-
-      {/* ================= DIALOG ================= */}
-      <Dialog
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        title="Mau liat tampilannya? 👀"
-        description="Kamu akan melihat detail undangan pernikahan 🚀"
+      {/* GRID */}
+      <Grid
+        fillWidth
+        maxWidth="xl"
+        columns={4}
+        gap="m"
       >
-        {activeCard && (
-          <Column fillWidth gap="12">
+        {weddingCards.map((card) => (
+          <Card
+            key={card.id}
+            direction="column"
+            radius="l-4"
+            border="neutral-alpha-medium"
+            cursor="interactive"
+            onMouseEnter={() => router.prefetch(card.href)}
+            onClick={() => setActive(card)}
+          >
+            {/* HEADER */}
+            <Row
+              fillWidth
+              paddingX="s"
+              paddingY="xs"
+              gap="xs"
+              vertical="center"
+            >
+              <Avatar size="m" src="/images/avatar.jpg" />
+              <Text variant="label-default-m">{card.title}</Text>
+            </Row>
+
+            {/* IMAGE */}
             <Media
-              src={activeCard.image}
-              aspectRatio="4 / 3"
-              radius="m"
+              fillWidth
+              aspectRatio="16 / 10"
+              radius="l"
+              src={card.image}
+              alt={card.title}
             />
 
-            <Heading size="s">{activeCard.couple}</Heading>
+            {/* CONTENT */}
+            <Column fillWidth padding="s" gap="xs">
+              <Text variant="body-default-l">{card.couple}</Text>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                {card.description}
+              </Text>
+            </Column>
 
-            <Text variant="body-default-s" onBackground="neutral-weak">
-              {activeCard.description}
-            </Text>
+            <Line background="neutral-alpha-medium" />
 
-            <Row fillWidth gap="8" horizontal="end">
+            {/* FOOTER */}
+            <Row
+              padding="s"
+              gap="xs"
+              vertical="center"
+              textVariant="label-default-s"
+              onBackground="neutral-medium"
+            >
+              <Icon name="like" size="s" />
+              {card.likes}
+              <Icon name="gift" size="s" marginLeft="m" />
+              {card.gifts}
+            </Row>
+          </Card>
+        ))}
+      </Grid>
+
+      {/* DIALOG */}
+      <Dialog
+        isOpen={!!active}
+        onClose={() => setActive(null)}
+        title="Lihat undangan?"
+        description="Kamu akan melihat detail undangan pernikahan"
+      >
+        {active && (
+          <Column gap="m">
+            <Media src={active.image} aspectRatio="4 / 3" radius="m" />
+            <Heading size="s">{active.couple}</Heading>
+            <Text variant="body-default-s">{active.description}</Text>
+
+            <Row fillWidth horizontal="end" gap="s">
               <Button
                 variant="secondary"
-                onClick={() => setIsOpen(false)}
+                onClick={() => setActive(null)}
               >
                 Kembali
               </Button>
-
-              <Button onClick={goToWedding}>
+              <Button onClick={() => router.push(active.href)}>
                 Oke mau liat 🚀
               </Button>
             </Row>
