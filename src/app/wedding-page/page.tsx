@@ -134,8 +134,8 @@ export default function WeddingPage() {
       <Dialog
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        title="Buka Undangan?"
-        description="Kamu akan melihat detail undangan pernikahan."
+        title="Mau liat tampilannya?👀"
+        description="Kamu akan melihat detail undangan pernikahan🚀"
       >
         {activeCard && (
           <Column fillWidth gap="12">
@@ -159,7 +159,7 @@ export default function WeddingPage() {
                 variant="secondary"
                 onClick={() => setIsOpen(false)}
               >
-                Batal
+                Kembali
               </Button>
 
               <Button
@@ -168,7 +168,7 @@ export default function WeddingPage() {
                   window.location.href = `/wedding/${activeCard.id}`;
                 }}
               >
-                Lihat Undangan
+                Oke mau liat🚀
               </Button>
             </Row>
           </Column>
