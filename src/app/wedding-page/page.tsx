@@ -164,9 +164,9 @@ export default function WeddingPage() {
               textVariant="label-default-s"
               onBackground="neutral-medium"
             >
-              <Icon name="like" size="s" />
-              {card.likes}
-              <Icon name="gift" size="s" marginLeft="m" />
+              <Icon name="gift" size="s" />
+              {card.gifts}
+              <Icon name="gift" size="s" />
               {card.gifts}
             </Row>
           </Card>
