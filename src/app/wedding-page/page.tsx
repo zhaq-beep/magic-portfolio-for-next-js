@@ -42,7 +42,7 @@ const weddingCards = [
 
 export default function WeddingPage() {
   return (
-    <Column as="main" fillWidth paddingY={32} paddingX={24}>
+    <Column as="main" fillWidth paddingY="l" paddingX="m">
       <Row
         fillWidth
         maxWidth="xl"
