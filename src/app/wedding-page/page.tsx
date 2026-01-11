@@ -52,7 +52,6 @@ export default function WeddingPage() {
         {weddingCards.map((card) => (
           <Column
             key={card.id}
-            fill
             s={{ fillWidth: true }}
           >
             <Card
