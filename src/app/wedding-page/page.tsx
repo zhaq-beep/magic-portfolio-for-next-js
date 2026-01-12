@@ -133,7 +133,7 @@ export default function WeddingPage() {
           >
             {/* HEADER */}
             <Row fillWidth paddingX="s" paddingY="xs" gap="xs" vertical="center">
-//              <Avatar size="m" src="/images/weddingicon/wed-01.jpg" />
+/*              <Avatar size="m" src="/images/weddingicon/wed-01.jpg" /> */
               <Text variant="label-default-m">{card.title}</Text>
             </Row>
 
