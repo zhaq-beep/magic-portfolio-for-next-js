@@ -39,7 +39,7 @@ const weddingCards: WeddingCard[] = [
     title: "Wedding Theme 1",
     couple: "Tema Klasik Bunga",
     description: "Undangan Pernikahan dengan tema klasik.",
-    image: "/images/wedding-01.jpg",
+    image: "/images/weddingicon/wed-01.jpg",
     person: 0,
     gifts: 0,
     href: "/wedding/andi-siti",
@@ -49,7 +49,7 @@ const weddingCards: WeddingCard[] = [
     title: "Wedding Theme 2",
     couple: "Tema Minimalis",
     description: "Undangan Pernikahan dengan tema minimalis.",
-    image: "/images/wedding-02.jpg",
+    image: "/images/weddingicon/wed-02.jpg",
     person: 0,
     gifts: 0,
     href: "/wedding/budi-rina",
@@ -59,7 +59,7 @@ const weddingCards: WeddingCard[] = [
     title: "Wedding Theme 3",
     couple: "Tema Adat Sunda",
     description: "Undangan Pernikahan dengan tema adat Sunda.",
-    image: "/images/wedding-02.jpg",
+    image: "/images/weddingicon/wed-03.jpg",
     person: 0,
     gifts: 0,
     href: "/wedding/dedi-maya",
@@ -69,7 +69,7 @@ const weddingCards: WeddingCard[] = [
     title: "Wedding Theme 4",
     couple: "Tema Adat Jawa",
     description: "Undangan Pernikahan dengan tema adat Jawa.",
-    image: "/images/wedding-01.jpg",
+    image: "/images/weddingicon/wed-04.jpg",
     person: 0,
     gifts: 0,
     href: "/promo/special-wedding",
@@ -79,7 +79,7 @@ const weddingCards: WeddingCard[] = [
     title: "Wedding Theme 5",
     couple: "Tema Modern",
     description: "Undangan Pernikahan dengan tema modern.",
-    image: "/images/wedding-01.jpg",
+    image: "/images/weddingicon/wed-05.jpg",
     person: 0,
     gifts: 0,
     href: "/promo/special-wedding",
@@ -89,7 +89,7 @@ const weddingCards: WeddingCard[] = [
     title: "Wedding Theme 6",
     couple: "Tema Simpel dan Elegan",
     description: "Undangan Pernikahan dengan tema simpel nan elegan.",
-    image: "/images/wedding-01.jpg",
+    image: "/images/weddingicon/wed-01.jpg",
     person: 0,
     gifts: 0,
     href: "/promo/special-wedding",
@@ -133,14 +133,14 @@ export default function WeddingPage() {
           >
             {/* HEADER */}
             <Row fillWidth paddingX="s" paddingY="xs" gap="xs" vertical="center">
-              <Avatar size="m" src="/images/avatar.jpg" />
+              <Avatar size="m" src="/images/weddingicon/wed-01.jpg" />
               <Text variant="label-default-m">{card.title}</Text>
             </Row>
 
             {/* IMAGE */}
             <Media
               fillWidth
-              aspectRatio="16 / 10"
+              aspectRatio="4 / 4"
               radius="l"
               src={card.image}
               alt={card.title}
