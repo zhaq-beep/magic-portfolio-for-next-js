@@ -42,7 +42,7 @@ const weddingCards: WeddingCard[] = [
     image: "/images/weddingicon/wed-01.jpg",
     person: 0,
     gifts: 0,
-    href: "/wedding/andi-siti",
+    href: "https://yourwedding.lovestoblog.com/theme-1/",
   },
   {
     id: "wedding-02",
