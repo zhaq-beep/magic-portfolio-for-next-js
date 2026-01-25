@@ -11,7 +11,7 @@ import {
 } from "@once-ui-system/core";
 import Link from "next/link";
 import { useState } from "react";
-import "./quiz-card.css"; // ⬅️ CSS hover
+import "./quiz-card.css";
 
 /* ======================
    DATA
@@ -87,7 +87,7 @@ export default function QuizClient() {
                 style={{ textDecoration: "none" }}
               >
                 <Column
-                  className="quiz-card"   {/* ⬅️ PENTING */}
+                  className="quiz-card"
                   padding="24"
                   radius="l"
                   gap="m"
