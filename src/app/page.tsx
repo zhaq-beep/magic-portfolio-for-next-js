@@ -103,7 +103,11 @@ export default function Home() {
       ====================== */}
       <RevealFx delay={0.3} fillWidth horizontal="center">
         <Column maxWidth="s" fillWidth>
-          <Input placeholder="Cari kode atau nama mata kuliah..." />
+          <Input
+            id="search-course"
+            placeholder="Cari kode atau nama mata kuliah..."
+          />
+
         </Column>
       </RevealFx>
 
