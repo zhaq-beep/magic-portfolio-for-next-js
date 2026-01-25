@@ -20,8 +20,13 @@ const courses = [
   { code: "TJW201", title: "Hukum Tajwid", modules: 6 },
   { code: "AKH301", title: "29 Karakter Luhur", modules: 9 },
   { code: "SLT101", title: "Solat", modules: 10 },
+  { code: "FQH210", title: "Fiqih Ibadah", modules: 8 },
+  { code: "SIJ110", title: "Sirah Nabawiyah", modules: 7 },
 ];
 
+/* ======================
+   CLIENT UI
+====================== */
 export default function QuizClient() {
   const [query, setQuery] = useState("");
 
@@ -58,6 +63,7 @@ export default function QuizClient() {
       <RevealFx delay={0.3} fillWidth>
         <Column maxWidth="s" fillWidth>
           <Input
+            id="search-quiz"
             placeholder="Cari materi atau kode..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
