@@ -11,7 +11,6 @@ import {
 } from "@once-ui-system/core";
 import Link from "next/link";
 import { useState } from "react";
-import "./quiz-card.css";
 
 /* ======================
    DATA
