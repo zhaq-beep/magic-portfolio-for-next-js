@@ -96,7 +96,6 @@ export default function QuizClient() {
                   width="32"
                   height="32"
                   align="center"
-                  justify="center"
                   radius="s"
                   background="brand-alpha-weak"
                 >
