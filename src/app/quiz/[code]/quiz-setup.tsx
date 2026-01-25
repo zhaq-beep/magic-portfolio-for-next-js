@@ -86,7 +86,7 @@ export default function QuizSetup({ code }: Props) {
 
         {/* JUMLAH SOAL */}
         <Column gap="xs">
-          <Row justify="space-between">
+          <Row horizontal="space-between">
             <Text size="xs" onBackground="neutral-weak">
               TARGET SOAL
             </Text>
@@ -104,7 +104,7 @@ export default function QuizSetup({ code }: Props) {
 
         {/* DURASI */}
         <Column gap="xs">
-          <Row justify="space-between">
+          <Row horizontal="space-between">
             <Text size="xs" onBackground="neutral-weak">
               DURASI (MENIT)
             </Text>
