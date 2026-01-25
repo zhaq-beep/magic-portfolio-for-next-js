@@ -11,6 +11,11 @@ import {
 } from "@once-ui-system/core";
 import Link from "next/link";
 import { baseURL, person } from "@/resources";
+import { redirect } from "next/navigation";
+
+export default function QuizIndex() {
+  redirect("/quiz/MATA4101");
+}
 
 /* ======================
    METADATA
