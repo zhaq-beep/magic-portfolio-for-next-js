@@ -23,7 +23,7 @@ const courses = [
   { code: "SRT005", title: "Hafalan Surat", modules: 10 },
   { code: "DOA006", title: "Hafalan Do'a", modules: 10 },
   { code: "DLL007", title: "Hafalan Dalil", modules: 10 },
-  { code: "PSA005", title: "Puasa", modules: 10 },
+  { code: "PSA008", title: "Puasa", modules: 10 },
 ];
 
 export default function QuizClient() {
@@ -37,100 +37,92 @@ export default function QuizClient() {
 
   return (
     <Column maxWidth="xl" gap="xl" paddingY="xl" horizontal="center">
-      {/* HERO */}
+      {/* ================= HERO ================= */}
       <Column horizontal="center" align="center" gap="m">
-        <RevealFx>
-          <Badge background="brand-alpha-weak" onBackground="brand-strong">
-            QUIZ CENTER
-          </Badge>
-        </RevealFx>
+        <Badge background="brand-alpha-weak" onBackground="brand-strong">
+          QUIZ CENTER
+        </Badge>
 
-        <RevealFx delay={0.1}>
-          <Heading variant="display-strong-l">
-            Portal <span style={{ color: "var(--brand-strong)" }}>Quiz</span>
-          </Heading>
-        </RevealFx>
+        <Heading variant="display-strong-l">
+          Portal <span style={{ color: "var(--brand-strong)" }}>Quiz</span>
+        </Heading>
 
-        <RevealFx delay={0.2}>
-          <Text onBackground="neutral-weak" align="center">
-            Silahkan pilih tema quiz yaa
-          </Text>
-        </RevealFx>
+        <Text onBackground="neutral-weak" align="center">
+          Silahkan pilih tema quiz yaa
+        </Text>
       </Column>
 
-      {/* SEARCH */}
-      <RevealFx delay={0.3} fillWidth>
-        <Column maxWidth="s" fillWidth>
-          <Input
-            id="search-quiz"
-            placeholder="Cari tema quiz atau kode..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-        </Column>
-      </RevealFx>
+      {/* ================= SEARCH ================= */}
+      <Column maxWidth="s" fillWidth marginTop="m">
+        <Input
+          placeholder="Cari tema quiz atau kode..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+      </Column>
 
-      {/* GRID */}
+      {/* ================= LIST ================= */}
       <Column fillWidth gap="l" marginTop="xl">
-        <Heading variant="display-strong-xs">Daftar Quiz</Heading>
+        <Heading variant="display-strong-s">Daftar Quiz</Heading>
 
         <Row
-          gap="l"
+          gap="m"
           wrap
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))",
           }}
         >
-          {filteredCourses.map((course, i) => (
-            <RevealFx key={course.code} delay={i * 0.05}>
-              <Link href={`/quiz/${course.code}`} style={{ textDecoration: "none" }}>
+          {filteredCourses.map((course) => (
+            <Link
+              key={course.code}
+              href={`/quiz/${course.code}`}
+              style={{ textDecoration: "none" }}
+            >
+              <Column
+                padding="m"
+                radius="l"
+                gap="s"
+                background="neutral-alpha-weak"
+                border="neutral-alpha-medium"
+                style={{
+                  height: "100%",
+                  cursor: "pointer",
+                }}
+              >
+                {/* ICON */}
                 <Column
-                  padding="l"
-                  radius="l"
-                  gap="s"
-                  background="neutral-alpha-weak"
-                  border="neutral-alpha-medium"
-                  style={{
-                    height: "100%",
-                    cursor: "pointer",
-                    transition: "transform .25s ease, box-shadow .25s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-6px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 12px 40px rgba(0,0,0,.35)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
+                  width="32"
+                  height="32"
+                  align="center"
+                  justify="center"
+                  radius="s"
+                  background="brand-alpha-weak"
                 >
-                  <Row align="center" gap="s">
-                    <Column padding="s" radius="s" background="brand-alpha-weak">
-                      📘
-                    </Column>
-
-                    <Text size="xs" onBackground="brand-strong">
-                      {course.code}
-                    </Text>
-                  </Row>
-
-                  <Heading variant="heading-strong-m">
-                    {course.title}
-                  </Heading>
-
-                  <Text size="xs" onBackground="neutral-weak">
-                    ⏱ {course.modules} Modul Tersedia
-                  </Text>
+                  📘
                 </Column>
-              </Link>
-            </RevealFx>
+
+                {/* TITLE */}
+                <Heading variant="heading-strong-s">
+                  {course.title}
+                </Heading>
+
+                {/* CODE */}
+                <Text size="xs" onBackground="neutral-weak">
+                  {course.code}
+                </Text>
+
+                {/* MODULE */}
+                <Text size="xs" onBackground="neutral-weak">
+                  ⏱ {course.modules} Modul
+                </Text>
+              </Column>
+            </Link>
           ))}
 
           {filteredCourses.length === 0 && (
             <Text onBackground="neutral-weak">
-              Materi tidak ditemukan 😔
+              Quiz tidak ditemukan 😔
             </Text>
           )}
         </Row>
