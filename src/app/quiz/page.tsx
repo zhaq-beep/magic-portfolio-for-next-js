@@ -11,11 +11,6 @@ import {
 } from "@once-ui-system/core";
 import Link from "next/link";
 import { baseURL, person } from "@/resources";
-import { redirect } from "next/navigation";
-
-export default function QuizIndex() {
-  redirect("/quiz/MATA4101");
-}
 
 /* ======================
    METADATA
@@ -23,10 +18,9 @@ export default function QuizIndex() {
 export async function generateMetadata() {
   return Meta.generate({
     title: "Portal Quiz & Materi",
-    description:
-      "Mainkan quiz sambil menambah ilmu✨",
+    description: "Mainkan quiz sambil menambah ilmu ✨",
     baseURL,
-    path: "/",
+    path: "/quiz",
   });
 }
 
@@ -54,17 +48,15 @@ const courses = [
 /* ======================
    PAGE
 ====================== */
-export default function Home() {
+export default function QuizPage() {
   return (
-    <Column maxWidth="m" gap="xl" paddingY="16" horizontal="center" >
-      {/* SEO Schema */}
+    <Column maxWidth="m" gap="xl" paddingY="16" horizontal="center">
       <Schema
         as="webPage"
         baseURL={baseURL}
-        path="/"
+        path="/quiz"
         title="Portal Quiz & Materi"
-        description="Mainkan quiz sambil menambah Ilmu"
-        image={`/api/og/generate?title=Portal%20Latihan%20Soal`}
+        description="Mainkan quiz sambil menambah ilmu"
         author={{
           name: person.name,
           url: baseURL,
@@ -72,87 +64,38 @@ export default function Home() {
         }}
       />
 
-      {/* ======================
-          HERO SECTION
-      ====================== */}
+      {/* HERO */}
       <Column horizontal="center" align="center" gap="m">
         <RevealFx>
           <Badge background="brand-alpha-weak" onBackground="brand-strong">
-            ESTABLISHED ACADEMIC EXCELLENCE
+            QUIZ CENTER
           </Badge>
         </RevealFx>
 
         <RevealFx delay={0.1}>
-          <Heading variant="display-strong-l" wrap="balance">
-            Portal{" "}
-            <span style={{ color: "var(--brand-strong)" }}>
-              Latihan Soal
-            </span>{" "}
-            & Materi
+          <Heading variant="display-strong-l">
+            Portal <span style={{ color: "var(--brand-strong)" }}>Quiz</span>
           </Heading>
         </RevealFx>
 
         <RevealFx delay={0.2}>
-          <Text
-            variant="heading-default-xl"
-            onBackground="neutral-weak"
-            wrap="balance"
-          >
-            Kurasi database simulasi ujian dengan akurasi data tertinggi
+          <Text onBackground="neutral-weak" align="center">
+            Pilih materi untuk mulai mengerjakan quiz
           </Text>
         </RevealFx>
       </Column>
 
-      {/* ======================
-          SEARCH BAR
-      ====================== */}
+      {/* SEARCH */}
       <RevealFx delay={0.3} fillWidth horizontal="center">
         <Column maxWidth="s" fillWidth>
-          <Input
-            id="search-course"
-            placeholder="Cari materi quiz"
-          />
-
+          <Input placeholder="Cari materi quiz..." />
         </Column>
       </RevealFx>
 
-      {/* ======================
-          STATISTIC CARD
-      ====================== */}
-      <RevealFx delay={0.4}>
-        <Column
-          fillWidth
-          background="neutral-alpha-weak"
-          padding="32"
-          radius="l"
-          gap="12"
-          horizontal="center"
-          align="center"
-        >
-          <Badge background="success-alpha-weak" onBackground="success-strong">
-            LIVE STATISTICS
-          </Badge>
-
-          <Heading variant="display-strong-m">112+</Heading>
-
-          <Text onBackground="neutral-weak" align="center">
-            Para Generus telah memainkan quiz ini
-          </Text>
-
-          <Row gap="24" marginTop="12">
-            <Text size="s">✓ Authentic Data</Text>
-            <Text size="s">✓ Secure Access</Text>
-            <Text size="s">✓ High Accuracy</Text>
-          </Row>
-        </Column>
-      </RevealFx>
-
-      {/* ======================
-          GRID MATA KULIAH
-      ====================== */}
+      {/* GRID */}
       <Column fillWidth gap="24" marginTop="40">
         <Heading variant="display-strong-xs">
-          Materi Quiz
+          Daftar Materi
         </Heading>
 
         <Row gap="24" wrap>
@@ -176,7 +119,7 @@ export default function Home() {
                   </Heading>
 
                   <Text size="s" onBackground="neutral-weak">
-                    {course.modules} Modul tersedia
+                    {course.modules} modul tersedia
                   </Text>
                 </Column>
               </Link>
