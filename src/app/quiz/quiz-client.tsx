@@ -94,7 +94,7 @@ export default function QuizClient() {
                 <Column
                   padding="24"
                   radius="l"
-                  gap="m"               {/* ✅ FIX DI SINI */}
+                  gap="m"
                   background="neutral-alpha-weak"
                   border="neutral-alpha-medium"
                   style={{
