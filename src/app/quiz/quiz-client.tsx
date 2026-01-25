@@ -16,12 +16,14 @@ import { useState } from "react";
    DATA
 ====================== */
 const courses = [
-  { code: "AKD101", title: "Pengetahuan Akidah", modules: 9 },
-  { code: "TJW201", title: "Hukum Tajwid", modules: 6 },
-  { code: "AKH301", title: "29 Karakter Luhur", modules: 9 },
-  { code: "SLT101", title: "Solat", modules: 10 },
-  { code: "FQH210", title: "Fiqih Ibadah", modules: 8 },
-  { code: "SIJ110", title: "Sirah Nabawiyah", modules: 7 },
+  { code: "AKD001", title: "Pengetahuan Akidah", modules: 9 },
+  { code: "TJW002", title: "Hukum Tajwid", modules: 6 },
+  { code: "AKH003", title: "29 Karakter Luhur", modules: 9 },
+  { code: "SLT004", title: "Solat", modules: 10 },
+  { code: "SRT005", title: "Hafalan Surat", modules: 10 },
+  { code: "DOA006", title: "Hafalan Do'a", modules: 10 },
+  { code: "DLL007", title: "Hafalan Dalil", modules: 10 },
+  { code: "PSA005", title: "Puasa", modules: 10 },
 ];
 
 export default function QuizClient() {
@@ -51,7 +53,7 @@ export default function QuizClient() {
 
         <RevealFx delay={0.2}>
           <Text onBackground="neutral-weak" align="center">
-            Pilih materi untuk mulai mengerjakan quiz
+            Silahkan pilih tema quiz yaa
           </Text>
         </RevealFx>
       </Column>
@@ -61,7 +63,7 @@ export default function QuizClient() {
         <Column maxWidth="s" fillWidth>
           <Input
             id="search-quiz"
-            placeholder="Cari materi atau kode..."
+            placeholder="Cari tema quiz atau kode..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
@@ -70,7 +72,7 @@ export default function QuizClient() {
 
       {/* GRID */}
       <Column fillWidth gap="l" marginTop="xl">
-        <Heading variant="display-strong-xs">Daftar Materi</Heading>
+        <Heading variant="display-strong-xs">Daftar Quiz</Heading>
 
         <Row
           gap="l"
@@ -86,7 +88,7 @@ export default function QuizClient() {
                 <Column
                   padding="l"
                   radius="l"
-                  gap="m"
+                  gap="s"
                   background="neutral-alpha-weak"
                   border="neutral-alpha-medium"
                   style={{
