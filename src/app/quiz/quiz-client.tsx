@@ -11,6 +11,7 @@ import {
 } from "@once-ui-system/core";
 import Link from "next/link";
 import { useState } from "react";
+import "./quiz-card.css"; // ⬅️ CSS hover
 
 /* ======================
    DATA
@@ -24,9 +25,6 @@ const courses = [
   { code: "SIJ110", title: "Sirah Nabawiyah", modules: 7 },
 ];
 
-/* ======================
-   CLIENT UI
-====================== */
 export default function QuizClient() {
   const [query, setQuery] = useState("");
 
@@ -38,7 +36,7 @@ export default function QuizClient() {
 
   return (
     <Column maxWidth="xl" gap="xl" paddingY="16" horizontal="center">
-      {/* ================= HERO ================= */}
+      {/* HERO */}
       <Column horizontal="center" align="center" gap="m">
         <RevealFx>
           <Badge background="brand-alpha-weak" onBackground="brand-strong">
@@ -59,11 +57,10 @@ export default function QuizClient() {
         </RevealFx>
       </Column>
 
-      {/* ================= SEARCH ================= */}
+      {/* SEARCH */}
       <RevealFx delay={0.3} fillWidth>
         <Column maxWidth="s" fillWidth>
           <Input
-            id="search-quiz"
             placeholder="Cari materi atau kode..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -71,11 +68,9 @@ export default function QuizClient() {
         </Column>
       </RevealFx>
 
-      {/* ================= GRID ================= */}
+      {/* GRID */}
       <Column fillWidth gap="24" marginTop="40">
-        <Heading variant="display-strong-xs">
-          Daftar Materi
-        </Heading>
+        <Heading variant="display-strong-xs">Daftar Materi</Heading>
 
         <Row
           gap="24"
@@ -92,23 +87,13 @@ export default function QuizClient() {
                 style={{ textDecoration: "none" }}
               >
                 <Column
+                  className="quiz-card"   {/* ⬅️ PENTING */}
                   padding="24"
                   radius="l"
                   gap="m"
                   background="neutral-alpha-weak"
                   border="neutral-alpha-medium"
-                  style={{
-                    height: "100%",
-                    cursor: "pointer",
-                    transition: "all .25s ease",
-                  }}
-                  hoverStyle={{
-                    transform: "translateY(-6px)",
-                    borderColor: "var(--brand-strong)",
-                    background: "neutral-alpha-medium",
-                  }}
                 >
-                  {/* HEADER */}
                   <Row align="center" gap="s">
                     <Column
                       padding="8"
@@ -117,18 +102,15 @@ export default function QuizClient() {
                     >
                       📘
                     </Column>
-
                     <Text size="xs" onBackground="brand-strong">
                       {course.code}
                     </Text>
                   </Row>
 
-                  {/* TITLE */}
                   <Heading variant="heading-strong-m">
                     {course.title}
                   </Heading>
 
-                  {/* FOOTER */}
                   <Text size="xs" onBackground="neutral-weak">
                     ⏱ {course.modules} Modul Tersedia
                   </Text>
