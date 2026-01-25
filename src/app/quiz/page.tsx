@@ -17,9 +17,9 @@ import { baseURL, person } from "@/resources";
 ====================== */
 export async function generateMetadata() {
   return Meta.generate({
-    title: "Portal Latihan Soal & Materi",
+    title: "Portal Quiz & Materi",
     description:
-      "Kurasi database simulasi ujian dengan akurasi data tertinggi",
+      "Mainkan quiz sambil menambah ilmu✨",
     baseURL,
     path: "/",
   });
@@ -31,17 +31,17 @@ export async function generateMetadata() {
 const courses = [
   {
     code: "MATA4101",
-    title: "Pengantar Matematika",
+    title: "Pengetahuan Akidah",
     modules: 9,
   },
   {
     code: "MATA4112",
-    title: "Aljabar Linear Elementer I",
+    title: "Hukum Tajwid",
     modules: 6,
   },
   {
     code: "EKMA4321",
-    title: "Sistem Informasi Manajemen",
+    title: "29 Karakter Luhur",
     modules: 9,
   },
 ];
@@ -51,14 +51,14 @@ const courses = [
 ====================== */
 export default function Home() {
   return (
-    <Column maxWidth="m" gap="xl" paddingY="16" horizontal="center">
+    <Column maxWidth="m" gap="xl" paddingY="16" horizontal="center" >
       {/* SEO Schema */}
       <Schema
         as="webPage"
         baseURL={baseURL}
         path="/"
-        title="Portal Latihan Soal & Materi"
-        description="Kurasi database simulasi ujian dengan akurasi data tertinggi"
+        title="Portal Quiz & Materi"
+        description="Mainkan quiz sambil menambah Ilmu"
         image={`/api/og/generate?title=Portal%20Latihan%20Soal`}
         author={{
           name: person.name,
@@ -105,7 +105,7 @@ export default function Home() {
         <Column maxWidth="s" fillWidth>
           <Input
             id="search-course"
-            placeholder="Cari kode atau nama mata kuliah..."
+            placeholder="Cari materi quiz"
           />
 
         </Column>
@@ -131,7 +131,7 @@ export default function Home() {
           <Heading variant="display-strong-m">112+</Heading>
 
           <Text onBackground="neutral-weak" align="center">
-            Mahasiswa UT telah menggunakan latihan soal di platform ini
+            Para Generus telah memainkan quiz ini
           </Text>
 
           <Row gap="24" marginTop="12">
@@ -147,12 +147,12 @@ export default function Home() {
       ====================== */}
       <Column fillWidth gap="24" marginTop="40">
         <Heading variant="display-strong-xs">
-          Mata Kuliah
+          Materi Quiz
         </Heading>
 
         <Row gap="24" wrap>
           {courses.map((course) => (
-            <Column key={course.code} flex={1} minWidth={260}>
+            <Column key={course.code} minWidth={260}>
               <Link href={`/quiz/${course.code}`}>
                 <Column
                   padding="24"
