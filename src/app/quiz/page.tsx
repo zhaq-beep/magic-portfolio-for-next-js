@@ -88,7 +88,10 @@ export default function QuizPage() {
       {/* SEARCH */}
       <RevealFx delay={0.3} fillWidth horizontal="center">
         <Column maxWidth="s" fillWidth>
-          <Input placeholder="Cari materi quiz..." />
+          <Input
+            id="search-quiz"
+            placeholder="Cari materi quiz..."
+          />
         </Column>
       </RevealFx>
 
