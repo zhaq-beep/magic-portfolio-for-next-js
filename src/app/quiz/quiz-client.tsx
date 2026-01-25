@@ -94,7 +94,7 @@ export default function QuizClient() {
                 <Column
                   padding="24"
                   radius="l"
-                  gap="14"
+                  gap="m"               {/* ✅ FIX DI SINI */}
                   background="neutral-alpha-weak"
                   border="neutral-alpha-medium"
                   style={{
@@ -109,7 +109,7 @@ export default function QuizClient() {
                   }}
                 >
                   {/* HEADER */}
-                  <Row align="center" gap="10">
+                  <Row align="center" gap="s">
                     <Column
                       padding="8"
                       radius="s"
