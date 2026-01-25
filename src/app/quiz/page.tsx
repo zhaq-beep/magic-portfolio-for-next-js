@@ -29,19 +29,24 @@ export async function generateMetadata() {
 ====================== */
 const courses = [
   {
-    code: "MATA4101",
+    code: "001",
     title: "Pengetahuan Akidah",
     modules: 9,
   },
   {
-    code: "MATA4112",
+    code: "002",
     title: "Hukum Tajwid",
     modules: 6,
   },
   {
-    code: "EKMA4321",
+    code: "003",
     title: "29 Karakter Luhur",
     modules: 9,
+  },
+  {
+    code: "004",
+    title: "Solat",
+    modules: 10,
   },
 ];
 
