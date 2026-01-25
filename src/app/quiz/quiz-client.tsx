@@ -54,11 +54,12 @@ export default function QuizClient() {
 
       {/* ================= SEARCH ================= */}
       <Column maxWidth="s" fillWidth marginTop="m">
-        <Input
-          placeholder="Cari tema quiz atau kode..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
+         <Input
+            id="search-quiz"
+            placeholder="Cari tema quiz atau kodenya yaa..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
       </Column>
 
       {/* ================= LIST ================= */}
