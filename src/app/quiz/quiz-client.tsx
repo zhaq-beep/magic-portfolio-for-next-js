@@ -24,6 +24,9 @@ const courses = [
   { code: "SIJ110", title: "Sirah Nabawiyah", modules: 7 },
 ];
 
+/* ======================
+   CLIENT UI
+====================== */
 export default function QuizClient() {
   const [query, setQuery] = useState("");
 
@@ -35,7 +38,7 @@ export default function QuizClient() {
 
   return (
     <Column maxWidth="xl" gap="xl" paddingY="16" horizontal="center">
-      {/* HERO */}
+      {/* ================= HERO ================= */}
       <Column horizontal="center" align="center" gap="m">
         <RevealFx>
           <Badge background="brand-alpha-weak" onBackground="brand-strong">
@@ -56,10 +59,11 @@ export default function QuizClient() {
         </RevealFx>
       </Column>
 
-      {/* SEARCH */}
+      {/* ================= SEARCH ================= */}
       <RevealFx delay={0.3} fillWidth>
         <Column maxWidth="s" fillWidth>
           <Input
+            id="search-quiz"
             placeholder="Cari materi atau kode..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -67,7 +71,7 @@ export default function QuizClient() {
         </Column>
       </RevealFx>
 
-      {/* GRID */}
+      {/* ================= GRID ================= */}
       <Column fillWidth gap="24" marginTop="40">
         <Heading variant="display-strong-xs">Daftar Materi</Heading>
 
@@ -81,24 +85,30 @@ export default function QuizClient() {
         >
           {filteredCourses.map((course, i) => (
             <RevealFx key={course.code} delay={i * 0.05}>
-              <Link
-                href={`/quiz/${course.code}`}
-                style={{ textDecoration: "none" }}
-              >
+              <Link href={`/quiz/${course.code}`} style={{ textDecoration: "none" }}>
                 <Column
-                  className="quiz-card"
                   padding="24"
                   radius="l"
                   gap="m"
                   background="neutral-alpha-weak"
                   border="neutral-alpha-medium"
+                  style={{
+                    height: "100%",
+                    cursor: "pointer",
+                    transition: "transform .25s ease, box-shadow .25s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-6px)";
+                    e.currentTarget.style.boxShadow =
+                      "0 12px 40px rgba(0,0,0,.35)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
                 >
-                  <Row align="center" gap="s">
-                    <Column
-                      padding="8"
-                      radius="s"
-                      background="brand-alpha-weak"
-                    >
+                  <Row align="center" gap="10">
+                    <Column padding="8" radius="s" background="brand-alpha-weak">
                       📘
                     </Column>
                     <Text size="xs" onBackground="brand-strong">
