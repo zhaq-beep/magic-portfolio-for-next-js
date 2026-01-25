@@ -2,9 +2,10 @@ import { Column, Heading, Text } from "@once-ui-system/core";
 import { notFound } from "next/navigation";
 
 const quizData: Record<string, { title: string }> = {
-  MATA4101: { title: "Pengetahuan Akidah" },
-  MATA4112: { title: "Hukum Tajwid" },
-  EKMA4321: { title: "29 Karakter Luhur" },
+  001: { title: "Pengetahuan Akidah" },
+  002: { title: "Hukum Tajwid" },
+  003: { title: "29 Karakter Luhur" },
+  004: { title: "Solat" },
 };
 
 export default function QuizDetail({
