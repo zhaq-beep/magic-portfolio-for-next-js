@@ -1,130 +1,180 @@
 import {
   Heading,
   Text,
-  Button,
-  Avatar,
-  RevealFx,
   Column,
-  Badge,
   Row,
+  Badge,
+  RevealFx,
   Schema,
   Meta,
-  Line,
+  Input,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL, routes } from "@/resources";
-import { Mailchimp } from "@/components";
-import { Projects } from "@/components/work/Projects";
-import { Posts } from "@/components/blog/Posts";
+import Link from "next/link";
+import { baseURL, person } from "@/resources";
 
+/* ======================
+   METADATA
+====================== */
 export async function generateMetadata() {
   return Meta.generate({
-    title: home.title,
-    description: home.description,
-    baseURL: baseURL,
-    path: home.path,
-    image: home.image,
+    title: "Portal Latihan Soal & Materi",
+    description:
+      "Kurasi database simulasi ujian dengan akurasi data tertinggi",
+    baseURL,
+    path: "/",
   });
 }
 
+/* ======================
+   DATA DUMMY
+====================== */
+const courses = [
+  {
+    code: "MATA4101",
+    title: "Pengantar Matematika",
+    modules: 9,
+  },
+  {
+    code: "MATA4112",
+    title: "Aljabar Linear Elementer I",
+    modules: 6,
+  },
+  {
+    code: "EKMA4321",
+    title: "Sistem Informasi Manajemen",
+    modules: 9,
+  },
+];
+
+/* ======================
+   PAGE
+====================== */
 export default function Home() {
   return (
-    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
+    <Column maxWidth="m" gap="xl" paddingY="16" horizontal="center">
+      {/* SEO Schema */}
       <Schema
         as="webPage"
         baseURL={baseURL}
-        path={home.path}
-        title={home.title}
-        description={home.description}
-        image={`/api/og/generate?title=${encodeURIComponent(home.title)}`}
+        path="/"
+        title="Portal Latihan Soal & Materi"
+        description="Kurasi database simulasi ujian dengan akurasi data tertinggi"
+        image={`/api/og/generate?title=Portal%20Latihan%20Soal`}
         author={{
           name: person.name,
-          url: `${baseURL}${about.path}`,
+          url: baseURL,
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Column fillWidth horizontal="center" gap="m">
-        <Column maxWidth="s" horizontal="center" align="center">
-          {home.featured.display && (
-            <RevealFx
-              fillWidth
-              horizontal="center"
-              paddingTop="16"
-              paddingBottom="32"
-              paddingLeft="12"
-            >
-              <Badge
-                background="brand-alpha-weak"
-                paddingX="12"
-                paddingY="4"
-                onBackground="neutral-strong"
-                textVariant="label-default-s"
-                arrow={false}
-                href={home.featured.href}
-              >
-                <Row paddingY="2">{home.featured.title}</Row>
-              </Badge>
-            </RevealFx>
-          )}
-          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
-            <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
-            </Heading>
-          </RevealFx>
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="32">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
-              {home.subline}
-            </Text>
-          </RevealFx>
-          <RevealFx paddingTop="12" delay={0.4} horizontal="center" paddingLeft="12">
-            <Button
-              id="about"
-              data-border="rounded"
-              href={about.path}
-              variant="secondary"
-              size="m"
-              weight="default"
-              arrowIcon
-            >
-              <Row gap="8" vertical="center" paddingRight="4">
-                {about.avatar.display && (
-                  <Avatar
-                    marginRight="8"
-                    style={{ marginLeft: "-0.75rem" }}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
-                {about.title}
-              </Row>
-            </Button>
-          </RevealFx>
-        </Column>
+
+      {/* ======================
+          HERO SECTION
+      ====================== */}
+      <Column horizontal="center" align="center" gap="m">
+        <RevealFx>
+          <Badge background="brand-alpha-weak" onBackground="brand-strong">
+            ESTABLISHED ACADEMIC EXCELLENCE
+          </Badge>
+        </RevealFx>
+
+        <RevealFx delay={0.1}>
+          <Heading variant="display-strong-l" wrap="balance">
+            Portal{" "}
+            <span style={{ color: "var(--brand-strong)" }}>
+              Latihan Soal
+            </span>{" "}
+            & Materi
+          </Heading>
+        </RevealFx>
+
+        <RevealFx delay={0.2}>
+          <Text
+            variant="heading-default-xl"
+            onBackground="neutral-weak"
+            wrap="balance"
+          >
+            Kurasi database simulasi ujian dengan akurasi data tertinggi
+          </Text>
+        </RevealFx>
       </Column>
-      <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
+
+      {/* ======================
+          SEARCH BAR
+      ====================== */}
+      <RevealFx delay={0.3} fillWidth horizontal="center">
+        <Column maxWidth="s" fillWidth>
+          <Input placeholder="Cari kode atau nama mata kuliah..." />
+        </Column>
       </RevealFx>
-      {routes["/blog"] && (
-        <Column fillWidth gap="24" marginBottom="l">
-          <Row fillWidth paddingRight="64">
-            <Line maxWidth={48} />
-          </Row>
-          <Row fillWidth gap="24" marginTop="40" s={{ direction: "column" }}>
-            <Row flex={1} paddingLeft="l" paddingTop="24">
-              <Heading as="h2" variant="display-strong-xs" wrap="balance">
-                Latest from the blog
-              </Heading>
-            </Row>
-            <Row flex={3} paddingX="20">
-              <Posts range={[1, 2]} columns="2" />
-            </Row>
-          </Row>
-          <Row fillWidth paddingLeft="64" horizontal="end">
-            <Line maxWidth={48} />
+
+      {/* ======================
+          STATISTIC CARD
+      ====================== */}
+      <RevealFx delay={0.4}>
+        <Column
+          fillWidth
+          background="neutral-alpha-weak"
+          padding="32"
+          radius="l"
+          gap="12"
+          horizontal="center"
+          align="center"
+        >
+          <Badge background="success-alpha-weak" onBackground="success-strong">
+            LIVE STATISTICS
+          </Badge>
+
+          <Heading variant="display-strong-m">112+</Heading>
+
+          <Text onBackground="neutral-weak" align="center">
+            Mahasiswa UT telah menggunakan latihan soal di platform ini
+          </Text>
+
+          <Row gap="24" marginTop="12">
+            <Text size="s">✓ Authentic Data</Text>
+            <Text size="s">✓ Secure Access</Text>
+            <Text size="s">✓ High Accuracy</Text>
           </Row>
         </Column>
-      )}
-      <Projects range={[2]} />
-      <Mailchimp />
+      </RevealFx>
+
+      {/* ======================
+          GRID MATA KULIAH
+      ====================== */}
+      <Column fillWidth gap="24" marginTop="40">
+        <Heading variant="display-strong-xs">
+          Mata Kuliah
+        </Heading>
+
+        <Row gap="24" wrap>
+          {courses.map((course) => (
+            <Column key={course.code} flex={1} minWidth={260}>
+              <Link href={`/quiz/${course.code}`}>
+                <Column
+                  padding="24"
+                  radius="l"
+                  background="neutral-alpha-weak"
+                  border="neutral-alpha-medium"
+                  gap="8"
+                  style={{ cursor: "pointer" }}
+                >
+                  <Text size="s" onBackground="brand-strong">
+                    {course.code}
+                  </Text>
+
+                  <Heading variant="heading-strong-m">
+                    {course.title}
+                  </Heading>
+
+                  <Text size="s" onBackground="neutral-weak">
+                    {course.modules} Modul tersedia
+                  </Text>
+                </Column>
+              </Link>
+            </Column>
+          ))}
+        </Row>
+      </Column>
     </Column>
   );
 }
