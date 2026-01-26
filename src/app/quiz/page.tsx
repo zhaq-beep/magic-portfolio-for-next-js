@@ -30,4 +30,12 @@ export default function QuizPage() {
         author={{
           name: person.name,
           url: baseURL,
-          image: `$
+          image: `${baseURL}${person.avatar}`,
+        }}
+      />
+
+      {/* CLIENT UI */}
+      <QuizClient />
+    </>
+  );
+}
