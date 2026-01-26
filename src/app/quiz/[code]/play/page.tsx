@@ -3,7 +3,7 @@
 import { useParams, useRouter } from "next/navigation"
 import { useState } from "react"
 import { quizData } from "@/data/quiz"
-import { Card, Button } from "once-ui"
+import { Card, Button } from "@once-ui-system/core"
 
 export default function QuizPlayPage() {
   const { slug } = useParams()
