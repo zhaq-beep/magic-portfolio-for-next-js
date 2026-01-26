@@ -42,7 +42,7 @@ export default function QuizPlayPage() {
           {question.options.map((opt, i) => (
             <Button
               key={i}
-              variant="gradient"
+              variant="primary"
               className="w-full"
               onClick={() => handleAnswer(i)}
             >
