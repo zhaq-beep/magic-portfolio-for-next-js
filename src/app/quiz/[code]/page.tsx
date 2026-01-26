@@ -1,4 +1,4 @@
-import { quizData } from "../quiz-data";
+import { QUIZZES } from "../quiz-data";
 import QuizSetup from "./quiz-setup";
 import { notFound } from "next/navigation";
 
@@ -7,11 +7,13 @@ export default function QuizCodePage({
 }: {
   params: { code: string };
 }) {
-  const quiz = quizData[params.code];
+  const quiz = QUIZZES.find(
+    (q) => q.code === params.code
+  );
 
   if (!quiz) {
-    notFound(); // ⬅️ INI yang bikin 404
+    notFound();
   }
 
-  return <QuizSetup quiz={quiz} code={params.code} />;
+  return <QuizSetup quiz={quiz} />;
 }
