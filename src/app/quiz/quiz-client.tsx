@@ -6,25 +6,24 @@ import {
   Column,
   Row,
   Badge,
-  RevealFx,
   Input,
 } from "@once-ui-system/core";
 import Link from "next/link";
 import { useState } from "react";
-import { QUIZZES } from "./quiz-data";
+import { QUIZZES, type Quiz } from "./quiz-data";
 
 export default function QuizClient() {
   const [query, setQuery] = useState("");
 
-  const filteredCourses = QUIZZES.filter(
-    (c) =>
+  const filteredCourses: Quiz[] = QUIZZES.filter(
+    (c: Quiz) =>
       c.title.toLowerCase().includes(query.toLowerCase()) ||
       c.code.toLowerCase().includes(query.toLowerCase())
   );
 
   return (
     <Column maxWidth="xl" gap="xl" paddingY="xl" horizontal="center">
-      {/* ================= HERO ================= */}
+      {/* HERO */}
       <Column horizontal="center" align="center" gap="m">
         <Badge background="brand-alpha-weak" onBackground="brand-strong">
           QUIZ CENTER
@@ -39,18 +38,17 @@ export default function QuizClient() {
         </Text>
       </Column>
 
-      {/* ================= SEARCH ================= */}
-      <Column maxWidth="s" fillWidth marginTop="m">
-         <Input
-            id="search-quiz"
-            placeholder="Cari tema quiz atau kodenya yaa..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
+      {/* SEARCH */}
+      <Column maxWidth="s" fillWidth>
+        <Input
+          placeholder="Cari tema quiz atau kodenya..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
       </Column>
 
-      {/* ================= LIST ================= */}
-      <Column fillWidth gap="l" marginTop="xl">
+      {/* LIST */}
+      <Column fillWidth gap="l">
         <Heading variant="display-strong-s">Daftar Quiz</Heading>
 
         <Row
@@ -61,7 +59,7 @@ export default function QuizClient() {
             gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))",
           }}
         >
-          {filteredCourses.map((course) => (
+          {filteredCourses.map((course: Quiz) => (
             <Link
               key={course.code}
               href={`/quiz/${course.code}`}
@@ -73,12 +71,8 @@ export default function QuizClient() {
                 gap="s"
                 background="neutral-alpha-weak"
                 border="neutral-alpha-medium"
-                style={{
-                  height: "100%",
-                  cursor: "pointer",
-                }}
+                style={{ cursor: "pointer" }}
               >
-                {/* ICON */}
                 <Column
                   width="32"
                   height="32"
@@ -89,17 +83,14 @@ export default function QuizClient() {
                   📘
                 </Column>
 
-                {/* TITLE */}
                 <Heading variant="heading-strong-s">
                   {course.title}
                 </Heading>
 
-                {/* CODE */}
                 <Text size="xs" onBackground="neutral-weak">
                   {course.code}
                 </Text>
 
-                {/* MODULE */}
                 <Text size="xs" onBackground="neutral-weak">
                   ⏱ {course.modules} Modul
                 </Text>
