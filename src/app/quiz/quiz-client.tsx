@@ -28,7 +28,7 @@ export default function QuizClient() {
           QUIZ CENTER
         </Badge>
 
-        <Heading variant="display-strong-l">
+        <Heading primary="display-strong-l">
           Portal <span style={{ color: "var(--brand-strong)" }}>Quiz</span>
         </Heading>
 
@@ -49,7 +49,7 @@ export default function QuizClient() {
 
       {/* LIST */}
       <Column fillWidth gap="l">
-        <Heading variant="display-strong-s">Daftar Quiz</Heading>
+        <Heading primary="display-strong-s">Daftar Quiz</Heading>
 
         <Row
           gap="m"
@@ -83,7 +83,7 @@ export default function QuizClient() {
                   📘
                 </Column>
 
-                <Heading variant="heading-strong-s">
+                <Heading primary="heading-strong-s">
                   {course.title}
                 </Heading>
 
