@@ -1,11 +1,12 @@
 import { Schema, Meta } from "@once-ui-system/core";
 import { baseURL, person } from "@/resources";
 import QuizClient from "./quiz-client";
+import type { Metadata } from "next";
 
 /* ======================
    METADATA
 ====================== */
-export async function generateMetadata() {
+export async function generateMetadata(): Promise<Metadata> {
   return Meta.generate({
     title: "Portal Quiz & Materi",
     description: "Mainkan quiz sambil menambah ilmu ✨",
@@ -29,11 +30,4 @@ export default function QuizPage() {
         author={{
           name: person.name,
           url: baseURL,
-          image: `${baseURL}${person.avatar}`,
-        }}
-      />
-      {/* CLIENT UI */}
-      <QuizClient />
-    </>
-  );
-}
+          image: `$
