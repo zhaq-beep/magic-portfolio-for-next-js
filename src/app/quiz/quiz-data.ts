@@ -1,33 +1,17 @@
-// src/app/quiz/quiz-data.ts
-
-export type QuizQuestion = {
-  question: string;
-  options: string[];
-  answer: number;
-};
-
-export type Quiz = {
-  title: string;
-  code: string;
-  modules: number;
-  questions: QuizQuestion[];
-};
-
-export const QUIZZES: Quiz[] = [
+export const quizzes = [
   {
-    title: "JavaScript Dasar",
-    code: "JS001",
-    modules: 5,
+    code: "ANAK001",
+    title: "Kuis Hewan",
     questions: [
       {
-        question: "Apa itu closure?",
-        options: [
-          "Fungsi dalam fungsi",
-          "Variable global",
-          "Async function",
-          "Promise",
-        ],
-        answer: 0,
+        question: "Hewan apa yang punya belalai?",
+        options: ["Kucing", "Gajah", "Ayam"],
+        answer: 1,
+      },
+      {
+        question: "Hewan apa yang bisa terbang?",
+        options: ["Ikan", "Burung", "Kuda"],
+        answer: 1,
       },
     ],
   },
