@@ -7,13 +7,9 @@ export default function QuizCodePage({
 }: {
   params: { code: string };
 }) {
-  const quiz = QUIZZES.find(
-    (q) => q.code === params.code
-  );
+  const quiz = QUIZZES.find((q) => q.code === params.code);
 
-  if (!quiz) {
-    notFound();
-  }
+  if (!quiz) return notFound();
 
   return <QuizSetup quiz={quiz} />;
 }
