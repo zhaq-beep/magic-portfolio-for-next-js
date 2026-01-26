@@ -14,12 +14,6 @@ import { useState } from "react";
 export default function QuizClient() {
   const [query, setQuery] = useState("");
 
-  const filteredCourses: Quiz[] = QUIZZES.filter(
-    (c: Quiz) =>
-      c.title.toLowerCase().includes(query.toLowerCase()) ||
-      c.code.toLowerCase().includes(query.toLowerCase())
-  );
-
   return (
     <Column maxWidth="xl" gap="xl" paddingY="xl" horizontal="center">
       {/* HERO */}
