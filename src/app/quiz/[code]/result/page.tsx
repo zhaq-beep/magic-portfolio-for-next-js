@@ -2,7 +2,7 @@
 
 import { useSearchParams, useParams } from "next/navigation"
 import { quizData } from "@/data/quiz"
-import { Card, Button } from "once-ui"
+import { Card, Button } from "@once-ui-system/core"
 import Link from "next/link"
 
 export default function QuizResultPage() {
