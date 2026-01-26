@@ -11,6 +11,7 @@ import {
 } from "@once-ui-system/core";
 import Link from "next/link";
 import { useState } from "react";
+import { QUIZZES } from "./quiz-data";
 
 export default function QuizClient() {
   const [query, setQuery] = useState("");
