@@ -53,7 +53,7 @@ export default function QuizPage({
     return (
       <div style={{ padding: 40 }}>
         <h2>Quiz tidak ditemukan 😔</h2>
-        <p>Kode: {code || "-"}</p>
+        <p>Kode: {code || "code"}</p>
       </div>
     );
   }
