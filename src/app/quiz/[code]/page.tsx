@@ -1,9 +1,19 @@
 import QuizPlay from "./quiz-play";
 
-/* ======================
-   DUMMY DATA
-====================== */
-const QUIZ_DATA: Record<string, any> = {
+type Question = {
+  id: string;
+  question: string;
+  options: string[];
+  correctIndex: number;
+};
+
+type Quiz = {
+  title: string;
+  description: string;
+  questions: Question[];
+};
+
+const QUIZ_DATA: Record<string, Quiz> = {
   AKD001: {
     title: "Pengetahuan Akidah",
     description: "Quiz dasar tentang akidah Islam",
@@ -27,24 +37,6 @@ const QUIZ_DATA: Record<string, any> = {
       },
     ],
   },
-
-  TJW002: {
-    title: "Hukum Tajwid",
-    description: "Quiz dasar tentang tajwid",
-    questions: [
-      {
-        id: "1",
-        question: "Apa itu Idgham?",
-        options: [
-          "Membaca jelas",
-          "Meleburkan huruf",
-          "Memantulkan suara",
-          "Memanjangkan bacaan",
-        ],
-        correctIndex: 1,
-      },
-    ],
-  },
 };
 
 export default function QuizPage({
@@ -52,13 +44,14 @@ export default function QuizPage({
 }: {
   params: { code: string };
 }) {
-  const quiz = QUIZ_DATA[params.code.toUpperCase()];
+  const code = params.code.toUpperCase();
+  const quiz = QUIZ_DATA[code];
 
   if (!quiz) {
     return (
       <div style={{ padding: 40 }}>
         <h2>Quiz tidak ditemukan 😔</h2>
-        <p>Kode: {params.code}</p>
+        <p>Kode: {code}</p>
       </div>
     );
   }
