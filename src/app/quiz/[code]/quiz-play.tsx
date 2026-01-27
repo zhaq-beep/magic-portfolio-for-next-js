@@ -96,7 +96,7 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
     <Column maxWidth={40} gap="24">
       <Heading>{quiz.title}</Heading>
 
-      <Text variant="secondary">
+      <Text variant="body-strong-m">
         Soal {current + 1} dari {quiz.questions.length}
       </Text>
 
