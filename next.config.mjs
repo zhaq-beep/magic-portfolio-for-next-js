@@ -7,8 +7,12 @@ const withMDX = mdx({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
+
   pageExtensions: ["ts", "tsx", "md", "mdx"],
+
   transpilePackages: ["next-mdx-remote"],
+
   images: {
     remotePatterns: [
       {
@@ -18,6 +22,7 @@ const nextConfig = {
       },
     ],
   },
+
   sassOptions: {
     compiler: "modern",
     silenceDeprecations: ["legacy-js-api"],
