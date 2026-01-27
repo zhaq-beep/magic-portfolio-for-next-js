@@ -1,3 +1,5 @@
+"use client";
+
 import QuizPlay from "./quiz-play";
 
 type Question = {
