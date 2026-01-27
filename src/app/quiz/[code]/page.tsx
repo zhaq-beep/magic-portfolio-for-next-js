@@ -44,16 +44,16 @@ const QUIZ_DATA: Record<string, Quiz> = {
 export default function QuizPage({
   params,
 }: {
-  params: { code?: string };
+  params: { code: string };
 }) {
-  const code = params?.code?.toUpperCase();
-  const quiz = code ? QUIZ_DATA[code] : null;
+  const code = params.code.toUpperCase();
+  const quiz = QUIZ_DATA[code];
 
   if (!quiz) {
     return (
       <div style={{ padding: 40 }}>
         <h2>Quiz tidak ditemukan 😔</h2>
-        <p>Kode: {code || "AKD001"}</p>
+        <p>Kode: {code}</p>
       </div>
     );
   }
