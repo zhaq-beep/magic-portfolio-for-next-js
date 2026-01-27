@@ -135,7 +135,7 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
         </Column>
       </Card>
 
-      <Flex justify="space-between">
+      <Flex justify="between">
         <Button
           variant="secondary"
           disabled={current === 0}
