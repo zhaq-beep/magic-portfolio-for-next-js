@@ -31,6 +31,15 @@ const quizzes = [
 ];
 
 /* ======================
+   STATIC PARAMS (🔥 WAJIB)
+====================== */
+export async function generateStaticParams() {
+  return quizzes.map((quiz) => ({
+    code: quiz.code,
+  }));
+}
+
+/* ======================
    METADATA
 ====================== */
 export function generateMetadata({
@@ -51,7 +60,7 @@ export function generateMetadata({
 }
 
 /* ======================
-   PAGE
+   PAGE (SERVER)
 ====================== */
 export default function QuizPage({
   params,
@@ -65,11 +74,11 @@ export default function QuizPage({
   return (
     <>
       <Schema
-         as="webPage"
-         baseURL={baseURL}
-         title={quiz.title}
-         description={quiz.description}
-         path={`/quiz/${quiz.code}`}
+        as="webPage"
+        baseURL={baseURL}
+        title={quiz.title}
+        description={quiz.description}
+        path={`/quiz/${quiz.code}`}
       />
 
       {/* CLIENT */}
