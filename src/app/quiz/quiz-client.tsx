@@ -26,7 +26,7 @@ type Quiz = {
 ====================== */
 const courses: Quiz[] = [
   {
-    title: "Pengetahuan Akidahr",
+    title: "Pengetahuan Akidah",
     code: "AKD001",
   },
   {
