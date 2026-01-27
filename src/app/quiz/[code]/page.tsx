@@ -6,7 +6,7 @@ import { baseURL } from "@/resources";
 
 /* ======================
    DUMMY DATA
-   (nanti bisa dari DB / APIK)
+   (nanti bisa dari DB / API)
 ====================== */
 const quizzes = [
   {
