@@ -17,6 +17,7 @@ import { useState, useMemo } from "react";
 type QuizMeta = {
   title: string;
   code: string;
+  modules: number; // ✅ TAMBAH INI
 };
 
 /* ======================
@@ -27,30 +28,37 @@ const courses: QuizMeta[] = [
   {
     title: "Pengetahuan Akidah",
     code: "AKD001",
+    modules: 10,
   },
   {
     title: "Hukum Tajwid",
     code: "TJW002",
+    modules: 12,
   },
   {
     title: "29 Karakter Luhur",
     code: "KLH003",
+    modules: 8,
   },
   {
     title: "Solat",
     code: "SLT004",
+    modules: 15,
   },
   {
     title: "Hafalan Surat",
     code: "SRT005",
+    modules: 20,
   },
   {
     title: "Hafalan Do'a",
     code: "DOA006",
+    modules: 18,
   },
   {
     title: "Hafalan Dalil",
     code: "DLL007",
+    modules: 14,
   },
 ];
 
@@ -80,7 +88,10 @@ export default function QuizClient() {
         </Badge>
 
         <Heading size="xl">
-          Portal <span style={{ color: "var(--brand-strong)" }}>Quiz</span>
+          Portal{" "}
+          <span style={{ color: "var(--brand-strong)" }}>
+            Quiz
+          </span>
         </Heading>
 
         <Text onBackground="neutral-weak" align="center">
@@ -112,7 +123,8 @@ export default function QuizClient() {
           wrap
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))",
+            gridTemplateColumns:
+              "repeat(auto-fill, minmax(160px, 1fr))",
           }}
         >
           {filteredCourses.map((course) => (
