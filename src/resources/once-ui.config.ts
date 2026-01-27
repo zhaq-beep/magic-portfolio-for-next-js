@@ -24,7 +24,7 @@ const routes: RoutesConfig = {
   "/gallery": true,
   "/wedding-page": true,
   "/quiz": true,
-  "/quiz/[code]": true,
+  "/quiz/*": true,
 };
 
 const display: DisplayConfig = {
