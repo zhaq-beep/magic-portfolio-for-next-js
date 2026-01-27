@@ -11,6 +11,9 @@ import {
   Badge,
 } from "@once-ui-system/core";
 
+/* ======================
+   TYPES
+====================== */
 type Question = {
   id: string;
   question: string;
@@ -29,6 +32,18 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
   const [answers, setAnswers] = useState<number[]>([]);
   const [finished, setFinished] = useState(false);
 
+  // Guard: kalau quiz kosong / belum keload
+  if (!quiz || quiz.questions.length === 0) {
+    return (
+      <Column maxWidth={32} gap="24" center>
+        <Heading size="m">Quiz tidak tersedia 😔</Heading>
+        <Text onBackground="neutral-weak">
+          Data soal belum ada atau gagal dimuat.
+        </Text>
+      </Column>
+    );
+  }
+
   const question = quiz.questions[current];
 
   const selectAnswer = (index: number) => {
@@ -46,7 +61,15 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
   };
 
   const prev = () => {
-    if (current > 0) setCurrent((c) => c - 1);
+    if (current > 0) {
+      setCurrent((c) => c - 1);
+    }
+  };
+
+  const resetQuiz = () => {
+    setFinished(false);
+    setCurrent(0);
+    setAnswers([]);
   };
 
   const score = answers.filter(
@@ -85,14 +108,7 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
           </Column>
         </Card>
 
-        <Button
-          variant="primary"
-          onClick={() => {
-            setFinished(false);
-            setCurrent(0);
-            setAnswers([]);
-          }}
-        >
+        <Button variant="primary" onClick={resetQuiz}>
           Ulangi Quiz
         </Button>
       </Column>
@@ -117,20 +133,24 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
           </Heading>
 
           <Column gap="12">
-            {question.options.map((opt, i) => (
-              <Button
-                key={i}
-                variant={
-                  answers[current] === i
-                    ? "primary"
-                    : "secondary"
-                }
-                onClick={() => selectAnswer(i)}
-                fillWidth
-              >
-                {opt}
-              </Button>
-            ))}
+            {question.options.map((opt, i) => {
+              const isSelected = answers[current] === i;
+
+              return (
+                <Button
+                  key={i}
+                  variant={
+                    isSelected
+                      ? "primary"
+                      : "secondary"
+                  }
+                  onClick={() => selectAnswer(i)}
+                  fillWidth
+                >
+                  {opt}
+                </Button>
+              );
+            })}
           </Column>
         </Column>
       </Card>
