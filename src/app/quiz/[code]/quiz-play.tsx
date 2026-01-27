@@ -135,7 +135,14 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
         </Column>
       </Card>
 
-      <Flex justifyContent="between">
+      {/* NAVIGATION */}
+      <Flex
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          gap: 12,
+        }}
+      >
         <Button
           variant="secondary"
           disabled={current === 0}
