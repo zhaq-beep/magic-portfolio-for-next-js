@@ -2,6 +2,9 @@
 
 import QuizPlay from "./quiz-play";
 
+/* ======================
+   TYPES
+====================== */
 type Question = {
   id: string;
   question: string;
@@ -15,6 +18,9 @@ type Quiz = {
   questions: Question[];
 };
 
+/* ======================
+   DUMMY DATA
+====================== */
 const QUIZ_DATA: Record<string, Quiz> = {
   AKD001: {
     title: "Pengetahuan Akidah",
@@ -46,8 +52,8 @@ export default function QuizPage({
 }: {
   params: { code: string };
 }) {
-  const code = params.code.toUpperCase();
-  const quiz = QUIZ_DATA[code];
+  const code = params.code?.toUpperCase();
+  const quiz = code ? QUIZ_DATA[code] : null;
 
   if (!quiz) {
     return (
