@@ -65,11 +65,18 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
           <Column gap="12">
             <Text>
               Skor kamu:
-              <strong> {score} / {quiz.questions.length}</strong>
+              <strong>
+                {" "}
+                {score} / {quiz.questions.length}
+              </strong>
             </Text>
 
             <Badge
-              color={score === quiz.questions.length ? "green" : "yellow"}
+              color={
+                score === quiz.questions.length
+                  ? "green"
+                  : "yellow"
+              }
             >
               {score === quiz.questions.length
                 ? "Sempurna 🔥"
@@ -78,11 +85,14 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
           </Column>
         </Card>
 
-        <Button onClick={() => {
-          setFinished(false);
-          setCurrent(0);
-          setAnswers([]);
-        }}>
+        <Button
+          variant="primary"
+          onClick={() => {
+            setFinished(false);
+            setCurrent(0);
+            setAnswers([]);
+          }}
+        >
           Ulangi Quiz
         </Button>
       </Column>
@@ -102,13 +112,19 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
 
       <Card padding="24">
         <Column gap="16">
-          <Heading size="m">{question.question}</Heading>
+          <Heading size="m">
+            {question.question}
+          </Heading>
 
           <Column gap="12">
             {question.options.map((opt, i) => (
               <Button
                 key={i}
-                variant={answers[current] === i ? "solid" : "outline"}
+                variant={
+                  answers[current] === i
+                    ? "primary"
+                    : "secondary"
+                }
                 onClick={() => selectAnswer(i)}
                 fillWidth
               >
@@ -121,7 +137,7 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
 
       <Flex justify="space-between">
         <Button
-          variant="ghost"
+          variant="secondary"
           disabled={current === 0}
           onClick={prev}
         >
@@ -129,6 +145,7 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
         </Button>
 
         <Button
+          variant="primary"
           disabled={answers[current] === undefined}
           onClick={next}
         >
