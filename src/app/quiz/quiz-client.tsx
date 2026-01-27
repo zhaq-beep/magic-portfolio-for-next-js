@@ -26,24 +26,32 @@ type Quiz = {
 ====================== */
 const courses: Quiz[] = [
   {
-    title: "Matematika Dasar",
-    code: "math-basic",
-    modules: 5,
+    title: "Pengetahuan Akidahr",
+    code: "AKD001",
   },
   {
-    title: "Sejarah Dunia",
-    code: "history-world",
-    modules: 8,
+    title: "Hukum Tajwid",
+    code: "TJW002",
   },
   {
-    title: "Fisika SMA",
-    code: "physics-sma",
-    modules: 6,
+    title: "29 Karakter Luhur",
+    code: "KLH003",
   },
   {
-    title: "Pemrograman JavaScript",
-    code: "js-fundamental",
-    modules: 10,
+    title: "Solat",
+    code: "SLT004",
+  },
+  {
+    title: "Hafalan Surat",
+    code: "SRT005",
+  },
+  {
+    title: "Hafalan Do'a",
+    code: "DOA006",
+  },
+  {
+    title: "Hafalan Dalil",
+    code: "DLL007",
   },
 ];
 
