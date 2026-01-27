@@ -14,17 +14,16 @@ import { useState, useMemo } from "react";
 /* ======================
    TYPES
 ====================== */
-type Quiz = {
+type QuizMeta = {
   title: string;
   code: string;
-  modules: number;
 };
 
 /* ======================
    DATA (dummy dulu)
    nanti bisa ganti API
 ====================== */
-const courses: Quiz[] = [
+const courses: QuizMeta[] = [
   {
     title: "Pengetahuan Akidah",
     code: "AKD001",
