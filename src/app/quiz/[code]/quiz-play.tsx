@@ -95,7 +95,7 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
         {question.options.map((option, index) => (
           <Button
             key={index}
-            variant="outline"
+            variant="secondary"
             onClick={() => answer(index)}
           >
             {option}
