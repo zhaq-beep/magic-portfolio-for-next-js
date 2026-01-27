@@ -42,11 +42,11 @@ export async function generateStaticParams() {
 /* ======================
    METADATA
 ====================== */
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
   params: { code: string };
-}): Metadata {
+}): Promise<Metadata> {
   const quiz = quizzes.find((q) => q.code === params.code);
 
   if (!quiz) return {};
