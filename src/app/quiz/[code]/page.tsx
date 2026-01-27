@@ -1,43 +1,67 @@
-import { notFound } from "next/navigation";
-import type { Metadata } from "next";
 import QuizPlay from "./quiz-play";
 
-const quizzes = [
-  {
-    code: "math-basic",
-    title: "Matematika Dasar",
-    description: "Uji pemahaman matematika dasar",
-    questions: []
-  }
-];
+/* ======================
+   DUMMY DATA
+====================== */
+const QUIZ_DATA: Record<string, any> = {
+  AKD001: {
+    title: "Pengetahuan Akidah",
+    description: "Quiz dasar tentang akidah Islam",
+    questions: [
+      {
+        id: "1",
+        question: "Apa arti iman?",
+        options: [
+          "Percaya dalam hati",
+          "Percaya dalam hati, diucapkan, diamalkan",
+          "Hanya ucapan",
+          "Hanya perbuatan",
+        ],
+        correctIndex: 1,
+      },
+      {
+        id: "2",
+        question: "Rukun iman ada berapa?",
+        options: ["3", "4", "5", "6"],
+        correctIndex: 3,
+      },
+    ],
+  },
 
-type PageProps = {
-  params: {
-    code: string;
-  };
+  TJW002: {
+    title: "Hukum Tajwid",
+    description: "Quiz dasar tentang tajwid",
+    questions: [
+      {
+        id: "1",
+        question: "Apa itu Idgham?",
+        options: [
+          "Membaca jelas",
+          "Meleburkan huruf",
+          "Memantulkan suara",
+          "Memanjangkan bacaan",
+        ],
+        correctIndex: 1,
+      },
+    ],
+  },
 };
 
-export async function generateMetadata(
-  { params }: PageProps
-): Promise<Metadata> {
-  const quiz = quizzes.find(q => q.code === params.code);
+export default function QuizPage({
+  params,
+}: {
+  params: { code: string };
+}) {
+  const quiz = QUIZ_DATA[params.code];
 
   if (!quiz) {
-    return {
-      title: "Quiz Not Found"
-    };
+    return (
+      <div style={{ padding: 40 }}>
+        <h2>Quiz tidak ditemukan 😔</h2>
+        <p>Kode: {params.code}</p>
+      </div>
+    );
   }
-
-  return {
-    title: quiz.title,
-    description: quiz.description
-  };
-}
-
-export default function QuizPage({ params }: PageProps) {
-  const quiz = quizzes.find(q => q.code === params.code);
-
-  if (!quiz) notFound();
 
   return <QuizPlay quiz={quiz} />;
 }
