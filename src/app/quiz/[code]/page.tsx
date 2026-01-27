@@ -5,7 +5,7 @@ import QuizPlay from "./quiz-play";
 
 /* ======================
    DUMMY DATA
-   (nanti bisa dari DB / API)
+   (nanti bisa dari DB / APIK)
 ====================== */
 const quizzes = [
   {
