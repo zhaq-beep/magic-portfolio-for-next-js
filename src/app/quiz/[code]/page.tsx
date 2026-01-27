@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Schema, Meta } from "@once-ui-system/core";
 import type { Metadata } from "next";
 import QuizPlay from "./quiz-play";
+import { baseURL } from "@/resources";
 
 /* ======================
    DUMMY DATA
@@ -44,6 +45,7 @@ export function generateMetadata({
   return Meta.generate({
     title: quiz.title,
     description: quiz.description,
+    baseURL,
     path: `/quiz/${quiz.code}`,
   });
 }
