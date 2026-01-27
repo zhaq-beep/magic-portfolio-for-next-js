@@ -28,21 +28,18 @@ type Quiz = {
 };
 
 export default function QuizPlay({ quiz }: { quiz: Quiz }) {
-  const [current, setCurrent] = useState(0);
-  const [answers, setAnswers] = useState<number[]>([]);
-  const [finished, setFinished] = useState(false);
-
-  // Guard: kalau quiz kosong / belum keload
-  if (!quiz || quiz.questions.length === 0) {
+  if (!quiz || !quiz.questions || quiz.questions.length === 0) {
     return (
       <Column maxWidth={32} gap="24" center>
-        <Heading size="m">Quiz tidak tersedia 😔</Heading>
-        <Text onBackground="neutral-weak">
-          Data soal belum ada atau gagal dimuat.
-        </Text>
+        <Heading>Quiz kosong 😭</Heading>
+        <Text>Data soal belum tersedia.</Text>
       </Column>
     );
   }
+
+  const [current, setCurrent] = useState(0);
+  const [answers, setAnswers] = useState<number[]>([]);
+  const [finished, setFinished] = useState(false);
 
   const question = quiz.questions[current];
 
