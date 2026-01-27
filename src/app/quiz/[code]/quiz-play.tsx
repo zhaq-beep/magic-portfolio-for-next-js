@@ -41,7 +41,26 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
   const [answers, setAnswers] = useState<number[]>([]);
   const [finished, setFinished] = useState(false);
 
+  const resetQuiz = () => {
+    setFinished(false);
+    setCurrent(0);
+    setAnswers([]);
+  };
+
   const question = quiz.questions[current];
+
+  // 🔥 GUARD ANTI CRASH
+  if (!question) {
+    return (
+      <Column maxWidth={32} gap="24" center>
+        <Heading>Error soal 😵</Heading>
+        <Text>Index soal tidak valid.</Text>
+        <Button variant="primary" onClick={resetQuiz}>
+          Reset Quiz
+        </Button>
+      </Column>
+    );
+  }
 
   const selectAnswer = (index: number) => {
     const copy = [...answers];
@@ -61,12 +80,6 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
     if (current > 0) {
       setCurrent((c) => c - 1);
     }
-  };
-
-  const resetQuiz = () => {
-    setFinished(false);
-    setCurrent(0);
-    setAnswers([]);
   };
 
   const score = answers.filter(
@@ -125,9 +138,7 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
 
       <Card padding="24">
         <Column gap="16">
-          <Heading size="m">
-            {question.question}
-          </Heading>
+          <Heading size="m">{question.question}</Heading>
 
           <Column gap="12">
             {question.options.map((opt, i) => {
@@ -136,11 +147,7 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
               return (
                 <Button
                   key={i}
-                  variant={
-                    isSelected
-                      ? "primary"
-                      : "secondary"
-                  }
+                  variant={isSelected ? "primary" : "secondary"}
                   onClick={() => selectAnswer(i)}
                   fillWidth
                 >
