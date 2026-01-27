@@ -1,3 +1,5 @@
+export const dynamicParams = false;
+
 import { notFound } from "next/navigation";
 import { Schema, Meta } from "@once-ui-system/core";
 import type { Metadata } from "next";
