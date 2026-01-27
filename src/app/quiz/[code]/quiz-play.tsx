@@ -1,18 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import {
   Column,
   Heading,
   Text,
   Button,
+  Flex,
+  Card,
   Badge,
-  Row,
 } from "@once-ui-system/core";
-import { useState } from "react";
 
-/* ======================
-   TYPES
-====================== */
 type Question = {
   id: string;
   question: string;
@@ -33,44 +31,57 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
 
   const question = quiz.questions[current];
 
-  function answer(index: number) {
-    const next = [...answers];
-    next[current] = index;
-    setAnswers(next);
+  const selectAnswer = (index: number) => {
+    const copy = [...answers];
+    copy[current] = index;
+    setAnswers(copy);
+  };
 
-    if (current === quiz.questions.length - 1) {
-      setFinished(true);
+  const next = () => {
+    if (current < quiz.questions.length - 1) {
+      setCurrent((c) => c + 1);
     } else {
-      setCurrent(current + 1);
+      setFinished(true);
     }
-  }
+  };
 
-  const score = quiz.questions.reduce((acc, q, i) => {
-    return acc + (answers[i] === q.correctIndex ? 1 : 0);
-  }, 0);
+  const prev = () => {
+    if (current > 0) setCurrent((c) => c - 1);
+  };
+
+  const score = answers.filter(
+    (a, i) => a === quiz.questions[i]?.correctIndex
+  ).length;
 
   /* ======================
-     RESULT
+     RESULT PAGE
   ====================== */
   if (finished) {
     return (
-      <Column maxWidth="s" gap="l" paddingY="xl" horizontal="center">
-        <Heading size="l">Hasil Quiz</Heading>
+      <Column maxWidth={32} gap="24" center>
+        <Heading>🎉 Quiz Selesai</Heading>
 
-        <Text>
-          Skor kamu: <strong>{score}</strong> / {quiz.questions.length}
-        </Text>
+        <Card padding="24">
+          <Column gap="12">
+            <Text>
+              Skor kamu:
+              <strong> {score} / {quiz.questions.length}</strong>
+            </Text>
 
-        <Text onBackground="neutral-weak">
-          {score === quiz.questions.length
-            ? "Perfect score 🎉"
-            : "Lumayan! Coba lagi biar makin jago 💪"}
-        </Text>
+            <Badge
+              color={score === quiz.questions.length ? "green" : "yellow"}
+            >
+              {score === quiz.questions.length
+                ? "Sempurna 🔥"
+                : "Mantap 💪"}
+            </Badge>
+          </Column>
+        </Card>
 
         <Button onClick={() => {
-          setAnswers([]);
-          setCurrent(0);
           setFinished(false);
+          setCurrent(0);
+          setAnswers([]);
         }}>
           Ulangi Quiz
         </Button>
@@ -79,29 +90,53 @@ export default function QuizPlay({ quiz }: { quiz: Quiz }) {
   }
 
   /* ======================
-     QUESTION
+     QUESTION PAGE
   ====================== */
   return (
-    <Column maxWidth="s" gap="l" paddingY="xl" horizontal="center">
-      <Badge>
-        Soal {current + 1} / {quiz.questions.length}
-      </Badge>
+    <Column maxWidth={40} gap="24">
+      <Heading>{quiz.title}</Heading>
 
-      <Heading size="l">{quiz.title}</Heading>
+      <Text opacity="weak">
+        Soal {current + 1} dari {quiz.questions.length}
+      </Text>
 
-      <Text>{question.question}</Text>
+      <Card padding="24">
+        <Column gap="16">
+          <Heading size="m">{question.question}</Heading>
 
-      <Column gap="s">
-        {question.options.map((option, index) => (
-          <Button
-            key={index}
-            variant="secondary"
-            onClick={() => answer(index)}
-          >
-            {option}
-          </Button>
-        ))}
-      </Column>
+          <Column gap="12">
+            {question.options.map((opt, i) => (
+              <Button
+                key={i}
+                variant={answers[current] === i ? "solid" : "outline"}
+                onClick={() => selectAnswer(i)}
+                fillWidth
+              >
+                {opt}
+              </Button>
+            ))}
+          </Column>
+        </Column>
+      </Card>
+
+      <Flex justify="space-between">
+        <Button
+          variant="ghost"
+          disabled={current === 0}
+          onClick={prev}
+        >
+          ← Sebelumnya
+        </Button>
+
+        <Button
+          disabled={answers[current] === undefined}
+          onClick={next}
+        >
+          {current === quiz.questions.length - 1
+            ? "Selesai"
+            : "Selanjutnya →"}
+        </Button>
+      </Flex>
     </Column>
   );
 }
