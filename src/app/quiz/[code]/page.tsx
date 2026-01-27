@@ -1,10 +1,7 @@
-"use client";
+export const dynamic = "force-dynamic";
 
 import QuizPlay from "./quiz-play";
 
-/* ======================
-   TYPES
-====================== */
 type Question = {
   id: string;
   question: string;
@@ -18,9 +15,6 @@ type Quiz = {
   questions: Question[];
 };
 
-/* ======================
-   DUMMY DATA
-====================== */
 const QUIZ_DATA: Record<string, Quiz> = {
   AKD001: {
     title: "Pengetahuan Akidah",
@@ -50,16 +44,16 @@ const QUIZ_DATA: Record<string, Quiz> = {
 export default function QuizPage({
   params,
 }: {
-  params: { code: string };
+  params: { code?: string };
 }) {
-  const code = params.code?.toUpperCase();
+  const code = params?.code?.toUpperCase();
   const quiz = code ? QUIZ_DATA[code] : null;
 
   if (!quiz) {
     return (
       <div style={{ padding: 40 }}>
         <h2>Quiz tidak ditemukan 😔</h2>
-        <p>Kode: {code}</p>
+        <p>Kode: {code || "-"}</p>
       </div>
     );
   }
