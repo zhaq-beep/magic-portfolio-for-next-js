@@ -52,7 +52,7 @@ export default function QuizPage({
 }: {
   params: { code: string };
 }) {
-  const quiz = QUIZ_DATA[params.code];
+  const quiz = QUIZ_DATA[params.code.toUpperCase()];
 
   if (!quiz) {
     return (
