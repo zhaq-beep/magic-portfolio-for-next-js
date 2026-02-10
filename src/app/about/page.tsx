@@ -401,72 +401,89 @@ export default function About() {
             </>
           )}
 
-          {about.work.display && (
-            <>
-              <Heading as="h2" 
-                id={about.certificates.title}
-                variant="display-strong-s"
-                marginBottom="m"
-                >
-                {about.certificates.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.certificates.experiences.map((experience, index) => (
-                  <Column
-                    key={`${experience.company}-${experience.role}-${index}`}
-                    fillWidth
+          {about.certificates.display && (
+  <>
+    <Heading
+      as="h2"
+      id={about.certificates.title}
+      variant="display-strong-s"
+      marginBottom="m"
+    >
+      {about.certificates.title}
+    </Heading>
+
+    <Column fillWidth gap="l" marginBottom="40">
+      {about.certificates.experiences.map((experience, index) => (
+        <Column
+          key={`${experience.company}-${experience.role}-${index}`}
+          fillWidth
+        >
+          <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
+            <Text id={experience.company} variant="heading-strong-l">
+              {experience.company}
+            </Text>
+
+            <Text variant="heading-default-xs" onBackground="neutral-weak">
+              {experience.timeframe}
+            </Text>
+          </Row>
+
+          <Text
+            variant="body-default-s"
+            onBackground="brand-weak"
+            marginBottom="m"
+          >
+            {experience.role}
+          </Text>
+
+          {experience.achievements?.length > 0 && (
+            <Column as="ul" gap="16">
+              {experience.achievements.map(
+                (achievement: React.ReactNode, i: number) => (
+                  <Text
+                    as="li"
+                    variant="body-default-m"
+                    key={`cert-ach-${index}-${i}`}
                   >
-                    <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
-                      <Text id={experience.company} variant="heading-strong-l">
-                        {experience.company}
-                      </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
-                        {experience.timeframe}
-                      </Text>
-                    </Row>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
-                      {experience.role}
-                    </Text>
-                    <Column as="ul" gap="16">
-                      {experience.achievements.map(
-                        (achievement: React.ReactNode, index: number) => (
-                          <Text
-                            as="li"
-                            variant="body-default-m"
-                            key={`${experience.company}-${index}`}
-                          >
-                            {achievement}
-                          </Text>
-                        ),
-                      )}
-                    </Column>
-                    {experience.images && experience.images.length > 0 && (
-                      <Row fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
-                        {experience.images.map((image, index) => (
-                          <Row
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Row>
-                        ))}
-                      </Row>
-                    )}
-                  </Column>
-                ))}
-              </Column>
-            </>
+                    {achievement}
+                  </Text>
+                )
+              )}
+            </Column>
           )}
-          
+
+          {experience.images?.length > 0 && (
+            <Row
+              fillWidth
+              paddingTop="m"
+              paddingLeft="40"
+              gap="12"
+              wrap
+            >
+              {experience.images.map((image, i) => (
+                <Row
+                  key={`cert-img-${index}-${i}`}
+                  border="neutral-medium"
+                  radius="m"
+                  minWidth={image.width}
+                  height={image.height}
+                >
+                  <Media
+                    enlarge
+                    radius="m"
+                    sizes={image.width.toString()}
+                    alt={image.alt}
+                    src={image.src}
+                  />
+                </Row>
+              ))}
+            </Row>
+          )}
+        </Column>
+      ))}
+    </Column>
+  </>
+)}          
         </Column>
       </Row>
     </Column>
