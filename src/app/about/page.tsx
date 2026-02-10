@@ -30,6 +30,9 @@ export async function generateMetadata() {
 export default function About() {
   const { intro, work, studies, technical, softskills, certificates } = about;
 
+  // AMANKAN LANGUAGES
+  const languages = Array.isArray(person.languages) ? person.languages : [];
+
   const structure = [
     {
       title: intro.title,
@@ -93,8 +96,6 @@ export default function About() {
       )}
 
       <Row fillWidth s={{ direction: "column" }} horizontal="center">
-
-        {/* AVATAR */}
         {about.avatar.display && (
           <Column
             className={styles.avatar}
@@ -117,9 +118,9 @@ export default function About() {
               {person.location}
             </Row>
 
-            {person.languages?.length > 0 && (
+            {languages.length > 0 && (
               <Row wrap gap="8">
-                {person.languages.map((language, index) => (
+                {languages.map((language, index) => (
                   <Tag key={index} size="l">
                     {language}
                   </Tag>
@@ -154,7 +155,6 @@ export default function About() {
               <Column fillWidth gap="l" marginBottom="40">
                 {work.experiences.map((experience, index) => (
                   <Column key={index} fillWidth>
-
                     <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
                       <Text id={experience.company} variant="heading-strong-l">
                         {experience.company}
@@ -169,7 +169,7 @@ export default function About() {
                       {experience.role}
                     </Text>
 
-                    {experience.achievements && (
+                    {Array.isArray(experience.achievements) && (
                       <Column as="ul" gap="16">
                         {experience.achievements.map((achievement, i) => (
                           <Text as="li" key={i} variant="body-default-m">
@@ -178,7 +178,6 @@ export default function About() {
                         ))}
                       </Column>
                     )}
-
                   </Column>
                 ))}
               </Column>
@@ -234,13 +233,7 @@ export default function About() {
           {/* SOFTSKILLS */}
           {softskills.display && (
             <>
-              <Heading
-                as="h2"
-                id={softskills.title}
-                variant="display-strong-s"
-                marginTop="40"
-                marginBottom="40"
-              >
+              <Heading as="h2" id={softskills.title} variant="display-strong-s" marginTop="40" marginBottom="40">
                 {softskills.title}
               </Heading>
 
@@ -260,7 +253,7 @@ export default function About() {
             </>
           )}
 
-          {/* ✅ CERTIFICATES — SUDAH SUPPORT DESCRIPTION / ACHIEVEMENTS */}
+          {/* CERTIFICATES */}
           {certificates.display && (
             <>
               <Heading
@@ -276,7 +269,6 @@ export default function About() {
               <Column fillWidth gap="l" marginBottom="40">
                 {certificates.experiences.map((cert, index) => (
                   <Column key={index} fillWidth>
-
                     <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
                       <Text id={cert.company} variant="heading-strong-l">
                         {cert.company}
@@ -291,15 +283,7 @@ export default function About() {
                       {cert.role}
                     </Text>
 
-                    {/* 👉 JIKA PAKAI DESCRIPTION */}
-                    {cert.description && (
-                      <Text variant="body-default-m" marginBottom="m">
-                        {cert.description}
-                      </Text>
-                    )}
-
-                    {/* 👉 JIKA PAKAI ACHIEVEMENTS */}
-                    {cert.achievements && (
+                    {Array.isArray(cert.achievements) && (
                       <Column as="ul" gap="16">
                         {cert.achievements.map((a, i) => (
                           <Text as="li" key={i} variant="body-default-m">
@@ -308,7 +292,6 @@ export default function About() {
                         ))}
                       </Column>
                     )}
-
                   </Column>
                 ))}
               </Column>
