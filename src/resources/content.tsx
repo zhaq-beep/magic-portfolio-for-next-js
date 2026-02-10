@@ -2,19 +2,19 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Mufid",
-  lastName: "Zhaqie",
-  name: `Zhaq Project`,
-  role: "Muballigh",
+  firstName: "Selene",
+  lastName: "Yu",
+  name: `Selene Yu`,
+  role: "Design Engineer",
   avatar: "/images/avatar.jpg",
-  email: "mufidzhaqie8080@gmail.com",
+  email: "example@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Indonesia"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Subscribe to {person.name}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
 
@@ -25,26 +25,26 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/zhaq-beep",
+    link: "https://github.com/once-ui-system",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/company/once-ui/",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/muadzz.17/",
-    essential: true,
+    link: "https://www.instagram.com/once_ui/",
+    essential: false,
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/",
-    essential: false,
+    link: "https://www.threads.com/@once_ui",
+    essential: true,
   },
   {
     name: "Email",
@@ -59,24 +59,24 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my projects as a ${person.role}`,
-  headline: <>Building projects that benefit the community</>,
+  description: `Portfolio website showcasing my work as a ${person.role}`,
+  headline: <>Building bridges between design and code</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Zhaq Project's Portfolio</strong>{" "}
+        <strong className="ml-4">Once UI</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Main project🚀
+          Featured work
         </Text>
       </Row>
     ),
-    href: "/work/poster-dinding/",
+    href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
     <>
-    Hi, I am Zhaq! a Muballigh at one of Majelis Taklim in <Text as="span" size="xl" weight="strong">Depok City</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
 </>
   ),
 };
@@ -95,84 +95,60 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://wa.me/+62895410071368",
+    link: "https://cal.com",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Mufid Zhaqie is a Muballigh at one of Majelis Taklim in Depok City with a passion
-        for making a positive impact, being influential without being influenced, and providing simple
-        and elegant design solutions. His work includes digital interfaces, interactive experiences,
-        and the convergence of design and technology.
+        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
+        into simple, elegant design solutions. Her work spans digital interfaces, interactive
+        experiences, and the convergence of design and technology.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Experience",
+    title: "Work Experience",
     experiences: [
       {
-        company: "Magang/PKL",
-        timeframe: "October - November 2018",
-        role: "PLN UPDL (Unit Pelaksana Pendidikan dan Pelatihan) Bogor",
+        company: "FLY",
+        timeframe: "2022 - Present",
+        role: "Senior Design Engineer",
         achievements: [
-          <>Participating in the daily activities of the implementing unit</>,
-          <>Scanning or digitizing documents using a scanner</>,
-          <>Responsible for printing document files using a printer, to produce files for office needs and making copies using a photocopier.</>,
-          <>Implementing general TIK in the field of work.</>,
+          <>
+            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
+            engagement and 30% faster load times.
+          </>,
+          <>
+            Spearheaded the integration of AI tools into design workflows, enabling designers to
+            iterate 50% faster.
+          </>,
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/project-01/cover-01.jpg",
+            alt: "Once UI Project",
+            width: 16,
+            height: 9,
+          },
         ],
       },
       {
-        company: "Ponpes Wali Barokah Kediri",
-        timeframe: "2022 - 2024",
-        role: "Administration Secretary",
+        company: "Creativ3",
+        timeframe: "2018 - 2022",
+        role: "Lead Designer",
         achievements: [
           <>
-            Organize a more efficient filing system and enhance the appearance of activity publications
-            with appealing visual designs, displayed on the madin pondok.
+            Developed a design system that unified the brand across multiple platforms, improving
+            design consistency by 40%.
           </>,
           <>
-            Record all financial transactions into the system and
-            report books in an orderly and systematic manner.
+            Led a cross-functional team to launch a new product line, contributing to a 15% increase
+            in overall company revenue.
           </>,
-          <>
-            Ensure all received funds are deposited to the
-            institution's staff safely, accurately, on time, neatly, and transparently.
-          </>,
-          <>
-            Coordinate finances and implement the use of institutional funds
-            according to applicable regulations
-          </>,
-          <>
-            Archive letters and/or expenditure receipts neatly and orderly.
-          </>,
-        ],
-//        images: [
-//          // optional: leave the array empty if you don't want to display images
-//          {
-//            src: "/images/projects/project-01/cover-01.jpg",
-//            alt: "Zhaq Project",
-//            width: 16,
-//            height: 9,
-//          },
-//        ],
-      },
-      {
-        company: "Majelis Taklim Baitul Ihsan Depok",
-        timeframe: "2024 - present",
-        role: "Muballigh",
-        achievements: [
-          <>
-            Developing interactive learning designs for Generus.
-          </>,
-          <>
-            Helping the Generus to learn effectively and systematically.
-          </>,
-          <>
-            Creating wall poster designs as a form of learning and knowledge.
-          </>
         ],
         images: [],
       },
@@ -183,11 +159,11 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "Uni XXXXXXXX",
-        description: <>Studied XXXXXXXXXX.</>,
+        name: "University of Jakarta",
+        description: <>Studied software engineering.</>,
       },
       {
-        name: "Build the Project",
+        name: "Build the Future",
         description: <>Studied online marketing and personal branding.</>,
       },
     ],
@@ -197,155 +173,60 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Designer",
+        title: "Figma",
         description: (
-          <>Able to design in Canva and CorelDRAW. Editing photos in Adobe Photoshop
-            or Adobe Lightroom on PC. Using PixelLab, Picsay and InShot on Mobile.</>
+          <>Able to prototype in Figma with Once UI with unnatural speed.</>
         ),
         tags: [
           {
-            name: "Canva",
-            icon: "canva",
-          },
-          {
-            name: "CorelDRAW",
-            icon: "coreldraw",
-          },
-          {
-            name: "Adobe Photoshop",
-            icon: "adobe-photoshop",
-          },
-          {
-            name: "Adobe Lightroom",
-            icon: "adobe-lightroom",
-          },
-          {
-            name: "PixelLab",
-            icon: "pixellab",
-          },
-          {
-            name: "Picsay Pro",
-            icon: "picsay",
-          },
-          {
-            name: "Inshot",
-            icon: "inshot",
+            name: "Figma",
+            icon: "figma",
           },
         ],
-      },
-      {
-        title: "Photographer",
-        description: (
-          <>Photography Enthusiast.</>
-        )
-      },
-      {
-        title: "Copywriter",
-        description: (
-          <>Writing on social media platforms.</>
-        )
-      },
-      {
-        title: "Administration Secretary",
-        description: (
-          <>Skilled in managing financial records, organizing filing systems,
-            and ensuring accurate and transparent reporting of transactions.</>
-        ),
-      },
-    ],
-  },
-  soft: {
-    display: true, // set to false to hide this section
-    title: "Soft skills",
-    skills: [
-      {
-        title: "Communication",
-        description: (
-          <>Able to communicate effectively with others.</>
-        ),
-      },
-      {
-        title: "Critical Thinking",
-        description: (
-          <>Able to analyze and evaluate information effectively.</>
-        ), 
-      },
-      {
-        title: "Public Relations",
-        description: (
-          <>Able to build and maintain good relationships with the community.</>
-        )
-      },
-      {
-        title: "Public Speaking",
-        description: (
-          <>Able to communicate well with the public</>
-        )
-      },
-      {
-        title: "Organization",
-        description: (
-          <>Able to organize and manage tasks efficiently.</>
-        ),
-      },
-      {
-        title: "Time Management",
-        description: (
-          <>Able to manage time and tasks effectively.</>
-        ),
-      },
-    ],
-  },
-  
-  certificates: {
-    display: true, // set to false to hide this section
-    title: "Certificates",
-    experiences: [
-      {
-        company: "Pelatihan Akuntansi dan Manajemen",
-        timeframe: "Jan 2022 - Present",
-        role: "Pondok Pesantren Wali Barokah Kota Kediri",
-        achievements: [
-          <>
-            Sertifikat ini diperoleh setelah menyelesaikan pelatihan intensif mengenai dasar-dasar
-            manajemen organisasi, komunikasi efektif, dan pengelolaan administrasi.
-            Pelatihan diselenggarakan oleh Pondok Pesantren Wali Barokah Kota Kediri.
-          </>,
-        ],
-      },
-      {
-        company: "Microsoft Excel Essentials",
-        timeframe: "Jul 2025 - Present",
-        role: "Alison.com",
-        achievements: [
-          <>
-            Lisensi ini diperoleh setelah mengikuti dan menyelesaikan pelatihan online atau kursus online mengenai fundamental atau
-            dasar-dasar Microsoft Excel guna meningkatkan keterampilan diri.
-            Pelatihan diselenggarakan oleh platform Alison – Empower Yourself
-          </>,
-        ],
+        // optional: leave the array empty if you don't want to display images
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Zhaq Project",
+            src: "/images/projects/project-01/cover-02.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Project image",
             width: 16,
             height: 9,
           },
         ],
-        },
+      },
       {
-        company: "Study Case Bootcamp Data Analyst with Excel",
-        timeframe: "Agu 2025 - present",
-        role: "DQLab",
-        achievements: [
-          <>
-            Lisensi ini diperoleh setelah mengikuti pelatihan online atau online bootcamp mengenai dasar-dasar
-            atau fundamental data analyst, menganalisis sebuah data menggunakan untuk kepentingan bisnis.
-            Pelatihan ini diselenggarakan oleh DQLab.
-          </>,
+        title: "Next.js",
+        description: (
+          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+        ),
+        tags: [
+          {
+            name: "JavaScript",
+            icon: "javascript",
+          },
+          {
+            name: "Next.js",
+            icon: "nextjs",
+          },
+          {
+            name: "Supabase",
+            icon: "supabase",
+          },
         ],
-        images: [],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/cover-04.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
@@ -362,7 +243,7 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Project",
+  label: "Work",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
@@ -371,63 +252,53 @@ const work: Work = {
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Certificates",
-  title: `Certificates – ${person.name}`,
-  description: `A certificate collection by ${person.name}`,
+  label: "Gallery",
+  title: `Photo gallery – ${person.name}`,
+  description: `A photo collection by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
     {
-      src: "/images/gallery/certificate-1.jpg",
+      src: "/images/gallery/horizontal-1.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/certificate-2.jpg",
+      src: "/images/gallery/vertical-4.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/horizontal-3.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/certificate-3.jpg",
+      src: "/images/gallery/vertical-1.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/vertical-2.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/horizontal-2.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/certificate-4.jpg",
+      src: "/images/gallery/horizontal-4.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/certificate-5.jpg",
+      src: "/images/gallery/vertical-3.jpg",
       alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/certificate-6.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/certificate-7.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/certificate-8.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/certificate-9.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/certificate-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
+      orientation: "vertical",
     },
   ],
 };
- 
+
 export { person, social, newsletter, home, about, blog, work, gallery };
