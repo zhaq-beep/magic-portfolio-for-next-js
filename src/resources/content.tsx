@@ -325,7 +325,28 @@ const about: About = {
         timeframe: "May 2024 - Present",
         role: "DQLab",
         achievements: [],
-        images: [],
+        images: [
+          {
+          src: "/images/gallery/certificate-8.jpg",
+          alt: "Certificate 10",
+          width: 16,
+          height: 10,
+          },
+        ],
+      },
+      {
+        company: "Fundamental Project Management",
+        timeframe: "May 2024 - Present",
+        role: "Digital Talent Scholarship 2025, KOMDIGI",
+        achievements: [],
+        images: [
+          {
+          src: "/images/gallery/certificate-9.jpg",
+          alt: "Certificate 10",
+          width: 16,
+          height: 10,
+          },
+        ],
       },
     ],
   },
