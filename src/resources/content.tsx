@@ -304,25 +304,25 @@ const about: About = {
         company: "Pelatihan Akuntansi dan Manajemen",
         timeframe: "Jan 2022 - Present",
         role: "Pondok Pesantren Wali Barokah Kota Kediri",
-        achievements: [
+        description: (
           <>
             Sertifikat ini diperoleh setelah menyelesaikan pelatihan intensif mengenai dasar-dasar
             manajemen organisasi, komunikasi efektif, dan pengelolaan administrasi.
             Pelatihan diselenggarakan oleh Pondok Pesantren Wali Barokah Kota Kediri.
           </>,
-        ],
+        ),
       },
       {
         company: "Microsoft Excel Essentials",
         timeframe: "Jul 2025 - Present",
         role: "Alison.com",
-        achievements: [
+        description: (
           <>
             Lisensi ini diperoleh setelah mengikuti dan menyelesaikan pelatihan online atau kursus online mengenai fundamental atau
             dasar-dasar Microsoft Excel guna meningkatkan keterampilan diri.
             Pelatihan diselenggarakan oleh platform Alison – Empower Yourself
           </>,
-        ],
+        ),
         images: [
           // optional: leave the array empty if you don't want to display images
           {
@@ -337,13 +337,13 @@ const about: About = {
         company: "Study Case Bootcamp Data Analyst with Excel",
         timeframe: "Agu 2025 - present",
         role: "DQLab",
-        achievements: [
+        description: (
           <>
             Lisensi ini diperoleh setelah mengikuti pelatihan online atau online bootcamp mengenai dasar-dasar
             atau fundamental data analyst, menganalisis sebuah data menggunakan untuk kepentingan bisnis.
             Pelatihan ini diselenggarakan oleh DQLab.
           </>,
-        ],
+        ),
         images: [],
       },
     ],
