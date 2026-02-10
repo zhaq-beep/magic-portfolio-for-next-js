@@ -368,6 +368,33 @@ const about: About = {
 //        ],
       },
       {
+        company: "Ask Questions to Make Data-Driven Decisions",
+        timeframe: "Sep 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Google, Coursera | ID Kredensial: <SmartLink href="/images/gallery/certificate-8.jpg" suffixIcon="arrowRight"> OYEETYUO0CE6 </SmartLink>
+            </Text>
+            <Badge
+              href="/images/gallery/certificate-8.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-8.jpg",
+//          alt: "Certificate 10",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
         company: "Fundamental Project Management",
         timeframe: "Aug 2025 - Present",
         role: (
@@ -475,7 +502,7 @@ const about: About = {
 //          },
 //        ],
       },
-            {
+      {
         company: "Short Class: Data Analysis Fundamental",
         timeframe: "Aug 2025 - Present",
         role: (
