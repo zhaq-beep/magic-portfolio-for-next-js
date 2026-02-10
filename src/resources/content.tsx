@@ -310,9 +310,20 @@ const about: About = {
       {
         company: "Microsoft Excel Essentials",
         timeframe: "Jul 2025 - Present",
-        role: 
-          <Badge href="#" id="badge-4" title="Documentation" icon="pages" textVariant="label-default-s" />
-          "Alison | ID Kredensial: 1940-50447968",
+        role: (
+          <Row gap="8" vertical="center">
+            <Badge
+              href="#"
+              id="badge-4"
+              title="Documentation"
+              icon="sparkles"
+              textVariant="label-default-s"
+            />
+            <Text variant="body-default-s">
+              Alison | ID Kredensial: 1940-50447968
+            </Text>
+          </Row>
+        ),
         achievements: [],
         images: [],
       },
