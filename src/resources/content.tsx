@@ -254,7 +254,7 @@ const about: About = {
       },
     ],
   },
-  softskills: {
+  soft: {
     display: true, // set to false to hide this section
     title: "Soft skills",
     skills: [
@@ -296,6 +296,7 @@ const about: About = {
       },
     ],
   },
+  
   certificates: {
     display: true, // set to false to hide this section
     title: "Certificates",
