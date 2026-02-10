@@ -296,29 +296,29 @@ const about: About = {
       },
     ],
   },
-  certificates: {
+  work: {
     display: true, // set to false to hide this section
     title: "Experience",
     experiences: [
       {
-        company: "Pelatihan Akuntansi dan Manajemen",
-        timeframe: "Jan 2022 - Present",
-        role: "Pondok Pesantren Wali Barokah Kota Kediri",
+        company: "Magang/PKL",
+        timeframe: "October - November 2018",
+        role: "PLN UPDL (Unit Pelaksana Pendidikan dan Pelatihan) Bogor",
         achievements: [
-          <>
-          Sertifikat ini diperoleh setelah menyelesaikan pelatihan intensif mengenai dasar-dasar manajemen organisasi,
-          komunikasi efektif, dan pengelolaan administrasi. Pelatihan diselenggarakan oleh Pondok Pesantren Wali Barokah Kota Kediri.
-          </>,
+          <>Participating in the daily activities of the implementing unit</>,
+          <>Scanning or digitizing documents using a scanner</>,
+          <>Responsible for printing document files using a printer, to produce files for office needs and making copies using a photocopier.</>,
+          <>Implementing general TIK in the field of work.</>,
         ],
       },
       {
-        company: "Microsoft Excel Essentials",
+        company: "Ponpes Wali Barokah Kediri",
         timeframe: "2022 - 2024",
-        role: "Alison.com",
+        role: "Administration Secretary",
         achievements: [
           <>
-            Lisensi ini diperoleh setelah mengikuti dan menyelesaikan pelatihan online atau kursus online mengenai fundamental
-            atau dasar-dasar Microsoft Excel guna meningkatkan keterampilan diri. Pelatihan diselenggarakan oleh platform Alison - Empower Yourself.
+            Organize a more efficient filing system and enhance the appearance of activity publications
+            with appealing visual designs, displayed on the madin pondok.
           </>,
           <>
             Record all financial transactions into the system and
@@ -336,15 +336,15 @@ const about: About = {
             Archive letters and/or expenditure receipts neatly and orderly.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/gallery/certificate-1.jpg",
-            alt: "Zhaq Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+//        images: [
+//          // optional: leave the array empty if you don't want to display images
+//          {
+//            src: "/images/projects/project-01/cover-01.jpg",
+//            alt: "Zhaq Project",
+//            width: 16,
+//            height: 9,
+//          },
+//        ],
       },
       {
         company: "Majelis Taklim Baitul Ihsan Depok",
