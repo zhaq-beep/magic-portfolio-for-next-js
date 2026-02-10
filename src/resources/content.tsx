@@ -315,8 +315,8 @@ const about: About = {
             <Badge
               href="https://alison.com/certification/check/ba47f91070"
               id="badge-4"
-              title="View"
-              icon="pages"
+              title="View here"
+              icon="document"
               textVariant="label-default-s"
             />
             <Text variant="body-default-s">
