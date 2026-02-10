@@ -40,7 +40,7 @@ const social: Social = [
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.threads.com/",
     essential: false,
   },
   {
@@ -62,16 +62,16 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  description: `Portfolio website showcasing my project as a ${person.role}`,
+  headline: <>building projects that benefit the community.</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Zhaq Project Portfolio</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Featured project🚀 
         </Text>
       </Row>
     ),
@@ -84,7 +84,7 @@ const home: Home = {
         Depok City
       </Text>
       , with a passion for making a positive impact,
-        being influential without being influenced, and providing simple and elegant design solutions.
+        being influential without being influenced.
     </>
   ),
 };
@@ -418,7 +418,7 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
+  label: "Project",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
 };
