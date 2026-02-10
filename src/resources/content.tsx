@@ -79,7 +79,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Zhaq, a design engineer at{" "}
+      I'm Zhaq, a Muballigh engineer at{" "}
       <Text as="span" size="xl" weight="strong">
         ONCE UI
       </Text>
@@ -296,9 +296,43 @@ const about: About = {
   },
 
   certificates: {
-    display: false,
+    display: true,
     title: "Certificates",
-    experiences: [],
+    experiences: [
+      {
+        company: "Pelatihan Akuntansi dan Manajemen",
+        timeframe: "Oct - Nov 2018",
+        role: "Pondok Pesantren Wali Barokah Kota Kediri",
+        achievements: [
+          <>
+            Participating in the daily activities of the implementing unit.
+          </>,
+        ],
+      },
+      {
+        company: "Microsoft Excel Essentials",
+        timeframe: "Mar 2022 - Mar 2024",
+        role: "Alison",
+        achievements: [
+          <>
+            Organize a more efficient filing system and enhance the appearance of activity publications with appealing visual designs,
+            displayed on the madin pondok.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Study Case Bootcamp Data Analyst with Excel",
+        timeframe: "May 2024 - Present",
+        role: "DQLab",
+        achievements: [
+          <>
+            Developing interactive learning designs for Generus.
+          </>,
+        ],
+        images: [],
+      },
+    ],
   },
 };
 
