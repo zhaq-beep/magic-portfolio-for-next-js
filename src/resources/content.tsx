@@ -309,7 +309,7 @@ const about: About = {
               Pondok Pesantren Wali Barokah Kota Kediri
             </Text>
             <Badge
-              href="/images/gallery/certificate-1.jpg""
+              href="/images/gallery/certificate-1.jpg"
               id="badge-4"
               title="View here"
               icon="document"
