@@ -79,11 +79,12 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Zhaq, a Muballigh engineer at{" "}
+      Hello, I am Zhaq. a Muballigh at one of Majelis Taklim in{" "}
       <Text as="span" size="xl" weight="strong">
-        ONCE UI
+        Depok City
       </Text>
-      , where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+      , with a passion for making a positive impact,
+        being influential without being influenced, and providing simple and elegant design solutions.
     </>
   ),
 };
@@ -115,7 +116,7 @@ const about: About = {
       <>
         Mufid Zhaqie is a Muballigh at one of Majelis Taklim in Depok City with a passion for making a positive impact,
         being influential without being influenced, and providing simple and elegant design solutions.
-        His work includes digital interfaces, interactive experiences, and the convergence of design and technology..
+        His work includes digital interfaces, interactive experiences, and the convergence of design and technology.
       </>
     ),
   },
@@ -341,7 +342,7 @@ const about: About = {
         achievements: [],
         images: [
           {
-          src: "/images/gallery/certificate-9.jpg",
+          src: "/images/gallery/certificate-10.jpg",
           alt: "Certificate 10",
           width: 16,
           height: 12,
