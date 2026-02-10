@@ -365,22 +365,6 @@ const about: About = {
       },
     ],
   },
-  
-
-  certificates: {
-    display: true,
-    title: "Certificates",
-    skills: [
-      {
-        title: "Pelatihan Akuntansi dan Manajemen",
-        description: (
-          <>Able to communicate effectively with others.</>
-        ),
-      },
-    ]
-
-
-  }
 };
 
 const blog: Blog = {
