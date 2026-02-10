@@ -44,6 +44,12 @@ const social: Social = [
     essential: false,
   },
   {
+    name: "WhatsApp",
+    icon: "whatsapp",
+    link: "https://wa.me/62895410071368?text=Halo%20guys.",
+    essential: true,
+  },
+  {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
@@ -242,6 +248,17 @@ const about: About = {
       {
         title: "Photographer",
         description: <>Photography Enthusiast.</>,
+        images: [],
+      },
+      {
+        title: "Copywriter",
+        description: <>Writing on social media platforms.</>,
+        images: [],
+      },
+      {
+        title: "Administration Secretary",
+        description: <>Skilled in managing financial records, organizing filing systems,and ensuring accurate
+          and transparent reporting of transactions.</>,
         images: [],
       },
     ],
