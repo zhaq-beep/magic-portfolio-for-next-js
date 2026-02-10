@@ -305,14 +305,7 @@ const about: About = {
         timeframe: "Jan 2022 - Present",
         role: "Pondok Pesantren Wali Barokah Kota Kediri",
         achievements: [],
-        images: [
-          {
-          src: "/images/gallery/certificate-10.jpg",
-          alt: "Certificate 10",
-          width: 16,
-          height: 12,
-          },
-        ],
+        images: [],
       },
       {
         company: "Microsoft Excel Essentials",
