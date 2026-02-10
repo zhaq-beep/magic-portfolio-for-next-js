@@ -343,16 +343,30 @@ const about: About = {
       {
         company: "Study Case Bootcamp Data Analyst with Excel",
         timeframe: "Aug 2025 - Present",
-        role: "DQLab | ID Kredensial: #DQLABMB7EXCUWSTFE",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Alison | ID Kredensial: 1940-50447968
+            </Text>
+            <Badge
+              href="/images/gallery/certificate-8.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        "DQLab | ID Kredensial: #DQLABMB7EXCUWSTFE",
         achievements: [],
-        images: [
-          {
-          src: "/images/gallery/certificate-8.jpg",
-          alt: "Certificate 10",
-          width: 16,
-          height: 12,
-          },
-        ],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-8.jpg",
+//          alt: "Certificate 10",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
       },
       {
         company: "Fundamental Project Management",
