@@ -50,6 +50,11 @@ export default function About() {
       items: about.technical.skills.map((skill) => skill.title),
     },
     {
+      title: about.soft.title,
+      display: about.soft.display,
+      items: about.soft.skills.map((skill) => skill.title),
+    },
+    {
       title: about.certificates.title,
       display: about.certificates.display,
       items: about.certificates.map((certificates) => certificates.title),
