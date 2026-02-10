@@ -115,6 +115,7 @@ export interface About extends BasePageConfig {
     /** Whether to show sub-items in the table of contents */
     subItems: boolean;
   };
+  
   /** Avatar section configuration */
   avatar: {
     /** Whether to display the avatar */
@@ -136,6 +137,7 @@ export interface About extends BasePageConfig {
     /** Description of the introduction section */
     description: React.ReactNode;
   };
+ 
   /** Work experience section */
   work: {
     /** Whether to display work experience */
@@ -165,6 +167,7 @@ export interface About extends BasePageConfig {
       }>;
     }>;
   };
+  
   /** Studies/education section */
   studies: {
     /** Whether to display studies section */
@@ -179,6 +182,7 @@ export interface About extends BasePageConfig {
       description: React.ReactNode;
     }>;
   };
+  
   /** Technical skills section */
   technical: {
     /** Whether to display technical skills section */
@@ -257,6 +261,8 @@ softskills: {
       role: string;
       /** Achievements at the company */
       achievements: React.ReactNode[];
+      /** Skill description */
+      description?: React.ReactNode;
       /** Images related to the experience */
       images?: Array<{
         /** Image source path */
