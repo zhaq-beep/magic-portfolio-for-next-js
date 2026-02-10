@@ -402,13 +402,13 @@ export default function About() {
           )}
 
           {about.certificates.display && (
-  <>
-    <Heading
+        <>
+        <Heading
       as="h2"
       id={about.certificates.title}
       variant="display-strong-s"
       marginBottom="m"
-    >
+        >
       {about.certificates.title}
     </Heading>
 
@@ -453,7 +453,7 @@ export default function About() {
             </Column>
           )}
 
-          {experience.images?.length > 0 && (
+          {Array.isArray(experience.images) && experience.images.length > 0 && (
             <Row
               fillWidth
               paddingTop="m"
