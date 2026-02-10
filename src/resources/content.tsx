@@ -105,7 +105,7 @@ const about: About = {
 
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://wa.me/62895410071368?text=Halo%20guys.",
   },
 
   intro: {
