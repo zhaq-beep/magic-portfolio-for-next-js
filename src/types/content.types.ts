@@ -215,7 +215,7 @@ export interface About extends BasePageConfig {
   };
 
 /** Soft skills section */
-softskills: {
+soft: {
   /** Whether to display soft skills section */
   display: boolean;
   /** Title for the soft skills section */
@@ -245,9 +245,9 @@ softskills: {
   }>;
 };
   
-/** Certificates experience section */
+/** Work experience section */
   certificates: {
-    /** Whether to display certificates experience */
+    /** Whether to display work experience */
     display: boolean;
     /** Title for the work experience section */
     title: string;
@@ -259,10 +259,8 @@ softskills: {
       timeframe: string;
       /** Role or job title */
       role: string;
-      /** Achievements at the company boleh salah satu */
-      achievements?: React.ReactNode[];
-      /** Skill description */
-      description?: React.ReactNode;
+      /** Achievements at the company */
+      achievements: React.ReactNode[];
       /** Images related to the experience */
       images?: Array<{
         /** Image source path */
