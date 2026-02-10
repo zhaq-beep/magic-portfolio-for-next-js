@@ -326,7 +326,10 @@ const about: About = {
         role: (
           <Row gap="8" vertical="center">
             <Text variant="body-default-s">
-              Alison | ID Kredensial: 1940-50447968
+              Alison | ID Kredensial: 
+              <SmartLink href="https://alison.com/certification/check/ba47f91070" selected>
+                50447968
+              </SmartLink>
             </Text>
             <Badge
               href="/images/gallery/certificate-12.jpg"
@@ -346,7 +349,10 @@ const about: About = {
         role: (
           <Row gap="8" vertical="center">
             <Text variant="body-default-s">
-              Alison | ID Kredensial: 1940-50447968
+              DQLab | ID Kredensial:
+              <SmartLink href="https://academy.dqlab.id/certificate/pdf/DQLABMB7EXCUWSTFE" selected>
+                #DQLABMB7EXCUWSTFE
+              </SmartLink>
             </Text>
             <Badge
               href="/images/gallery/certificate-8.jpg"
@@ -403,7 +409,10 @@ const about: About = {
         role: (
           <Row gap="8" vertical="center">
             <Text variant="body-default-s">
-              Digital Talent Scholarship | ID Kredensial: 19510935840-686
+              Digital Talent Scholarship | ID Kredensial: 
+              <SmartLink href="https://digitalent.komdigi.go.id/cek-sertifikat?registrasi=19510935840-686" selected>
+                19510935840-686
+              </SmartLink>  
             </Text>
             <Badge
               href="/images/gallery/certificate-10.jpg"
@@ -430,7 +439,10 @@ const about: About = {
         role: (
           <Row gap="8" vertical="center">
             <Text variant="body-default-s">
-              RevoU | ID Kredensial: DAMC-28072025-01-1-00107
+              RevoU | ID Kredensial: 
+               <SmartLink href="https://certificates.revou.tech/" selected>
+                 DAMC-28072025-01-1-00107
+               </SmartLink>
             </Text>
             <Badge
               href="/images/gallery/certificate-1.jpg"
@@ -457,7 +469,10 @@ const about: About = {
         role: (
           <Row gap="8" vertical="center">
             <Text variant="body-default-s">
-              Google, Coursera | ID Kredensial: SLGLDCP97UIO
+              Google, Coursera | ID Kredensial:
+              <SmartLink href="https://www.coursera.org/account/accomplishments/records/SLGLDCP97UIO" selected>
+                SLGLDCP97UIO
+              </SmartLink>
             </Text>
             <Badge
               href="/images/gallery/certificate-3.jpg"
@@ -511,7 +526,10 @@ const about: About = {
         role: (
           <Row gap="8" vertical="center">
             <Text variant="body-default-s">
-              MySkill | ID Kredensial: 270794/DTA/LM/08/2025
+              MySkill | ID Kredensial:
+              <SmartLink href="https://myskill.id/" selected> 
+                270794/DTA/LM/08/2025
+              </SmartLink>
             </Text>
             <Badge
               href="/images/gallery/certificate-11.jpg"
