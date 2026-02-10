@@ -312,6 +312,9 @@ const about: About = {
         timeframe: "Jul 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Alison | ID Kredensial: 1940-50447968
+            </Text>
             <Badge
               href="https://alison.com/certification/check/ba47f91070"
               id="badge-4"
@@ -319,9 +322,6 @@ const about: About = {
               icon="document"
               textVariant="label-default-s"
             />
-            <Text variant="body-default-s">
-              Alison | ID Kredensial: 1940-50447968
-            </Text>
           </Row>
         ),
         achievements: [],
