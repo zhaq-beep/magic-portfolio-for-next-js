@@ -111,7 +111,7 @@ export default function About() {
               {person.location}
             </Row>
 
-            {person.languages?.length > 0 && (
+            {Array.isArray(person.languages) && person.languages.length > 0 && (
               <Row wrap gap="8">
                 {person.languages.map((language, index) => (
                   <Tag key={index} size="l">
