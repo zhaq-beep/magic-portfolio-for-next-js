@@ -204,7 +204,7 @@ const about: About = {
 
   technical: {
     display: true,
-    title: "Technical skills",
+    title: "Technical Skills",
     skills: [
       {
         title: "Design Graphic",
@@ -303,11 +303,11 @@ const about: About = {
         company: "Pelatihan Akuntansi dan Manajemen",
         timeframe: "Oct - Nov 2018",
         role: "Pondok Pesantren Wali Barokah Kota Kediri",
-        achievements: [
-          <>
-            Participating in the daily activities of the implementing unit.
-          </>,
-        ],
+//        achievements: [
+//          <>
+//            Participating in the daily activities of the implementing unit.
+//          </>,
+//        ],
         images: [
           {
           src: "/images/gallery/certificate-10.jpg",
