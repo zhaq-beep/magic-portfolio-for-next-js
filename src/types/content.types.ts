@@ -258,7 +258,7 @@ soft: {
       /** Timeframe of employment */
       timeframe: string;
       /** Role or job title */
-      role: string;
+      role: React.ReactNode;
       /** Achievements at the company */
       achievements?: React.ReactNode[];
       /** Images related to the experience */
