@@ -344,7 +344,7 @@ const about: About = {
 //            height: 9,
 //          },
 //        ],
-      },
+        },
       {
         company: "Majelis Taklim Baitul Ihsan Depok",
         timeframe: "2024 - present",
