@@ -264,7 +264,6 @@ const about: About = {
     ],
   },
 
-  // ➤ BAGIAN WAJIB YANG TADI KURANG
   soft: {
     display: true,
     title: "Soft Skills",
@@ -274,8 +273,24 @@ const about: About = {
         description: <>Able to communicate effectively with others.</>,
       },
       {
-        title: "Team Work",
-        description: <>Comfortable working in collaborative environments.</>,
+        title: "Critical Thinking",
+        description: <>Able to analyze and evaluate information effectively.</>,
+      },
+      {
+        title: "Public Relations",
+        description: <>Able to build and maintain good relationships with the community.</>,
+      },
+      {
+        title: "Public Speaking",
+        description: <>Able to communicate well with the public.</>,
+      },
+      {
+        title: "Organization",
+        description: <>Able to organize and manage tasks efficiently.</>,
+      },
+      {
+        title: "Time Management",
+        description: <>Able to manage time and tasks effectively.</>,
       },
     ],
   },
