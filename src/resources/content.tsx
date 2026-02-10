@@ -303,11 +303,7 @@ const about: About = {
         company: "Pelatihan Akuntansi dan Manajemen",
         timeframe: "Oct - Nov 2018",
         role: "Pondok Pesantren Wali Barokah Kota Kediri",
-//        achievements: [
-//          <>
-//            Participating in the daily activities of the implementing unit.
-//          </>,
-//        ],
+        achievements: [],
         images: [
           {
           src: "/images/gallery/certificate-10.jpg",
@@ -321,23 +317,14 @@ const about: About = {
         company: "Microsoft Excel Essentials",
         timeframe: "Mar 2022 - Mar 2024",
         role: "Alison",
-        achievements: [
-          <>
-            Organize a more efficient filing system and enhance the appearance of activity publications with appealing visual designs,
-            displayed on the madin pondok.
-          </>,
-        ],
+        achievements: [],
         images: [],
       },
       {
         company: "Study Case Bootcamp Data Analyst with Excel",
         timeframe: "May 2024 - Present",
         role: "DQLab",
-        achievements: [
-          <>
-            Developing interactive learning designs for Generus.
-          </>,
-        ],
+        achievements: [],
         images: [],
       },
     ],
