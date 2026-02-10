@@ -57,7 +57,7 @@ export default function About() {
     {
       title: about.certificates.title,
       display: about.certificates.display,
-      items: about.certificates.map((certificates) => certificates.title),
+      items: about.certificates.experiences.map((experience) => experience.company),
     },
   ];
   return (
