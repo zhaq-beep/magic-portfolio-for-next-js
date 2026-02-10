@@ -360,8 +360,8 @@ const work: Work = {
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
+  label: "Certificates",
+  title: `Certificates – ${person.name}`,
   description: `A photo collection by ${person.name}`,
   images: [
     { src: "/images/gallery/certificate-1.jpg", alt: "image", orientation: "horizontal" },
