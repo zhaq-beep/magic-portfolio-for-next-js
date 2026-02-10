@@ -308,6 +308,12 @@ const about: About = {
             Participating in the daily activities of the implementing unit.
           </>,
         ],
+        images: [
+          src: "/images/projects/project-01/cover-02.jpg",
+          alt: "Project image",
+          width: 16,
+          height: 9
+        ],
       },
       {
         company: "Microsoft Excel Essentials",
