@@ -245,7 +245,7 @@ soft: {
   }>;
 };
   
-/** Work experience section */
+/** Certificates experience section */
   certificates: {
     /** Whether to display work experience */
     display: boolean;
