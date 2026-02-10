@@ -193,7 +193,7 @@ const about: About = {
     institutions: [
       {
         name: "Univ. xxxxxxxxx",
-        description: <>Studied xxxxxxxx.</>,
+        description: <>Studied xxxxxxxx</>,
       },
       {
         name: "Build the Project",
@@ -300,8 +300,8 @@ const about: About = {
     title: "Certificates",
     experiences: [
       {
-        company: "Pelatihan Akuntansi dan Manajemen",
-        timeframe: "Oct - Nov 2018",
+        company: "Accounting and Management Training",
+        timeframe: "Jan 2022 - Present",
         role: "Pondok Pesantren Wali Barokah Kota Kediri",
         achievements: [],
         images: [
@@ -323,7 +323,7 @@ const about: About = {
       {
         company: "Study Case Bootcamp Data Analyst with Excel",
         timeframe: "Aug 2025 - Present",
-        role: "DQLab",
+        role: "DQLab | ID Kredensial: #DQLABMB7EXCUWSTFE",
         achievements: [],
         images: [
           {
@@ -351,7 +351,7 @@ const about: About = {
       {
         company: "Intro to Data Analytics",
         timeframe: "Aug 2025 - Present",
-        role: "RevoU",
+        role: "RevoU | ID Kredensial: DAMC-28072025-01-1-00107",
         achievements: [],
         images: [
           {
@@ -371,6 +371,34 @@ const about: About = {
           {
           src: "/images/gallery/certificate-3.jpg",
           alt: "Certificate 3",
+          width: 16,
+          height: 12,
+          },
+        ],
+      },
+      {
+        company: "Free Class: Data Science",
+        timeframe: "Sep 2025 - Present",
+        role: "Dibimbing",
+        achievements: [],
+        images: [
+          {
+          src: "/images/gallery/certificate-6.jpg",
+          alt: "Certificate 6",
+          width: 16,
+          height: 12,
+          },
+        ],
+      },
+            {
+        company: "Short Class: Data Analysis Fundamental",
+        timeframe: "Aug 2025 - Present",
+        role: "MySkill | ID Kredensial: 270794/DTA/LM/08/2025",
+        achievements: [],
+        images: [
+          {
+          src: "/images/gallery/certificate-11.jpg",
+          alt: "Certificate 11",
           width: 16,
           height: 12,
           },
