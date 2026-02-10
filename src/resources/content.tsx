@@ -206,8 +206,22 @@ const about: About = {
           Editing photos in Adobe Photoshop or Adobe Lightroom on PC. Using PixelLab, Picsay and InShot on Mobile.</>,
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "CorelDRAW",
+          },
+          {
+            name: "Adobe Photoshop",
+          },
+          {
+            name: "Lightroom Mobile",
+          },
+          {
+            name: "InShot",
+          },
+          {
+            name: "PixelLab",
+          },
+          {
+            name: "Picsay Pro",
           },
         ],
         images: [
