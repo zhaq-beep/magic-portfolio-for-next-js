@@ -436,9 +436,10 @@ export default function About() {
             {experience.role}
           </Text>
 
-          {experience.achievements?.length > 0 && (
-            <Column as="ul" gap="16">
-              {experience.achievements.map(
+          {Array.isArray(experience.achievements) && experience.achievements.length > 0 && (
+  <Column as="ul" gap="16">
+    {experience.achievements.map(
+
                 (achievement: React.ReactNode, i: number) => (
                   <Text
                     as="li"
