@@ -309,10 +309,12 @@ const about: About = {
           </>,
         ],
         images: [
+          {
           src: "/images/gallery/certificate-10.jpg",
           alt: "Certificate 10",
           width: 16,
-          height: 9
+          height: 9,
+          },
         ],
       },
       {
