@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Mufid",
+  lastName: "Zhaqie",
+  name: `Zhaq Project`,
+  role: "Muballigh",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
+  email: "mufidzhaqie8080@gmail.com",
   location: "Asia/Jakarta",
-  languages: ["English", "Bahasa"],
+  languages: ["Indonesia", "English"],
 };
 
 const newsletter: Newsletter = {
@@ -22,26 +22,26 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/zhaq-beep/",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://linkedin.com/in/mufid-zhaqie/",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
+    link: "https://www.instagram.com/muadzz.17/",
+    essential: true,
   },
   {
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/@once_ui",
-    essential: true,
+    essential: false,
   },
   {
     name: "Email",
@@ -69,11 +69,11 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/poster-dinding",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
+      I'm Zhaq, a design engineer at{" "}
       <Text as="span" size="xl" weight="strong">
         ONCE UI
       </Text>
@@ -107,52 +107,73 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Mufid Zhaqie is a Muballigh at one of Majelis Taklim in Depok City with a passion for making a positive impact,
+        being influential without being influenced, and providing simple and elegant design solutions.
+        His work includes digital interfaces, interactive experiences, and the convergence of design and technology..
       </>
     ),
   },
 
   work: {
     display: true,
-    title: "Work Experience",
+    title: "Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Magang/PKL",
+        timeframe: "Oct - Nov 2018",
+        role: "PLN UPDL (Unit Pelaksana Pendidikan dan Pelatihan) Bogor",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Participating in the daily activities of the implementing unit.
+          </>,
+          <>  
+            Scanning or digitizing documents using a scanner.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+           Responsible for printing document files using a printer, to produce files for office needs and making copies using a photocopier.
           </>,
-        ],
-        images: [
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          <>
+            Implementing general TIK in the field of work.
+          </>,
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Ponpes Wali Barokah Kediri",
+        timeframe: "Mar 2022 - Mar 2024",
+        role: "Administration Secretary",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Organize a more efficient filing system and enhance the appearance of activity publications with appealing visual designs,
+            displayed on the madin pondok.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Record all financial transactions into the system and report books in an orderly and systematic manner.
+          </>,
+          <>
+            Ensure all received funds are deposited to the institution's staff safely, accurately, on time, neatly, and transparently.
+          </>,
+          <>
+            Coordinate finances and implement the use of institutional funds according to applicable regulations
+          </>,
+          <>
+            Archive letters and/or expenditure receipts neatly and orderly.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Majelis Taklim Baitul Ihsan Depok",
+        timeframe: "May 2024 - Present",
+        role: "Muballigh",
+        achievements: [
+          <>
+            Developing interactive learning designs for Generus.
+          </>,
+          <>
+            Helping the Generus to learn effectively and systematically.
+          </>,
+          <>
+            Creating wall poster designs as a form of learning and knowledge.
           </>,
         ],
         images: [],
@@ -165,12 +186,12 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Univ. xxxxxxxxx",
+        description: <>Studied xxxxxxxx.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Build the Project",
+        description: <>Studied online and personal branding.</>,
       },
     ],
   },
@@ -180,8 +201,9 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Design Graphic",
+        description: <>Able to design in Canva and CorelDRAW.
+          Editing photos in Adobe Photoshop or Adobe Lightroom on PC. Using PixelLab, Picsay and InShot on Mobile.</>,
         tags: [
           {
             name: "Figma",
@@ -204,30 +226,9 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Photographer",
+        description: <>Photography Enthusiast.</>,
+        images: [],
       },
     ],
   },
