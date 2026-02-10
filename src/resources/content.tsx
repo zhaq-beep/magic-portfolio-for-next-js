@@ -302,63 +302,47 @@ const about: About = {
     experiences: [
       {
         company: "Pelatihan Akuntansi dan Manajemen",
-        timeframe: "October - November 2018",
+        timeframe: "Jan 2022 - Present",
         role: "Pondok Pesantren Wali Barokah Kota Kediri",
         achievements: [
-          <>Sertifikat ini diperoleh setelah menyelesaikan pelatihan intensif mengenai dasar-dasar
+          <>
+            Sertifikat ini diperoleh setelah menyelesaikan pelatihan intensif mengenai dasar-dasar
             manajemen organisasi, komunikasi efektif, dan pengelolaan administrasi.
-            Pelatihan diselenggarakan oleh Pondok Pesantren Wali Barokah Kota Kediri.</>,
+            Pelatihan diselenggarakan oleh Pondok Pesantren Wali Barokah Kota Kediri.
+          </>,
         ],
       },
       {
-        company: "Ponpes Wali Barokah Kediri",
-        timeframe: "2022 - 2024",
-        role: "Administration Secretary",
+        company: "Microsoft Excel Essentials",
+        timeframe: "Jul 2025 - Present",
+        role: "Alison.com",
         achievements: [
           <>
-            Organize a more efficient filing system and enhance the appearance of activity publications
-            with appealing visual designs, displayed on the madin pondok.
-          </>,
-          <>
-            Record all financial transactions into the system and
-            report books in an orderly and systematic manner.
-          </>,
-          <>
-            Ensure all received funds are deposited to the
-            institution's staff safely, accurately, on time, neatly, and transparently.
-          </>,
-          <>
-            Coordinate finances and implement the use of institutional funds
-            according to applicable regulations
-          </>,
-          <>
-            Archive letters and/or expenditure receipts neatly and orderly.
+            Lisensi ini diperoleh setelah mengikuti dan menyelesaikan pelatihan online atau kursus online mengenai fundamental atau
+            dasar-dasar Microsoft Excel guna meningkatkan keterampilan diri.
+            Pelatihan diselenggarakan oleh platform Alison – Empower Yourself
           </>,
         ],
-//        images: [
-//          // optional: leave the array empty if you don't want to display images
-//          {
-//            src: "/images/projects/project-01/cover-01.jpg",
-//            alt: "Zhaq Project",
-//            width: 16,
-//            height: 9,
-//          },
-//        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/project-01/cover-01.jpg",
+            alt: "Zhaq Project",
+            width: 16,
+            height: 9,
+          },
+        ],
         },
       {
-        company: "Majelis Taklim Baitul Ihsan Depok",
-        timeframe: "2024 - present",
-        role: "Muballigh",
+        company: "Study Case Bootcamp Data Analyst with Excel",
+        timeframe: "Agu 2025 - present",
+        role: "DQLab",
         achievements: [
           <>
-            Developing interactive learning designs for Generus.
+            Lisensi ini diperoleh setelah mengikuti pelatihan online atau online bootcamp mengenai dasar-dasar
+            atau fundamental data analyst, menganalisis sebuah data menggunakan untuk kepentingan bisnis.
+            Pelatihan ini diselenggarakan oleh DQLab.
           </>,
-          <>
-            Helping the Generus to learn effectively and systematically.
-          </>,
-          <>
-            Creating wall poster designs as a form of learning and knowledge.
-          </>
         ],
         images: [],
       },
