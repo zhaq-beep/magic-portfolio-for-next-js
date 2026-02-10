@@ -148,6 +148,10 @@ const about: About = {
         company: "Ponpes Wali Barokah Kediri",
         timeframe: "Mar 2022 - Mar 2024",
         role: "Administration Secretary",
+        name: "View",
+        icon: "github",
+        link: "https://github.com/zhaq-beep/",
+        essential: true,
         achievements: [
           <>
             Organize a more efficient filing system and enhance the appearance of activity publications with appealing visual designs,
