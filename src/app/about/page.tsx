@@ -297,7 +297,6 @@ export default function About() {
               </Column>
             </>
           )}
-
         </Column>
       </Row>
     </Column>
