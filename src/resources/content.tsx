@@ -65,7 +65,7 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Zhaq Project</strong>{" "}
+        <strong className="ml-4">Zhaq Project's Portfolio</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Main project🚀
@@ -296,6 +296,91 @@ const about: About = {
       },
     ],
   },
+  certificates: {
+    display: true, // set to false to hide this section
+    title: "Experience",
+    experiences: [
+      {
+        company: "Pelatihan Akuntansi dan Manajemen",
+        timeframe: "Jan 2022 - Present",
+        role: "Pondok Pesantren Wali Barokah Kota Kediri",
+        achievements: [
+          <>
+          Sertifikat ini diperoleh setelah menyelesaikan pelatihan intensif mengenai dasar-dasar manajemen organisasi,
+          komunikasi efektif, dan pengelolaan administrasi. Pelatihan diselenggarakan oleh Pondok Pesantren Wali Barokah Kota Kediri.
+          </>,
+        ],
+      },
+      {
+        company: "Microsoft Excel Essentials",
+        timeframe: "2022 - 2024",
+        role: "Alison.com",
+        achievements: [
+          <>
+            Lisensi ini diperoleh setelah mengikuti dan menyelesaikan pelatihan online atau kursus online mengenai fundamental
+            atau dasar-dasar Microsoft Excel guna meningkatkan keterampilan diri. Pelatihan diselenggarakan oleh platform Alison - Empower Yourself.
+          </>,
+          <>
+            Record all financial transactions into the system and
+            report books in an orderly and systematic manner.
+          </>,
+          <>
+            Ensure all received funds are deposited to the
+            institution's staff safely, accurately, on time, neatly, and transparently.
+          </>,
+          <>
+            Coordinate finances and implement the use of institutional funds
+            according to applicable regulations
+          </>,
+          <>
+            Archive letters and/or expenditure receipts neatly and orderly.
+          </>,
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/gallery/certificate-1.jpg",
+            alt: "Zhaq Project",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "Majelis Taklim Baitul Ihsan Depok",
+        timeframe: "2024 - present",
+        role: "Muballigh",
+        achievements: [
+          <>
+            Developing interactive learning designs for Generus.
+          </>,
+          <>
+            Helping the Generus to learn effectively and systematically.
+          </>,
+          <>
+            Creating wall poster designs as a form of learning and knowledge.
+          </>
+        ],
+        images: [],
+      },
+    ],
+  },
+  
+
+  certificates: {
+    display: true,
+    title: "Certificates",
+    skills: [
+      {
+        title: "Pelatihan Akuntansi dan Manajemen",
+        description: (
+          <>Able to communicate effectively with others.</>
+        ),
+      },
+    ]
+
+
+  }
 };
 
 const blog: Blog = {
