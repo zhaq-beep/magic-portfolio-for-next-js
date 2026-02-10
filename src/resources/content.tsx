@@ -296,7 +296,7 @@ const about: About = {
       },
     ],
   },
-  work: {
+  certificates: {
     display: true, // set to false to hide this section
     title: "Certificates",
     experiences: [
