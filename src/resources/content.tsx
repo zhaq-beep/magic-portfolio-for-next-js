@@ -370,72 +370,137 @@ const about: About = {
       {
         company: "Fundamental Project Management",
         timeframe: "Aug 2025 - Present",
-        role: "Digital Talent Scholarship 2025, KOMDIGI | ID Kredensial: 19510935840-686",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Digital Talent Scholarship | ID Kredensial: 19510935840-686
+            </Text>
+            <Badge
+              href="/images/gallery/certificate-10.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
         achievements: [],
-        images: [
-          {
-          src: "/images/gallery/certificate-10.jpg",
-          alt: "Certificate 10",
-          width: 16,
-          height: 12,
-          },
-        ],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-10.jpg",
+//          alt: "Certificate 10",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
       },
       {
         company: "Intro to Data Analytics",
         timeframe: "Aug 2025 - Present",
-        role: "RevoU | ID Kredensial: DAMC-28072025-01-1-00107",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              RevoU | ID Kredensial: DAMC-28072025-01-1-00107
+            </Text>
+            <Badge
+              href="/images/gallery/certificate-1.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
         achievements: [],
-        images: [
-          {
-          src: "/images/gallery/certificate-1.jpg",
-          alt: "Certificate 1",
-          width: 16,
-          height: 12,
-          },
-        ],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-1.jpg",
+//          alt: "Certificate 1",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
       },
       {
         company: "Foundations:  Data, Data, Everywhere",
         timeframe: "Sep 2025 - Present",
-        role: "Google, Coursera | ID Kredensial: SLGLDCP97UIO",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Google, Coursera | ID Kredensial: SLGLDCP97UIO
+            </Text>
+            <Badge
+              href="/images/gallery/certificate-3.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
         achievements: [],
-        images: [
-          {
-          src: "/images/gallery/certificate-3.jpg",
-          alt: "Certificate 3",
-          width: 16,
-          height: 12,
-          },
-        ],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-3.jpg",
+//          alt: "Certificate 3",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
       },
       {
         company: "Free Class: Data Science",
         timeframe: "Sep 2025 - Present",
-        role: "Dibimbing",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Dibimbing
+            </Text>
+            <Badge
+              href="/images/gallery/certificate-6.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
         achievements: [],
-        images: [
-          {
-          src: "/images/gallery/certificate-6.jpg",
-          alt: "Certificate 6",
-          width: 16,
-          height: 12,
-          },
-        ],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-6.jpg",
+//          alt: "Certificate 6",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
       },
             {
         company: "Short Class: Data Analysis Fundamental",
         timeframe: "Aug 2025 - Present",
-        role: "MySkill | ID Kredensial: 270794/DTA/LM/08/2025",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              MySkill | ID Kredensial: 270794/DTA/LM/08/2025
+            </Text>
+            <Badge
+              href="/images/gallery/certificate-11.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
         achievements: [],
-        images: [
-          {
-          src: "/images/gallery/certificate-11.jpg",
-          alt: "Certificate 11",
-          width: 16,
-          height: 12,
-          },
-        ],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-11.jpg",
+//          alt: "Certificate 11",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
       },
     ],
   },
