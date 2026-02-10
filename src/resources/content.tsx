@@ -63,12 +63,12 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my project as a ${person.role}`,
-  headline: <>building projects that benefit the community.</>,
+  headline: <>Building projects that benefit the community.</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Zhaq Project Portfolio</strong>{" "}
+        <strong className="ml-4">Zhaq Project</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured project🚀 
