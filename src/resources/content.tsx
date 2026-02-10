@@ -357,7 +357,6 @@ const about: About = {
             />
           </Row>
         ),
-        "DQLab | ID Kredensial: #DQLABMB7EXCUWSTFE",
         achievements: [],
         images: [],
 //          {
