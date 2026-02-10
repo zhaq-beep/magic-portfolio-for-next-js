@@ -259,8 +259,8 @@ softskills: {
       timeframe: string;
       /** Role or job title */
       role: string;
-      /** Achievements at the company */
-      achievements: React.ReactNode[];
+      /** Achievements at the company boleh salah satu */
+      achievements?: React.ReactNode[];
       /** Skill description */
       description?: React.ReactNode;
       /** Images related to the experience */
