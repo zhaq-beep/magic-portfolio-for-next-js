@@ -313,10 +313,10 @@ const about: About = {
         role: (
           <Row gap="8" vertical="center">
             <Badge
-              href="#"
+              href="https://alison.com/certification/check/ba47f91070"
               id="badge-4"
-              title="Documentation"
-              icon="sparkles"
+              title="View"
+              icon="pages"
               textVariant="label-default-s"
             />
             <Text variant="body-default-s">
