@@ -303,7 +303,20 @@ const about: About = {
       {
         company: "Accounting and Management Training",
         timeframe: "Jan 2022 - Present",
-        role: "Pondok Pesantren Wali Barokah Kota Kediri",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Pondok Pesantren Wali Barokah Kota Kediri
+            </Text>
+            <Badge
+              href="https://alison.com/certification/check/ba47f91070"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
         achievements: [],
         images: [],
       },
