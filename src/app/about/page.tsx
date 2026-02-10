@@ -30,9 +30,6 @@ export async function generateMetadata() {
 export default function About() {
   const { intro, work, studies, technical, softskills, certificates } = about;
 
-  // AMANKAN LANGUAGES
-  const languages = Array.isArray(person.languages) ? person.languages : [];
-
   const structure = [
     {
       title: intro.title,
@@ -118,9 +115,9 @@ export default function About() {
               {person.location}
             </Row>
 
-            {languages.length > 0 && (
+            {person.languages && person.languages.length > 0 && (
               <Row wrap gap="8">
-                {languages.map((language, index) => (
+                {person.languages.map((language, index) => (
                   <Tag key={index} size="l">
                     {language}
                   </Tag>
@@ -131,29 +128,28 @@ export default function About() {
         )}
 
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
-
           {/* INTRO */}
-          {intro.display && (
+          {about.intro.display && (
             <Column
-              id={intro.title}
+              id={about.intro.title}
               textVariant="body-default-l"
               fillWidth
               gap="m"
               marginBottom="xl"
             >
-              {intro.description}
+              {about.intro.description}
             </Column>
           )}
 
           {/* WORK */}
-          {work.display && (
+          {about.work.display && (
             <>
-              <Heading as="h2" id={work.title} variant="display-strong-s" marginBottom="m">
-                {work.title}
+              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
+                {about.work.title}
               </Heading>
 
               <Column fillWidth gap="l" marginBottom="40">
-                {work.experiences.map((experience, index) => (
+                {about.work.experiences.map((experience, index) => (
                   <Column key={index} fillWidth>
                     <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
                       <Text id={experience.company} variant="heading-strong-l">
@@ -169,15 +165,13 @@ export default function About() {
                       {experience.role}
                     </Text>
 
-                    {Array.isArray(experience.achievements) && (
-                      <Column as="ul" gap="16">
-                        {experience.achievements.map((achievement, i) => (
-                          <Text as="li" key={i} variant="body-default-m">
-                            {achievement}
-                          </Text>
-                        ))}
-                      </Column>
-                    )}
+                    <Column as="ul" gap="16">
+                      {experience.achievements.map((achievement, i) => (
+                        <Text as="li" key={i} variant="body-default-m">
+                          {achievement}
+                        </Text>
+                      ))}
+                    </Column>
                   </Column>
                 ))}
               </Column>
@@ -185,14 +179,14 @@ export default function About() {
           )}
 
           {/* STUDIES */}
-          {studies.display && (
+          {about.studies.display && (
             <>
-              <Heading as="h2" id={studies.title} variant="display-strong-s" marginBottom="m">
-                {studies.title}
+              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
+                {about.studies.title}
               </Heading>
 
               <Column fillWidth gap="l" marginBottom="40">
-                {studies.institutions.map((institution, index) => (
+                {about.studies.institutions.map((institution, index) => (
                   <Column key={index} fillWidth gap="4">
                     <Text id={institution.name} variant="heading-strong-l">
                       {institution.name}
@@ -208,14 +202,14 @@ export default function About() {
           )}
 
           {/* TECHNICAL */}
-          {technical.display && (
+          {about.technical.display && (
             <>
-              <Heading as="h2" id={technical.title} variant="display-strong-s" marginBottom="40">
-                {technical.title}
+              <Heading as="h2" id={about.technical.title} variant="display-strong-s" marginBottom="40">
+                {about.technical.title}
               </Heading>
 
               <Column fillWidth gap="l">
-                {technical.skills.map((skill, index) => (
+                {about.technical.skills.map((skill, index) => (
                   <Column key={index} fillWidth gap="4">
                     <Text id={skill.title} variant="heading-strong-l">
                       {skill.title}
@@ -231,14 +225,14 @@ export default function About() {
           )}
 
           {/* SOFTSKILLS */}
-          {softskills.display && (
+          {about.softskills.display && (
             <>
-              <Heading as="h2" id={softskills.title} variant="display-strong-s" marginTop="40" marginBottom="40">
-                {softskills.title}
+              <Heading as="h2" id={about.softskills.title} variant="display-strong-s" marginTop="40" marginBottom="40">
+                {about.softskills.title}
               </Heading>
 
               <Column fillWidth gap="l">
-                {softskills.skills.map((skill, index) => (
+                {about.softskills.skills.map((skill, index) => (
                   <Column key={index} fillWidth gap="4">
                     <Text id={skill.title} variant="heading-strong-l">
                       {skill.title}
@@ -253,7 +247,7 @@ export default function About() {
             </>
           )}
 
-          {/* CERTIFICATES */}
+          {/* ✅ CERTIFICATES — BAGIAN BARU */}
           {certificates.display && (
             <>
               <Heading
@@ -283,15 +277,13 @@ export default function About() {
                       {cert.role}
                     </Text>
 
-                    {Array.isArray(cert.achievements) && (
-                      <Column as="ul" gap="16">
-                        {cert.achievements.map((a, i) => (
-                          <Text as="li" key={i} variant="body-default-m">
-                            {a}
-                          </Text>
-                        ))}
-                      </Column>
-                    )}
+                    <Column as="ul" gap="16">
+                      {cert.achievements.map((a, i) => (
+                        <Text as="li" key={i} variant="body-default-m">
+                          {a}
+                        </Text>
+                      ))}
+                    </Column>
                   </Column>
                 ))}
               </Column>
