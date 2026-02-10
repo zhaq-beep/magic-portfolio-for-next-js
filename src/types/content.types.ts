@@ -260,7 +260,7 @@ soft: {
       /** Role or job title */
       role: string;
       /** Achievements at the company */
-      achievements: React.ReactNode[];
+      achievements?: React.ReactNode[];
       /** Images related to the experience */
       images?: Array<{
         /** Image source path */
