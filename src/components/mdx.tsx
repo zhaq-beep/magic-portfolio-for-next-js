@@ -1,6 +1,7 @@
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import React, { ReactNode } from "react";
 import { slugify as transliterate } from "transliteration";
+import dynamic from "next/dynamic";
 
 import {
   Heading,
@@ -25,9 +26,14 @@ import {
   List,
   ListItem,
   Line,
-  Carousel,
   Badge,
 } from "@once-ui-system/core";
+
+/* ✅ FIX: dynamic Carousel */
+const Carousel = dynamic(
+  () => import("@once-ui-system/core").then((mod) => mod.Carousel),
+  { ssr: false }
+);
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
@@ -44,11 +50,7 @@ function CustomLink({ href, children, ...props }: CustomLinkProps) {
   }
 
   if (href.startsWith("#")) {
-    return (
-      <a href={href} {...props}>
-        {children}
-      </a>
-    );
+    return <a href={href} {...props}>{children}</a>;
   }
 
   return (
@@ -59,10 +61,7 @@ function CustomLink({ href, children, ...props }: CustomLinkProps) {
 }
 
 function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
-  if (!src) {
-    console.error("Media requires a valid 'src' property.");
-    return null;
-  }
+  if (!src) return null;
 
   return (
     <Media
@@ -80,11 +79,11 @@ function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
 }
 
 function slugify(str: string): string {
-  const strWithAnd = str.replace(/&/g, " and "); // Replace & with 'and'
+  const strWithAnd = str.replace(/&/g, " and ");
   return transliterate(strWithAnd, {
     lowercase: true,
-    separator: "-", // Replace spaces with -
-  }).replace(/\-\-+/g, "-"); // Replace multiple - with single -
+    separator: "-",
+  }).replace(/\-\-+/g, "-");
 }
 
 function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
@@ -101,7 +100,6 @@ function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
   };
 
   CustomHeading.displayName = `${as}`;
-
   return CustomHeading;
 }
 
@@ -124,11 +122,8 @@ function createInlineCode({ children }: { children: ReactNode }) {
 }
 
 function createCodeBlock(props: any) {
-  // For pre tags that contain code blocks
-  if (props.children && props.children.props && props.children.props.className) {
+  if (props.children?.props?.className) {
     const { className, children } = props.children.props;
-
-    // Extract language from className (format: language-xxx)
     const language = className.replace("language-", "");
     const label = language.charAt(0).toUpperCase() + language.slice(1);
 
@@ -136,19 +131,12 @@ function createCodeBlock(props: any) {
       <CodeBlock
         marginTop="8"
         marginBottom="16"
-        codes={[
-          {
-            code: children,
-            language,
-            label,
-          },
-        ]}
-        copyButton={true}
+        codes={[{ code: children, language, label }]}
+        copyButton
       />
     );
   }
 
-  // Fallback for other pre tags or empty code blocks
   return <pre {...props} />;
 }
 
@@ -204,7 +192,8 @@ const components = {
   Icon,
   Media,
   SmartLink,
-  Carousel,
+  Badge,
+  Carousel, // ✅ now safe
 };
 
 type CustomMDXProps = MDXRemoteProps & {
@@ -212,5 +201,10 @@ type CustomMDXProps = MDXRemoteProps & {
 };
 
 export function CustomMDX(props: CustomMDXProps) {
-  return <MDXRemote {...props} components={{ ...components, ...(props.components || {}) }} />;
+  return (
+    <MDXRemote
+      {...props}
+      components={{ ...components, ...(props.components || {}) }}
+    />
+  );
 }
