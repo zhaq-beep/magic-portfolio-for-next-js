@@ -1,4 +1,4 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Project } from "@/types";
+import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text, Badge, SmartLink } from "@once-ui-system/core";
 
 const person: Person = {
@@ -646,7 +646,7 @@ const blog: Blog = {
   description: `Read what ${person.name} has been up to recently`,
 };
 
-const project: Project = {
+const work: Work = {
   path: "/project",
   label: "Project",
   title: `A Showcase of my project journey. – ${person.name}`,
@@ -672,4 +672,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, project, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery };
