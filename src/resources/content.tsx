@@ -1,4 +1,4 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Blog, Gallery, Home, Newsletter, Person, Social, Project } from "@/types";
 import { Line, Row, Text, Badge, SmartLink } from "@once-ui-system/core";
 
 const person: Person = {
@@ -647,9 +647,9 @@ const blog: Blog = {
 };
 
 const work: Work = {
-  path: "/work",
+  path: "/project",
   label: "Project",
-  title: `Projects – ${person.name}`,
+  title: `A Showcase of my project journey. – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
 };
 
