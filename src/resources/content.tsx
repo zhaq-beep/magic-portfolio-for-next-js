@@ -646,7 +646,7 @@ const blog: Blog = {
   description: `Read what ${person.name} has been up to recently`,
 };
 
-const work: Work = {
+const project: Work = {
   path: "/project",
   label: "Project",
   title: `A Showcase of my project journey. – ${person.name}`,
