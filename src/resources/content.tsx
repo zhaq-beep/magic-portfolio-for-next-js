@@ -475,7 +475,67 @@ const about: About = {
                </SmartLink>
             </Text>
             <Badge
-              href="/images/gallery/certificate-1.jpg"
+              href="/images/gallery/certificate-9.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-1.jpg",
+//          alt: "Certificate 1",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "Analyze Data to Answer Questions",
+        timeframe: "Oct 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Google, Coursera | ID Kredensial: 
+               <SmartLink href="https://www.coursera.org/account/accomplishments/records/9J2XVH4H1XDJ" selected>
+                 9J2XVH4H1XDJ
+               </SmartLink>
+            </Text>
+            <Badge
+              href="/images/gallery/certificate-5.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-1.jpg",
+//          alt: "Certificate 1",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "Share Data Through the Art of Visualization",
+        timeframe: "Oct 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Google, Coursera | ID Kredensial: 
+               <SmartLink href="https://www.coursera.org/account/accomplishments/records/ZLGC969SUWAU" selected>
+                 ZLGC969SUWAU
+               </SmartLink>
+            </Text>
+            <Badge
+              href="/images/gallery/certificate-13.jpg"
               id="badge-4"
               title="View here"
               icon="document"
