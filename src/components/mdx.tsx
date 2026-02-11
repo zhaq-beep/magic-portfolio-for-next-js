@@ -28,9 +28,6 @@ import {
   Badge,
 } from "@once-ui-system/core";
 
-// ✅ FIXED IMPORT (NAMED EXPORT)
-import MDXCarousel from "@/components/MDXCarousel";
-
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
   children: ReactNode;
@@ -46,7 +43,11 @@ function CustomLink({ href, children, ...props }: CustomLinkProps) {
   }
 
   if (href.startsWith("#")) {
-    return <a href={href} {...props}>{children}</a>;
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
   }
 
   return (
@@ -57,7 +58,10 @@ function CustomLink({ href, children, ...props }: CustomLinkProps) {
 }
 
 function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
-  if (!src) return null;
+  if (!src) {
+    console.error("Media requires a valid 'src' property.");
+    return null;
+  }
 
   return (
     <Media
@@ -75,11 +79,11 @@ function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
 }
 
 function slugify(str: string): string {
-  const strWithAnd = str.replace(/&/g, " and ");
+  const strWithAnd = str.replace(/&/g, " and "); // Replace & with 'and'
   return transliterate(strWithAnd, {
     lowercase: true,
-    separator: "-",
-  }).replace(/\-\-+/g, "-");
+    separator: "-", // Replace spaces with -
+  }).replace(/\-\-+/g, "-"); // Replace multiple - with single -
 }
 
 function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
@@ -88,21 +92,15 @@ function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
     ...props
   }: Omit<React.ComponentProps<typeof HeadingLink>, "as" | "id">) => {
     const slug = slugify(children as string);
-
     return (
-      <HeadingLink
-        marginTop="24"
-        marginBottom="12"
-        as={as}
-        id={slug}
-        {...props}
-      >
+      <HeadingLink marginTop="24" marginBottom="12" as={as} id={slug} {...props}>
         {children}
       </HeadingLink>
     );
   };
 
   CustomHeading.displayName = `${as}`;
+
   return CustomHeading;
 }
 
@@ -125,8 +123,11 @@ function createInlineCode({ children }: { children: ReactNode }) {
 }
 
 function createCodeBlock(props: any) {
-  if (props.children?.props?.className) {
+  // For pre tags that contain code blocks
+  if (props.children && props.children.props && props.children.props.className) {
     const { className, children } = props.children.props;
+
+    // Extract language from className (format: language-xxx)
     const language = className.replace("language-", "");
     const label = language.charAt(0).toUpperCase() + language.slice(1);
 
@@ -134,17 +135,24 @@ function createCodeBlock(props: any) {
       <CodeBlock
         marginTop="8"
         marginBottom="16"
-        codes={[{ code: children, language, label }]}
-        copyButton
+        codes={[
+          {
+            code: children,
+            language,
+            label,
+          },
+        ]}
+        copyButton={true}
       />
     );
   }
 
+  // Fallback for other pre tags or empty code blocks
   return <pre {...props} />;
 }
 
-function createList({ children }: { children: ReactNode }) {
-  return <List>{children}</List>;
+function createList(as: "ul" | "ol") {
+  return ({ children }: { children: ReactNode }) => <List as={as}>{children}</List>;
 }
 
 function createListItem({ children }: { children: ReactNode }) {
@@ -163,8 +171,7 @@ function createHR() {
   );
 }
 
-/* ✅ EXPORTABLE COMPONENT MAP */
-export const mdxComponents = {
+const components = {
   p: createParagraph as any,
   h1: createHeading("h1") as any,
   h2: createHeading("h2") as any,
@@ -176,8 +183,8 @@ export const mdxComponents = {
   a: CustomLink as any,
   code: createInlineCode as any,
   pre: createCodeBlock as any,
-  ol: createList as any,
-  ul: createList as any,
+  ol: createList("ol") as any,
+  ul: createList("ul") as any,
   li: createListItem as any,
   hr: createHR as any,
   Heading,
@@ -197,19 +204,12 @@ export const mdxComponents = {
   Media,
   SmartLink,
   Badge,
-
-  Carousel: MDXCarousel,
 };
 
 type CustomMDXProps = MDXRemoteProps & {
-  components?: typeof mdxComponents;
+  components?: typeof components;
 };
 
 export function CustomMDX(props: CustomMDXProps) {
-  return (
-    <MDXRemote
-      {...props}
-      components={{ ...mdxComponents, ...(props.components || {}) }}
-    />
-  );
+  return <MDXRemote {...props} components={{ ...components, ...(props.components || {}) }} />;
 }
