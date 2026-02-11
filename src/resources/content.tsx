@@ -646,7 +646,7 @@ const blog: Blog = {
   description: `Read what ${person.name} has been up to recently`,
 };
 
-const project: Work = {
+const project: Project = {
   path: "/project",
   label: "Project",
   title: `A Showcase of my project journey. – ${person.name}`,
@@ -672,4 +672,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, project, gallery };
