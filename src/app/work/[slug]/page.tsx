@@ -103,7 +103,7 @@ export default async function Project({
 
       <Column maxWidth="s" gap="16" horizontal="center" align="center">
         <SmartLink href="/work">
-          <Text variant="label-strong-m">Projects</Text>
+          <Text variant="label-strong-m">A Showcase of my projects.</Text>
         </SmartLink>
 
         <Text
