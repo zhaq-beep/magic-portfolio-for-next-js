@@ -28,6 +28,9 @@ import {
   Badge,
 } from "@once-ui-system/core";
 
+// ✅ IMPORT WRAPPER
+import MDXCarousel from "@/components/MDXCarousel";
+
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
   children: ReactNode;
@@ -85,8 +88,15 @@ function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
     ...props
   }: Omit<React.ComponentProps<typeof HeadingLink>, "as" | "id">) => {
     const slug = slugify(children as string);
+
     return (
-      <HeadingLink marginTop="24" marginBottom="12" as={as} id={slug} {...props}>
+      <HeadingLink
+        marginTop="24"
+        marginBottom="12"
+        as={as}
+        id={slug}
+        {...props}
+      >
         {children}
       </HeadingLink>
     );
@@ -186,6 +196,9 @@ const components = {
   Media,
   SmartLink,
   Badge,
+
+  // ✅ REGISTER DI SINI
+  Carousel: MDXCarousel,
 };
 
 type CustomMDXProps = MDXRemoteProps & {
