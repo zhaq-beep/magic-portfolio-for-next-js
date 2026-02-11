@@ -28,7 +28,7 @@ import {
   Badge,
 } from "@once-ui-system/core";
 
-// ✅ IMPORT WRAPPER
+// ✅ CLIENT WRAPPER
 import MDXCarousel from "@/components/MDXCarousel";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -163,7 +163,8 @@ function createHR() {
   );
 }
 
-const components = {
+/* ✅ EXPORTABLE COMPONENT MAP */
+export const mdxComponents = {
   p: createParagraph as any,
   h1: createHeading("h1") as any,
   h2: createHeading("h2") as any,
@@ -197,19 +198,19 @@ const components = {
   SmartLink,
   Badge,
 
-  // ✅ REGISTER DI SINI
+  // 🔥 IMPORTANT
   Carousel: MDXCarousel,
 };
 
 type CustomMDXProps = MDXRemoteProps & {
-  components?: typeof components;
+  components?: typeof mdxComponents;
 };
 
 export function CustomMDX(props: CustomMDXProps) {
   return (
     <MDXRemote
       {...props}
-      components={{ ...components, ...(props.components || {}) }}
+      components={{ ...mdxComponents, ...(props.components || {}) }}
     />
   );
 }
