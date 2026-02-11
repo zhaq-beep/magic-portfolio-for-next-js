@@ -19,7 +19,7 @@ const baseURL: string = "https://zhaqproject.vercel.app/";
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
-  "/project": true,
+  "/work": true,
   "/blog": false,
   "/gallery": true,
   "/wedding-page": true,
