@@ -4,19 +4,20 @@ import {
   Meta,
   Schema,
   AvatarGroup,
+  Button,
   Column,
+  Flex,
   Heading,
   Media,
   Text,
   SmartLink,
   Row,
+  Avatar,
   Line,
 } from "@once-ui-system/core";
-
 import { baseURL, about, person, work } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
-import { ScrollToHash } from "@/components";
-import { CustomMDX, mdxComponents } from "@/components/mdx";
+import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
 import { Projects } from "@/components/work/Projects";
 
@@ -33,13 +34,12 @@ export async function generateMetadata({
   params: Promise<{ slug: string | string[] }>;
 }): Promise<Metadata> {
   const routeParams = await params;
-
   const slugPath = Array.isArray(routeParams.slug)
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
   const posts = getPosts(["src", "app", "work", "projects"]);
-  const post = posts.find((post) => post.slug === slugPath);
+  let post = posts.find((post) => post.slug === slugPath);
 
   if (!post) return {};
 
@@ -47,9 +47,7 @@ export async function generateMetadata({
     title: post.metadata.title,
     description: post.metadata.summary,
     baseURL: baseURL,
-    image:
-      post.metadata.image ||
-      `/api/og/generate?title=${post.metadata.title}`,
+    image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
     path: `${work.path}/${post.slug}`,
   });
 }
@@ -60,22 +58,19 @@ export default async function Project({
   params: Promise<{ slug: string | string[] }>;
 }) {
   const routeParams = await params;
-
   const slugPath = Array.isArray(routeParams.slug)
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
-  const post = getPosts(["src", "app", "work", "projects"]).find(
-    (post) => post.slug === slugPath
-  );
+  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slugPath);
 
   if (!post) {
     notFound();
   }
 
   const avatars =
-    post.metadata.team?.map((member) => ({
-      src: member.avatar,
+    post.metadata.team?.map((person) => ({
+      src: person.avatar,
     })) || [];
 
   return (
@@ -89,10 +84,7 @@ export default async function Project({
         datePublished={post.metadata.publishedAt}
         dateModified={post.metadata.publishedAt}
         image={
-          post.metadata.image ||
-          `/api/og/generate?title=${encodeURIComponent(
-            post.metadata.title
-          )}`
+          post.metadata.image || `/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`
         }
         author={{
           name: person.name,
@@ -100,32 +92,18 @@ export default async function Project({
           image: `${baseURL}${person.avatar}`,
         }}
       />
-
       <Column maxWidth="s" gap="16" horizontal="center" align="center">
         <SmartLink href="/work">
-          <Text variant="label-strong-m">A Showcase of my projects.</Text>
+          <Text variant="label-strong-m">Projects</Text>
         </SmartLink>
-
-        <Text
-          variant="body-default-xs"
-          onBackground="neutral-weak"
-          marginBottom="12"
-        >
-          {post.metadata.publishedAt &&
-            formatDate(post.metadata.publishedAt)}
+        <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
+          {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
         </Text>
-
-        <Heading variant="display-strong-m">
-          {post.metadata.title}
-        </Heading>
+        <Heading variant="display-strong-m">{post.metadata.title}</Heading>
       </Column>
-
       <Row marginBottom="32" horizontal="center">
         <Row gap="16" vertical="center">
-          {post.metadata.team && (
-            <AvatarGroup reverse avatars={avatars} size="s" />
-          )}
-
+          {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="s" />}
           <Text variant="label-default-m" onBackground="brand-weak">
             {post.metadata.team?.map((member, idx) => (
               <span key={idx}>
@@ -134,46 +112,25 @@ export default async function Project({
                     ,{" "}
                   </Text>
                 )}
-                <SmartLink href={member.linkedIn}>
-                  {member.name}
-                </SmartLink>
+                <SmartLink href={member.linkedIn}>{member.name}</SmartLink>
               </span>
             ))}
           </Text>
         </Row>
       </Row>
-
-      {post.metadata.images?.length > 0 && (
-        <Media
-          priority
-          aspectRatio="16 / 9"
-          radius="m"
-          alt="image"
-          src={post.metadata.images[0]}
-        />
+      {post.metadata.images.length > 0 && (
+        <Media priority aspectRatio="16 / 9" radius="m" alt="image" src={post.metadata.images[0]} />
       )}
-
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
-        <CustomMDX
-          source={post.content}
-          components={mdxComponents}
-        />
+        <CustomMDX source={post.content} />
       </Column>
-
       <Column fillWidth gap="40" horizontal="center" marginTop="40">
         <Line maxWidth="40" />
-
-        <Heading
-          as="h2"
-          variant="heading-strong-xl"
-          marginBottom="24"
-        >
+        <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
           Related projects
         </Heading>
-
         <Projects exclude={[post.slug]} range={[2]} />
       </Column>
-
       <ScrollToHash />
     </Column>
   );
