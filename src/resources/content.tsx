@@ -464,6 +464,36 @@ const about: About = {
 //        ],
       },
       {
+        company: "Process Data from Dirty to Clean",
+        timeframe: "Oct 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Google, Coursera | ID Kredensial: 
+               <SmartLink href="https://www.coursera.org/account/accomplishments/records/897PDFIQTLRU" selected>
+                 897PDFIQTLRU
+               </SmartLink>
+            </Text>
+            <Badge
+              href="/images/gallery/certificate-1.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-1.jpg",
+//          alt: "Certificate 1",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
         company: "Foundations:  Data, Data, Everywhere",
         timeframe: "Sep 2025 - Present",
         role: (
