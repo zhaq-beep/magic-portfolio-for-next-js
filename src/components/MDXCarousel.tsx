@@ -1,5 +1,5 @@
 "use client";
 
-import { Carousel } from "@once-ui-system/core";
+import { Carousel as OnceCarousel } from "@once-ui-system/core";
 
-export default Carousel;
+export const Carousel = OnceCarousel;
