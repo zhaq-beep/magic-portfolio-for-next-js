@@ -301,7 +301,7 @@ const about: About = {
     title: "Certificates",
     experiences: [
       {
-        company: "Accounting and Management Training",
+        company: "● Accounting and Management Training",
         timeframe: "Jan 2022 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -321,7 +321,7 @@ const about: About = {
         images: [],
       },
       {
-        company: "Microsoft Excel Essentials",
+        company: "● Microsoft Excel Essentials",
         timeframe: "Jul 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -344,7 +344,7 @@ const about: About = {
         images: [],
       },
       {
-        company: "Study Case Bootcamp Data Analyst with Excel",
+        company: "● Study Case Bootcamp Data Analyst with Excel",
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -374,7 +374,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "Ask Questions to Make Data-Driven Decisions",
+        company: "● Ask Questions to Make Data-Driven Decisions",
         timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -404,7 +404,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "Fundamental Project Management",
+        company: "● Fundamental Project Management",
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -434,7 +434,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "Intro to Data Analytics",
+        company: "● Intro to Data Analytics",
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -464,7 +464,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "Prepare Data for Exploration",
+        company: "● Prepare Data for Exploration",
         timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -494,7 +494,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "Analyze Data to Answer Questions",
+        company: "● Analyze Data to Answer Questions",
         timeframe: "Oct 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -524,7 +524,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "Share Data Through the Art of Visualization",
+        company: "● Share Data Through the Art of Visualization",
         timeframe: "Oct 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -554,7 +554,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "Foundations:  Data, Data, Everywhere",
+        company: "● Foundations: Data, Data, Everywhere",
         timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -584,7 +584,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "Free Class: Data Science",
+        company: "● Free Class: Data Science",
         timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -611,7 +611,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "Short Class: Data Analysis Fundamental",
+        company: "● Short Class: Data Analysis Fundamental",
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
