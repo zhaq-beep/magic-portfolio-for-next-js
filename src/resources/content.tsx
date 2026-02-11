@@ -14,8 +14,8 @@ const person: Person = {
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  title: <>Subscribe to {person.name}'s Newsletter</>,
+  description: <>My weekly newsletter about creativity and projects.</>,
 };
 
 const social: Social = [
@@ -75,16 +75,11 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/poster-dinding",
+    href: "/work/worksheet/",
   },
   subline: (
     <>
-      Hello, I am Zhaq. a Muballigh at one of Majelis Taklim in{" "}
-      <Text as="span" size="xl" weight="strong">
-        Depok City
-      </Text>
-      , with a passion for making a positive impact,
-        being influential without being influenced.
+    Hi, I am Zhaq! a Muballigh at one of Majelis Taklim in <Text as="span" size="xl" weight="strong">Depok City</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
     </>
   ),
 };
