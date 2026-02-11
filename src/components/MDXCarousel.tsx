@@ -1,5 +1,10 @@
 "use client";
 
-import { Carousel as OnceCarousel } from "@once-ui-system/core";
+import dynamic from "next/dynamic";
 
-export const Carousel = OnceCarousel;
+const Carousel = dynamic(
+  () => import("@once-ui-system/core").then((m) => m.Carousel),
+  { ssr: false }
+);
+
+export default Carousel;
