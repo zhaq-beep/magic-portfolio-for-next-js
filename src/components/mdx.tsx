@@ -29,7 +29,7 @@ import {
 } from "@once-ui-system/core";
 
 // ✅ FIXED IMPORT (NAMED EXPORT)
-import { Carousel as MDXCarousel } from "@/components/MDXCarousel";
+import MDXCarousel from "@/components/MDXCarousel";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
@@ -198,7 +198,6 @@ export const mdxComponents = {
   SmartLink,
   Badge,
 
-  // 🔥 FIXED
   Carousel: MDXCarousel,
 };
 
