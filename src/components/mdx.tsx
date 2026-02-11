@@ -1,7 +1,6 @@
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import React, { ReactNode } from "react";
 import { slugify as transliterate } from "transliteration";
-import dynamic from "next/dynamic";
 
 import {
   Heading,
@@ -28,12 +27,6 @@ import {
   Line,
   Badge,
 } from "@once-ui-system/core";
-
-/* ✅ FIX: dynamic Carousel */
-const Carousel = dynamic(
-  () => import("@once-ui-system/core").then((mod) => mod.Carousel),
-  { ssr: false }
-);
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
@@ -193,7 +186,6 @@ const components = {
   Media,
   SmartLink,
   Badge,
-  Carousel, // ✅ now safe
 };
 
 type CustomMDXProps = MDXRemoteProps & {
