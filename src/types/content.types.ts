@@ -139,7 +139,7 @@ export interface About extends BasePageConfig {
   };
  
   /** Work experience section */
-  project: {
+  work: {
     /** Whether to display work experience */
     display: boolean;
     /** Title for the work experience section */
