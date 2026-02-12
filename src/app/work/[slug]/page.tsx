@@ -14,6 +14,7 @@ import {
   Row,
   Avatar,
   Line,
+  OgCard,
 } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
