@@ -202,6 +202,9 @@ const components = {
   Icon,
   Media,
   SmartLink,
+  Badge,
+  Carousel,
+  OgCard,
 };
 
 type CustomMDXProps = MDXRemoteProps & {
