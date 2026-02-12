@@ -296,7 +296,7 @@ const about: About = {
     title: "Certificates",
     experiences: [
       {
-        company: "● Accounting and Management Training",
+        company: "● Accounting and Management Training", // 000
         timeframe: "Jan 2022 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -316,7 +316,7 @@ const about: About = {
         images: [],
       },
       {
-        company: "● Microsoft Excel Essentials",
+        company: "● Microsoft Excel Essentials", // 012
         timeframe: "Jul 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -339,7 +339,7 @@ const about: About = {
         images: [],
       },
       {
-        company: "● Study Case Bootcamp Data Analyst with Excel",
+        company: "● Study Case Bootcamp Data Analyst with Excel", // 008
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -369,7 +369,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Ask Questions to Make Data-Driven Decisions",
+        company: "● Ask Questions to Make Data-Driven Decisions", // 002
         timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -399,7 +399,37 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Fundamental Project Management",
+        company: "● Process Data from Dirty to Clean", // 009
+        timeframe: "Oct 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Google, Coursera | ID Kredensial: 
+              <SmartLink href="https://www.coursera.org/account/accomplishments/verify/C0IWDGT054W1" selected>
+                C0IWDGT054W1 
+              </SmartLink>
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-009.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-2.jpg",
+//          alt: "Certificate 10",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "● Fundamental Project Management", // 010
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -429,7 +459,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Intro to Data Analytics",
+        company: "● Intro to Data Analytics", // 001
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -459,7 +489,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Prepare Data for Exploration",
+        company: "● Prepare Data for Exploration", // 014
         timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -489,7 +519,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Analyze Data to Answer Questions",
+        company: "● Analyze Data to Answer Questions", // 005
         timeframe: "Oct 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -519,7 +549,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Share Data Through the Art of Visualization",
+        company: "● Share Data Through the Art of Visualization", // 013
         timeframe: "Oct 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -549,7 +579,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Foundations: Data, Data, Everywhere",
+        company: "● Foundations: Data, Data, Everywhere", // 003
         timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -579,7 +609,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Free Class: Data Science",
+        company: "● Free Class: Data Science", // 006
         timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -606,7 +636,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Short Class: Data Analysis Fundamental",
+        company: "● Short Class: Data Analysis Fundamental", // 011
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -629,6 +659,66 @@ const about: About = {
         images: [],
 //          {
 //          src: "/images/gallery/certificate-11.jpg",
+//          alt: "Certificate 11",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "● Aplikasi Design Grafis bagi Guru dan Tenaga Kependidikan", // 007
+        timeframe: "Jul 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              MySkill | ID Kredensial:
+              <SmartLink href="https://digitalent.komdigi.go.id/cek-sertifikat?registrasi=19410570850-145" selected> 
+                19410570850-145
+              </SmartLink>
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-007.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-004.jpg",
+//          alt: "Certificate 11",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "● Short Class: Designing Using Canva", // 004
+        timeframe: "Aug 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              MySkill | ID Kredensial:
+              <SmartLink href="https://myskill.id/" selected> 
+                278114/GFD/LM/08/2025
+              </SmartLink>
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-004.jpg"
+              id="badge-4"
+              title="View here"
+              icon="document"
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-004.jpg",
 //          alt: "Certificate 11",
 //          width: 16,
 //          height: 12,
