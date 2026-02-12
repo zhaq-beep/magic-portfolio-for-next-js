@@ -304,7 +304,7 @@ const about: About = {
               Pondok Pesantren Wali Barokah Kota Kediri
             </Text>
             <Badge
-              href="/images/gallery/certificate-0.jpg"
+              href="/images/certificate/certificate-0.jpg"
               id="badge-4"
               title="View here"
               icon="document"
@@ -327,7 +327,7 @@ const about: About = {
               </SmartLink>
             </Text>
             <Badge
-              href="/images/gallery/certificate-12.jpg"
+              href="/images/certificate/certificate-012.jpg"
               id="badge-4"
               title="View here"
               icon="document"
@@ -350,7 +350,7 @@ const about: About = {
               </SmartLink>
             </Text>
             <Badge
-              href="/images/gallery/certificate-8.jpg"
+              href="/images/certificate/certificate-008.jpg"
               id="badge-4"
               title="View here"
               icon="document"
@@ -380,7 +380,7 @@ const about: About = {
               </SmartLink>
             </Text>
             <Badge
-              href="/images/gallery/certificate-2.jpg"
+              href="/images/certificate/certificate-002.jpg"
               id="badge-4"
               title="View here"
               icon="document"
@@ -410,7 +410,7 @@ const about: About = {
               </SmartLink>  
             </Text>
             <Badge
-              href="/images/gallery/certificate-10.jpg"
+              href="/images/certificate/certificate-010.jpg"
               id="badge-4"
               title="View here"
               icon="document"
@@ -440,7 +440,7 @@ const about: About = {
                </SmartLink>
             </Text>
             <Badge
-              href="/images/gallery/certificate-1.jpg"
+              href="/images/certificate/certificate-001.jpg"
               id="badge-4"
               title="View here"
               icon="document"
@@ -470,7 +470,7 @@ const about: About = {
                </SmartLink>
             </Text>
             <Badge
-              href="/images/gallery/certificate-14.jpg"
+              href="/images/certificate/certificate-014.jpg"
               id="badge-4"
               title="View here"
               icon="document"
@@ -500,7 +500,7 @@ const about: About = {
                </SmartLink>
             </Text>
             <Badge
-              href="/images/gallery/certificate-5.jpg"
+              href="/images/certificate/certificate-005.jpg"
               id="badge-4"
               title="View here"
               icon="document"
@@ -530,7 +530,7 @@ const about: About = {
                </SmartLink>
             </Text>
             <Badge
-              href="/images/gallery/certificate-13.jpg"
+              href="/images/certificate/certificate-013.jpg"
               id="badge-4"
               title="View here"
               icon="document"
@@ -560,7 +560,7 @@ const about: About = {
               </SmartLink>
             </Text>
             <Badge
-              href="/images/gallery/certificate-3.jpg"
+              href="/images/certificate/certificate-003.jpg"
               id="badge-4"
               title="View here"
               icon="document"
@@ -587,7 +587,7 @@ const about: About = {
               Dibimbing
             </Text>
             <Badge
-              href="/images/gallery/certificate-6.jpg"
+              href="/images/certificate/certificate-006.jpg"
               id="badge-4"
               title="View here"
               icon="document"
@@ -617,7 +617,7 @@ const about: About = {
               </SmartLink>
             </Text>
             <Badge
-              href="/images/gallery/certificate-11.jpg"
+              href="/images/certificate/certificate-011.jpg"
               id="badge-4"
               title="View here"
               icon="document"
