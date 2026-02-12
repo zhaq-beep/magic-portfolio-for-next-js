@@ -25,6 +25,9 @@ import {
   List,
   ListItem,
   Line,
+  Badge,
+  Carousel,
+  OgCard,
 } from "@once-ui-system/core";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
