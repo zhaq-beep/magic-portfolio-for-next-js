@@ -205,6 +205,7 @@ const components = {
   Icon,
   Media,
   SmartLink,
+  Badge,
   Carousel,
   OgCard,
 };
