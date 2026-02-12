@@ -3,8 +3,8 @@ title: "Design Poster Dinding for Majelis Taklim"
 publishedAt: "2025-11-01"
 summary: "Membuat desain poster dinding tentang pengetahuan dengan ukuran A3 atau A2 untuk Majelis Taklim."
 images:
-  - "/images/certificate/pr13.jpg"
-  - "/images/certificate/muslimah.jpg"
+  - "/images/poster/pr13.jpg"
+  - "/images/poster/muslimah.jpg"
 team:
   - name: "Zhaq Project"
     role: "Muballigh"
@@ -34,22 +34,17 @@ Kalo kalian mau file posternya untuk dicetak dan ditempel di tempat pengajian ka
 
 ## Lihat Tampilan 😎
 
-<Row fillWidth fitHeight gap="16" s={{direction: "column"}}>
-  <Column fillWidth center>
-      col
-  </Column>
-  <Column fill gap="16">
-    <Row fill center>
-        row
-    </Row>
-    <Row fill center>
-        row
-    </Row>
-  </Column>
-  <Column fillWidth center>
-      col
-  </Column>
-</Row>
+<Carousel
+  indicator="thumbnail"
+  items={[
+    { slide: "/images/poster/29karakterluhur.jpg", alt: "Image 1" },
+    { slide: "/images/poster/asmaulhusna.jpg", alt: "Image 2" },
+    { slide: "/images/poster/doa.jpg", alt: "Image 3" },
+    { slide: "/images/poster/hijaiyah.jpg", alt: "Image 4" },
+    { slide: "/images/poster/muslmah.jpg", alt: "Image 5" },
+    { slide: "/images/poster/pr13.jpg", alt: "Image 6" },
+  ]}
+/>
 
 ## Gimana caranya? 🚀
 
@@ -61,3 +56,4 @@ Kalian dapat mengunduh Design Poster ini lalu kalian cetak/print. Jika ingin mem
 
 
 This project demonstrates your ability to leverage automation and streamline workflows, which is highly relevant for design engineering portfolios focused on efficiency and innovation.
+
