@@ -1,7 +1,7 @@
 "use client";
 
 import React, { forwardRef } from "react";
-import { Icon, SmartLink } from "@once-ui-system/core";
+import { Arrow, Flex, Icon, SmartLink } from "@once-ui-system/core";
 
 import styles from "./Badge.module.scss";
 import { IconName } from "@/resources/icons";
