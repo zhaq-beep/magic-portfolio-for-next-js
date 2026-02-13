@@ -112,10 +112,17 @@ Kalian boleh bertanya tentang Buku Penghubung ini langsung ke owner yaps.
 Silakan hubungi melalui tombol di bawah. Mugi-mugi barokah ✨
 <SmartLink
   href="/about"
-  icon="person"
+  icon="link"
   selected
 > 
   Contact Owner
+</SmartLink>
+
+<SmartLink href="/about" icon="link" selected>
+  <div className="flex items-center gap-2">
+    <Icon name="check" onBackground="success-weak" />
+    <span>Contact Owner</span>
+  </div>
 </SmartLink>
 
 <Button arrowIcon asChild>
