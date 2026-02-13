@@ -189,7 +189,7 @@ const mailchimp: MailchimpConfig = {
 
 // default schema data
 const schema: SchemaConfig = {
-  logo: "",
+  logo: "https://zhaqproject.vercel.app/images/avatar.jpg",
   type: "Person",
   name: "Mufid Zhaqie",
   description: home.description,
