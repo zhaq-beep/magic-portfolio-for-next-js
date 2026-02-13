@@ -8,3 +8,4 @@ export { Providers } from "./Providers";
 export { ScrollToHash } from "./ScrollToHash";
 export { ThemeToggle } from "./ThemeToggle";
 export { CustomMDX } from "./CustomMDX";
+export { Badge } from "./Badge";
