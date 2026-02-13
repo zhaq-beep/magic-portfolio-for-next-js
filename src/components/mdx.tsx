@@ -25,6 +25,7 @@ import {
   List,
   ListItem,
   Line,
+  Badge,
 } from "@once-ui-system/core";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -202,6 +203,7 @@ const components = {
   Icon,
   Media,
   SmartLink,
+  Badge,
 };
 
 type CustomMDXProps = MDXRemoteProps & {
