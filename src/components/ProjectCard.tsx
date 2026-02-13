@@ -2,7 +2,6 @@
 
 import {
   AvatarGroup,
-  Carousel,
   Column,
   Flex,
   Heading,
