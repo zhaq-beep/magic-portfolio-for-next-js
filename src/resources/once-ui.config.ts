@@ -20,8 +20,11 @@ const routes: RoutesConfig = {
   "/": true,
   "/about": true,
   "/work": true,
-  "/blog": true,
+  "/blog": false,
   "/gallery": true,
+  "/wedding-page": true,
+  "/quiz": true,
+  
 };
 
 const display: DisplayConfig = {
@@ -33,7 +36,7 @@ const display: DisplayConfig = {
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
 const protectedRoutes: ProtectedRoutesConfig = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": false,
 };
 
 // Import and set font for each variant
@@ -195,8 +198,8 @@ const schema: SchemaConfig = {
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
+  threads: "https://www.threads.com/",
+  linkedin: "https://www.linkedin.com/in/mufid-zhaqie/",
   discord: "https://discord.com/invite/5EyAQ4eNdS",
 };
 
@@ -208,7 +211,7 @@ const socialSharing: SocialSharingConfig = {
     linkedin: true,
     facebook: false,
     pinterest: false,
-    whatsapp: false,
+    whatsapp: true,
     reddit: false,
     telegram: false,
     email: true,
