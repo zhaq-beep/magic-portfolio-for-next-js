@@ -396,14 +396,14 @@ export default function About() {
               </Heading>
 
               <Column fillWidth gap="l" marginBottom="xl">
-                {about.projects.skills.map((skill, index) => (
-                  <Column key={`${skill.title}-${index}`} fillWidth gap="4">
-                    <Text id={skill.title} variant="heading-strong-l">
-                      {skill.title}
+                {about.projects.projects.map((project, index) => (
+                  <Column key={`${project.name}-${index}`} fillWidth gap="4">
+                    <Text id={project.name} variant="heading-strong-l">
+                      {project.name}
                     </Text>
 
                     <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
+                      {project.description}
                     </Text>
                   </Column>
                 ))}
