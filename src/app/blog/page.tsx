@@ -29,7 +29,7 @@ export default function Blog() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="heading-strong-xl" marginLeft="24">
+      <Heading marginBottom="m" variant="heading-strong-xl" marginLeft="24">
         {blog.title}
       </Heading>
       <Column fillWidth flex={1} gap="40">
