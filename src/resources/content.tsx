@@ -732,6 +732,50 @@ const about: About = {
       },
     ],
   },
+  
+    projects: {
+    display: true,
+    title: "Projects",
+    skills: [
+      {
+        title: "Generus Learning Design",
+        description: (
+          <>
+            Developing structured and interactive learning systems for Generus.
+          </>
+        ),
+        tags: [
+          { name: "Curriculum Design" },
+          { name: "Public Speaking" },
+        ],
+        images: [],
+      },
+      {
+        title: "Digital Dakwah Content",
+        description: (
+          <>Creating engaging dakwah visuals for social media.</>
+        ),
+        tags: [
+          { name: "Canva" },
+          { name: "CorelDRAW" },
+          { name: "Photoshop" },
+        ],
+        images: [],
+      },
+      {
+        title: "Personal Portfolio Website",
+        description: (
+          <>Building a modern web portfolio using Next.js & TypeScript.</>
+        ),
+        tags: [
+          { name: "Next.js" },
+          { name: "TypeScript" },
+          { name: "UI Design" },
+        ],
+        images: [],
+      },
+    ],
+  },
 };
 
 const blog: Blog = {
