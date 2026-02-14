@@ -60,7 +60,7 @@ export default function About() {
     {
       title: about.projects.title,
       display: about.projects.display,
-      items: about.projects.projects.map((project) => project.name),
+      items: about.projects.skills.map((project) => project.title),
     },
   ];
 
