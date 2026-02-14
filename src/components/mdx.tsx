@@ -26,6 +26,7 @@ import {
   ListItem,
   Line,
   Badge,
+  BlockQuote,
 } from "@once-ui-system/core";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
