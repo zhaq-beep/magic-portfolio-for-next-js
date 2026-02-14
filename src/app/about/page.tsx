@@ -125,7 +125,7 @@ export default function About() {
                 ))}
               </Row>
             ) : null}
-          </Column>  {/* ✅ FIX: Avatar Column ditutup di sini */}
+          </Column>
         )}
 
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
