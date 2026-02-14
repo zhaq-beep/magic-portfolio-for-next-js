@@ -125,6 +125,7 @@ export default function About() {
                 ))}
               </Row>
             )}
+          </Column>
 
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
           {/* INTRO */}
@@ -471,3 +472,4 @@ export default function About() {
     </Column>
   </>
 )}
+          
