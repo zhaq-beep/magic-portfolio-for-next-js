@@ -418,7 +418,7 @@ export default function About() {
           key={`${experience.company}-${experience.role}-${index}`}
           fillWidth
         >
-          <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
+          <Row fillWidth horizontal="between" vertical="end" marginBottom="2">
             <Text id={experience.company} variant="heading-strong-l">
               {experience.company}
             </Text>
@@ -431,7 +431,7 @@ export default function About() {
           <Text
             variant="body-default-s"
             onBackground="brand-weak"
-            marginBottom="m"
+            marginBottom="s"
           >
             {experience.role}
           </Text>
