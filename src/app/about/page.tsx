@@ -116,7 +116,7 @@ export default function About() {
               {person.location}
             </Row>
 
-            {person.languages?.length ? (
+            {person.languages && person.languages.length > 0 && (
               <Row wrap gap="8">
                 {person.languages.map((lang, i) => (
                   <Tag key={`${lang}-${i}`} size="l">
@@ -124,9 +124,7 @@ export default function About() {
                   </Tag>
                 ))}
               </Row>
-            ) : null}
-          </Column>
-        )}
+            )}
 
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
           {/* INTRO */}
