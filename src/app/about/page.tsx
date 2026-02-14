@@ -396,18 +396,21 @@ export default function About() {
               </Heading>
 
               <Column fillWidth gap="l" marginBottom="xl">
-                {about.projects.projects.map((project, index) => (
-                  <Column key={`${project.name}-${index}`} fillWidth gap="4">
-                    <Text id={project.name} variant="heading-strong-l">
-                      {project.name}
+                {about.projects.skills.map((project, index) => (
+                  <Column key={`${project.title}-${index}`} fillWidth gap="4">
+                    <Text id={project.title} variant="heading-strong-l">
+                      {project.title}
                     </Text>
-
+                    
+                    {project.description && (
                     <Text variant="body-default-m" onBackground="neutral-weak">
                       {project.description}
                     </Text>
-                  </Column>
-                ))}
-              </Column>
+                  )}
+                </Column>
+              ))}
+            </Column>
+
             </>
           )}
         </Column>
