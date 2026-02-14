@@ -177,7 +177,10 @@ const about: About = {
             Helping the Generus to learn effectively and systematically.
           </>,
           <>
-            Creating wall poster designs as a form of learning and knowledge.
+            Creating a design project as a form of learning and knowledge.
+          </>,
+          <>
+            Building a project that benefits the people.
           </>,
         ],
         images: [],
