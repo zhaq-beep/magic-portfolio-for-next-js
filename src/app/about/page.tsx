@@ -1,10 +1,8 @@
 import {
   Avatar,
-  Button,
   Column,
   Heading,
   Icon,
-  IconButton,
   Media,
   Tag,
   Text,
@@ -12,7 +10,7 @@ import {
   Schema,
   Row,
 } from "@once-ui-system/core";
-import { baseURL, about, person, social } from "@/resources";
+import { baseURL, about, person } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
@@ -118,7 +116,7 @@ export default function About() {
               {person.location}
             </Row>
 
-            {person.languages && person.languages.length > 0 && (
+            {person.languages?.length ? (
               <Row wrap gap="8">
                 {person.languages.map((lang, i) => (
                   <Tag key={`${lang}-${i}`} size="l">
@@ -126,10 +124,11 @@ export default function About() {
                   </Tag>
                 ))}
               </Row>
-            )}
+            ) : null}
+          </Column>  {/* ✅ FIX: Avatar Column ditutup di sini */}
+        )}
 
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
-          
           {/* INTRO */}
           <Column
             id={about.intro.title}
@@ -180,7 +179,7 @@ export default function About() {
                       {skill.description}
                     </Text>
 
-                    {skill.tags?.length > 0 && (
+                    {skill.tags?.length ? (
                       <Row wrap gap="8" paddingTop="8">
                         {skill.tags.map((tag, i) => (
                           <Tag
@@ -192,9 +191,9 @@ export default function About() {
                           </Tag>
                         ))}
                       </Row>
-                    )}
+                    ) : null}
 
-                    {skill.images?.length > 0 && (
+                    {skill.images?.length ? (
                       <Row fillWidth paddingTop="m" gap="12" wrap>
                         {skill.images.map((image, i) => (
                           <Row
@@ -214,14 +213,14 @@ export default function About() {
                           </Row>
                         ))}
                       </Row>
-                    )}
+                    ) : null}
                   </Column>
                 ))}
               </Column>
             </>
           )}
 
-          {/* PROJECTS (IDENTIK DENGAN SOFT) */}
+          {/* PROJECTS */}
           {about.projects.display && (
             <>
               <Heading
@@ -243,42 +242,6 @@ export default function About() {
                     <Text variant="body-default-m" onBackground="neutral-weak">
                       {skill.description}
                     </Text>
-
-                    {skill.tags?.length > 0 && (
-                      <Row wrap gap="8" paddingTop="8">
-                        {skill.tags.map((tag, i) => (
-                          <Tag
-                            key={`${skill.title}-${i}`}
-                            size="l"
-                            prefixIcon={tag.icon}
-                          >
-                            {tag.name}
-                          </Tag>
-                        ))}
-                      </Row>
-                    )}
-
-                    {skill.images?.length > 0 && (
-                      <Row fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, i) => (
-                          <Row
-                            key={`${skill.title}-img-${i}`}
-                            border="neutral-medium"
-                            radius="m"
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Row>
-                        ))}
-                      </Row>
-                    )}
                   </Column>
                 ))}
               </Column>
