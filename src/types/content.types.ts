@@ -274,6 +274,37 @@ soft: {
       }>;
     }>;
   };
+
+  /** Projects skills section */
+  projects: {
+  /** Whether to display soft skills section */
+  display: boolean;
+  /** Title for the soft skills section */
+  title: string;
+  /** List of soft skills */
+  skills: Array<{
+    /** Skill name */
+    title: string;
+    /** Skill description */
+    description?: React.ReactNode;
+    /** Skill tags */
+    tags?: Array<{
+      name: string;
+      icon?: string;
+    }>;
+    /** Images related to the skill */
+    images?: Array<{
+      /** Image source path */
+      src: string;
+      /** Image alt text */
+      alt: string;
+      /** Image width ratio */
+      width: number;
+      /** Image height ratio */
+      height: number;
+    }>;
+  }>;
+};
 }
   
 /**
