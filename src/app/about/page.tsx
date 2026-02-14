@@ -156,6 +156,7 @@ export default function About() {
             </Column>
           )}
 
+          {/* WORK */}
           {about.work.display && (
             <>
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
@@ -215,6 +216,7 @@ export default function About() {
             </>
           )}
 
+          {/* STUDIES */}
           {about.studies.display && (
             <>
               <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
@@ -235,6 +237,7 @@ export default function About() {
             </>
           )}
 
+          {/* TECHNICAL SKILLS */}
           {about.technical.display && (
             <>
               <Heading
@@ -353,35 +356,6 @@ export default function About() {
               </Column>
             </>
           )}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           
           {/* PROJECTS */}
           {about.projects.display && (
