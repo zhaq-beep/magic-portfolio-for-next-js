@@ -112,7 +112,7 @@ const about: About = {
     description: (
       <>
         Mufid Zhaqie is a Muballigh at one of Majelis Taklim in Depok City with a passion for making a positive impact,
-        being influential without being influenced, and providing simple and elegant design solutions.
+        being influential without being influenced. Providing simple and elegant design solutions.
         His work includes digital interfaces, interactive experiences, and the convergence of design and technology.
       </>
     ),
@@ -120,7 +120,7 @@ const about: About = {
 
   work: {
     display: true,
-    title: "Experience",
+    title: "Experiences",
     experiences: [
       {
         company: "Magang/PKL",
