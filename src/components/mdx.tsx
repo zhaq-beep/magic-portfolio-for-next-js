@@ -186,6 +186,7 @@ const components = {
   ul: createList("ul") as any,
   li: createListItem as any,
   hr: createHR as any,
+  Badge,
   Heading,
   Text,
   CodeBlock,
