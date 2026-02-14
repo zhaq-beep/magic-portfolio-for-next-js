@@ -358,19 +358,19 @@ export default function About() {
           {/* CERTIFICATES */}
           {about.certificates.display && (
           <>
-          <Heading
-        as="h2"
-        id={about.certificates.title}
-        variant="display-strong-s"
-        marginBottom="m"
-      >
-        {about.certificates.title}
-        </Heading>
+    <Heading
+      as="h2"
+      id={about.certificates.title}
+      variant="display-strong-s"
+      marginBottom="m"
+    >
+      {about.certificates.title}
+    </Heading>
 
     <Column fillWidth gap="l" marginBottom="xl">
       {about.certificates.experiences.map((experience, index) => (
         <Column
-          key={`${experience.company}-${experience.role}-${index}`}
+          key={`${experience.company}-${index}`}
           fillWidth
         >
           <Row fillWidth horizontal="between" vertical="end" marginBottom="2">
@@ -391,24 +391,21 @@ export default function About() {
             {experience.role}
           </Text>
 
-          {Array.isArray(experience.achievements) && experience.achievements.length > 0 && (
+          {experience.achievements?.length ? (
             <Column as="ul" gap="16">
-            {experience.achievements.map(
-
-                (achievement: React.ReactNode, i: number) => (
-                  <Text
-                    as="li"
-                    variant="body-default-m"
-                    key={`cert-ach-${index}-${i}`}
-                  >
-                    {achievement}
-                  </Text>
-                )
-              )}
+              {experience.achievements.map((achievement, i) => (
+                <Text
+                  as="li"
+                  variant="body-default-m"
+                  key={`cert-ach-${index}-${i}`}
+                >
+                  {achievement}
+                </Text>
+              ))}
             </Column>
-          )}
+          ) : null}
 
-          {Array.isArray(experience.images) && experience.images.length > 0 && (
+          {experience.images?.length ? (
             <Row
               fillWidth
               paddingTop="m"
@@ -434,44 +431,43 @@ export default function About() {
                 </Row>
               ))}
             </Row>
-          )}
+          ) : null}
         </Column>
       ))}
     </Column>
   </>
-)} 
-          
-          {/* PROJECTS */}
-          {about.projects.display && (
-            <>
-              <Heading
-                as="h2"
-                id={about.projects.title}
-                variant="display-strong-s"
-                marginBottom="m"
-              >
-                {about.projects.title}
-              </Heading>
+)}
 
-              <Column fillWidth gap="l" marginBottom="xl">
-                {about.projects.skills.map((project, index) => (
-                  <Column key={`${project.title}-${index}`} fillWidth gap="4">
-                    <Text id={project.title} variant="heading-strong-l">
-                      {project.title}
-                    </Text>
-                    
-                    {project.description && (
-                    <Text variant="body-default-m" onBackground="neutral-weak">
-                      {project.description}
-                    </Text>
-                  )}
-                </Column>
-              ))}
-            </Column>
-          </>
-        )}
+{/* PROJECTS */}
+{about.projects.display && (
+  <>
+    <Heading
+      as="h2"
+      id={about.projects.title}
+      variant="display-strong-s"
+      marginBottom="m"
+    >
+      {about.projects.title}
+    </Heading>
+
+    <Column fillWidth gap="l" marginBottom="xl">
+      {about.projects.skills.map((project, index) => (
+        <Column
+          key={`${project.title}-${index}`}
+          fillWidth
+          gap="4"
+        >
+          <Text id={project.title} variant="heading-strong-l">
+            {project.title}
+          </Text>
+
+          {project.description ? (
+            <Text variant="body-default-m" onBackground="neutral-weak">
+              {project.description}
+            </Text>
+          ) : null}
         </Column>
-      </Row>
+      ))}
     </Column>
-  );
-}
+  </>
+)}
