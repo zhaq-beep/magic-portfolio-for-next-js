@@ -311,10 +311,11 @@ const about: About = {
             <Badge
               href="/images/certificate/certificate-0.jpg"
               id="badge-3"
-              title="View here"
+              title="View"
               icon="document"
               effect={true}
               arrow={true}
+              textVariant="label-default-s"
             />
           </Row>
         ),
@@ -334,9 +335,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-012.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -357,9 +360,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-008.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -387,9 +392,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-002.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -417,9 +424,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-009.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -447,9 +456,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-010.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -477,9 +488,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-001.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -507,9 +520,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-014.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -537,9 +552,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-005.jpg"
-              id="badge-4"
-              title="View here"
+             id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -567,9 +584,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-013.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -585,7 +604,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Foundations: Data, Data, Everywhere", // 003
+        company: "Foundations: Data, Data, Everywhere", // 003
         timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -597,9 +616,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-003.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -624,9 +645,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-006.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -654,9 +677,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-011.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -672,7 +697,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Aplikasi Design Grafis bagi Guru dan Tenaga Kependidikan", // 007
+        company: "Aplikasi Design Grafis bagi Guru dan Tenaga Kependidikan", // 007
         timeframe: "Jul 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -684,9 +709,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-007.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
@@ -702,7 +729,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Short Class: Designing Using Canva", // 004
+        company: "Short Class: Designing Using Canva", // 004
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -714,9 +741,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-004.jpg"
-              id="badge-4"
-              title="View here"
+              id="badge-3"
+              title="View"
               icon="document"
+              effect={true}
+              arrow={true}
               textVariant="label-default-s"
             />
           </Row>
