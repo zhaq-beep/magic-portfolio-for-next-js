@@ -735,7 +735,7 @@ const about: About = {
   
     projects: {
     display: true,
-    title: "Projects",
+    title: "Projects ✨",
     skills: [
       {
         title: "Views of some of my projects",
@@ -744,7 +744,7 @@ const about: About = {
             <Badge
               href="/work"
               id="badge-4"
-              title="Catch me🫵"
+              title="Catch me 🫵"
               icon="document"
               textVariant="label-default-s"
             />
