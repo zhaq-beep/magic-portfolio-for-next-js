@@ -90,7 +90,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Getting to know ${person.name}, a ${person.role} at one of Majelis Taklim in Depok City who is passionate about making a positive impact.`,
+  description: `Getting to know ${person.name}, a ${person.role} at one of Majelis Taklim in Depok City who is passionate about making a positive impact while remaining grounded. He provides simple and elegant design solutions, with work spanning digital interfaces, interactive experiences, and the intersection of design and technology.`,
 
   tableOfContent: {
     display: true,
@@ -798,7 +798,7 @@ const work: Work = {
   path: "/work",
   label: "Project",
   title: `Project – ${person.name}`,
-  description: `Display of several projects by ${person.name}`,
+  description: `Display of several projects by ${person.name}, a ${person.role} at one of Majelis Taklim in Depok City who is passionate about making a positive impact while remaining grounded. He provides simple and elegant design solutions, with work spanning digital interfaces, interactive experiences, and the intersection of design and technology.`,
 };
 
 const gallery: Gallery = {
