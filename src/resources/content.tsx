@@ -61,7 +61,7 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
+  title: `${person.name} Portfolio - Muballigh`,
   description: `Mufid Zhaqie is a ${person.role} at one of Majelis Taklim in Depok City who is passionate about making a positive impact while remaining grounded. He provides simple and elegant design solutions, with work spanning digital interfaces, interactive experiences, and the intersection of design and technology.`,
   headline: <>Building projects that benefit the community.</>,
   featured: {
@@ -90,7 +90,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Getting to know ${person.name}, a ${person.role} at one of Majelis Taklim in Depok City who is passionate about making a positive impact.`,
 
   tableOfContent: {
     display: true,
@@ -805,7 +805,7 @@ const gallery: Gallery = {
   path: "/gallery",
   label: "Certificates",
   title: `Certificates – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  description: `a showcase cerfiticates by ${person.name}`,
   images: [
     { src: "/images/certificate/certificate-001.jpg", alt: "image", orientation: "horizontal" },
     { src: "/images/certificate/certificate-002.jpg", alt: "image", orientation: "horizontal" },
