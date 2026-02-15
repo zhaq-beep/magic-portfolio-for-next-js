@@ -427,52 +427,49 @@ export default function About() {
           {/* CERTIFICATES */}
           {about.certificates.display && (
           <>
-    <Heading
-      as="h2"
-      id={about.certificates.title}
-      variant="display-strong-s"
-      marginBottom="m"
-    >
-      {about.certificates.title}
-    </Heading>
+            <Heading
+            as="h2"
+              id={about.certificates.title}
+              variant="display-strong-s"
+              marginBottom="s"
+            >
+              {about.certificates.title}
+            </Heading>
 
-    <Column fillWidth gap="l" marginBottom="m">
-      {about.certificates.experiences.map((experience, index) => (
-        <Column
-          key={`${experience.company}-${index}`}
-          fillWidth
-        >
-          <Row fillWidth horizontal="between" vertical="end" marginBottom="2">
-            <Text id={experience.company} variant="heading-strong-l">
-              {experience.company}
-            </Text>
-
-            <Text variant="heading-default-xs" onBackground="neutral-weak">
-              {experience.timeframe}
-            </Text>
-          </Row>
-
-          <Text
-            variant="body-default-s"
-            onBackground="brand-weak"
-            marginBottom="s"
-          >
-            {experience.role}
-          </Text>
-
-          {experience.achievements?.length ? (
-            <Column as="ul" gap="16">
-              {experience.achievements.map((achievement, i) => (
-                <Text
-                  as="li"
-                  variant="body-default-m"
-                  key={`cert-ach-${index}-${i}`}
-                >
-                  {achievement}
+            <Column fillWidth gap="l" marginBottom="s">
+              {about.certificates.experiences.map((experience, index) => (
+            <Column
+              key={`${experience.company}-${index}`}
+              fillWidth
+              >
+              <Row fillWidth horizontal="between" vertical="end" marginBottom="2">
+                <Text id={experience.company} variant="heading-strong-l">
+                  {experience.company}
                 </Text>
-              ))}
-            </Column>
-          ) : null}
+                <Text variant="heading-default-xs" onBackground="neutral-weak">
+                  {experience.timeframe}
+                </Text>
+              </Row>        
+              <Text            
+                variant="body-default-s"
+                onBackground="brand-weak"
+                marginBottom="xs"         
+                >
+                {experience.role}
+              </Text>
+              {experience.achievements?.length ? (
+                <Column as="ul" gap="16">
+                  {experience.achievements.map((achievement, i) => (
+                  <Text
+                    as="li"                  
+                    variant="body-default-m"              
+                    key={`cert-ach-${index}-${i}`}
+                    >
+                    {achievement}
+                  </Text>
+                ))}
+                </Column>
+              ) : null}
 
           {experience.images?.length ? (
             <Row
