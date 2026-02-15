@@ -744,7 +744,7 @@ const about: About = {
             <Badge
               href="/work"
               id="badge-4"
-              title="View here."
+              title="Catch me🫵"
               icon="document"
               textVariant="label-default-s"
             />
