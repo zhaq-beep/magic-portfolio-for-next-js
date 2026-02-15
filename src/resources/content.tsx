@@ -111,7 +111,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Mufid Zhaqie is a Muballigh at one of Majelis Taklim in Depok City who is passionate about <Text as="span" size="xl" weight="strong">making a positive impact</Text> while remaining grounded.
+        Mufid Zhaqie is a Muballigh at one of Majelis Taklim in Depok City who is passionate about making a positive impact while remaining grounded.
         He provides simple and elegant design solutions, with work spanning digital interfaces, interactive experiences, and the intersection of design
         and technology.
       </>
