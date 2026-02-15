@@ -741,14 +741,10 @@ const about: About = {
         title: "Views of some of my projects",
         description: (
           <Row gap="12" vertical="center">
-            <Text variant="body-default-s">
-              View here.  
-            </Text>
-
             <Badge
               href="/work"
               id="badge-4"
-              title="View here"
+              title="View here."
               icon="document"
               textVariant="label-default-s"
             />
