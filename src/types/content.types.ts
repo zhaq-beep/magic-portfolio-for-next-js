@@ -276,7 +276,7 @@ soft: {
   };
 
   /** Projects section */
-  project: {
+  projects: {
   /** Whether to display soft skills section */
   display: boolean;
   /** Title for the soft skills section */
