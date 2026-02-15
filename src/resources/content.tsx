@@ -733,7 +733,7 @@ const about: About = {
     ],
   },
   
-    projects: {
+    project: {
     display: true,
     title: "Projects",
     skills: [
