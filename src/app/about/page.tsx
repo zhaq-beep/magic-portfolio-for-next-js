@@ -1,8 +1,10 @@
 import {
   Avatar,
+  Button,
   Column,
   Heading,
   Icon,
+  IconButton,
   Media,
   Tag,
   Text,
