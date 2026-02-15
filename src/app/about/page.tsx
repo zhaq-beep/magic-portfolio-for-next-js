@@ -369,7 +369,7 @@ export default function About() {
       {about.certificates.title}
     </Heading>
 
-    <Column fillWidth gap="l" marginBottom="xl">
+    <Column fillWidth gap="l" marginBottom="m">
       {about.certificates.experiences.map((experience, index) => (
         <Column
           key={`${experience.company}-${index}`}
