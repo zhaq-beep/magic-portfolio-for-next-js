@@ -743,10 +743,12 @@ const about: About = {
           <Row gap="12" vertical="center">
             <Badge
               href="/work"
-              id="badge-4"
+              id="badge-2"
               title="Catch me 🫵"
-              icon="document"
+              icon="rocket"
               textVariant="label-default-s"
+              onBackground="brand-medium"
+              background="brand-medium"
             />
           </Row>       
         ),
