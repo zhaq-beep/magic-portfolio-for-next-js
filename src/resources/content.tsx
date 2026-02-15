@@ -120,7 +120,7 @@ const about: About = {
 
   work: {
     display: true,
-    title: "Experiences",
+    title: "Experiences 🚀",
     experiences: [
       {
         company: "Magang/PKL",
@@ -190,7 +190,7 @@ const about: About = {
 
   studies: {
     display: true,
-    title: "Studies",
+    title: "Studies 🎓️",
     institutions: [
       {
         name: "Univ. xxxxxxxxx",
@@ -205,7 +205,7 @@ const about: About = {
 
   technical: {
     display: true,
-    title: "Technical Skills",
+    title: "Technical Skills 🧩",
     skills: [
       {
         title: "Design Graphic",
@@ -267,7 +267,7 @@ const about: About = {
 
   soft: {
     display: true,
-    title: "Soft Skills",
+    title: "Soft Skills 🎯",
     skills: [
       {
         title: "Communication",
@@ -298,7 +298,7 @@ const about: About = {
 
   certificates: {
     display: true,
-    title: "Certificates",
+    title: "Certificates 📑",
     experiences: [
       {
         company: "● Accounting and Management Training", // 000
