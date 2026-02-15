@@ -80,7 +80,7 @@ const home: Home = {
   subline: (
     <>
       Hi, I am Zhaq. a Muballigh at one of Majelis Taklim in <Text as="span" size="xl" weight="strong">Depok City</Text>,
-      passionate about creating intuitive user experiences. In between activities, I enjoy working on <br /> projects that can be
+      passionate about creating intuitive user experiences. I enjoy working on <br /> projects that can be
       beneficial to others.
     </>
   ),
