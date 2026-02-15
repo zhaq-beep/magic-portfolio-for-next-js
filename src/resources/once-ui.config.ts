@@ -14,7 +14,7 @@ import {
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://zhaqproject.vercel.app/";
+const baseURL: string = "https://zhaqproject.vercel.app";
 
 const routes: RoutesConfig = {
   "/": true,
@@ -189,10 +189,12 @@ const mailchimp: MailchimpConfig = {
 
 // default schema data
 const schema: SchemaConfig = {
-  logo: "https://zhaqproject.vercel.app/images/avatar.jpg",
+  logo: `${baseURL}images/avatar.jpg`,
   type: "Person",
   name: "Mufid Zhaqie",
-  description: home.description,
+  description: `Mufid Zhaqie is a Muballigh at one of Majelis Taklim in Depok City with a passion for making a positive impact,
+  being influential without being influenced. Providing simple and elegant design solutions. His work includes digital interfaces, 
+  interactive experiences, and the convergence of design and technology.`,
   email: "mufidzhaqie8080@gmail.com",
 };
 
