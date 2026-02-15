@@ -275,8 +275,8 @@ soft: {
     }>;
   };
 
-  /** Projects skills section */
-  projects: {
+  /** Projects section */
+  project: {
   /** Whether to display soft skills section */
   display: boolean;
   /** Title for the soft skills section */
