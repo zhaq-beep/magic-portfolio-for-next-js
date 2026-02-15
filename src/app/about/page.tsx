@@ -126,6 +126,7 @@ export default function About() {
               </Row>
             )}
           </Column>
+      )}
 
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
           {/* INTRO */}
@@ -148,7 +149,7 @@ export default function About() {
               {person.role}
             </Text>
           </Column>
-
+        
           {about.intro.display && (
             <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
               {about.intro.description}
