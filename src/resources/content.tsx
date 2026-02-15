@@ -301,7 +301,7 @@ const about: About = {
     title: "Certificates 📑",
     experiences: [
       {
-        company: "● Accounting and Management Training", // 000
+        company: "Accounting and Management Training", // 000
         timeframe: "Jan 2022 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -310,10 +310,11 @@ const about: About = {
             </Text>
             <Badge
               href="/images/certificate/certificate-0.jpg"
-              id="badge-4"
+              id="badge-3"
               title="View here"
               icon="document"
-              textVariant="label-default-s"
+              effect={true}
+              arrow={true}
             />
           </Row>
         ),
@@ -321,7 +322,7 @@ const about: About = {
         images: [],
       },
       {
-        company: "● Microsoft Excel Essentials", // 012
+        company: "Microsoft Excel Essentials", // 012
         timeframe: "Jul 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -344,7 +345,7 @@ const about: About = {
         images: [],
       },
       {
-        company: "● Study Case Bootcamp Data Analyst with Excel", // 008
+        company: "Study Case Bootcamp Data Analyst with Excel", // 008
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -374,7 +375,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Ask Questions to Make Data-Driven Decisions", // 002
+        company: "Ask Questions to Make Data-Driven Decisions", // 002
         timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -404,7 +405,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Process Data from Dirty to Clean", // 009
+        company: "Process Data from Dirty to Clean", // 009
         timeframe: "Oct 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -434,7 +435,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Fundamental Project Management", // 010
+        company: "Fundamental Project Management", // 010
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -464,7 +465,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Intro to Data Analytics", // 001
+        company: "Intro to Data Analytics", // 001
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -494,7 +495,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Prepare Data for Exploration", // 014
+        company: "Prepare Data for Exploration", // 014
         timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -524,7 +525,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Analyze Data to Answer Questions", // 005
+        company: "Analyze Data to Answer Questions", // 005
         timeframe: "Oct 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -554,7 +555,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Share Data Through the Art of Visualization", // 013
+        company: "Share Data Through the Art of Visualization", // 013
         timeframe: "Oct 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -614,7 +615,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Free Class: Data Science", // 006
+        company: "Free Class: Data Science", // 006
         timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
@@ -641,7 +642,7 @@ const about: About = {
 //        ],
       },
       {
-        company: "● Short Class: Data Analysis Fundamental", // 011
+        company: "Short Class: Data Analysis Fundamental", // 011
         timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
