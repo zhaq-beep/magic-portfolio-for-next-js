@@ -451,7 +451,7 @@ export default function About() {
       {about.projects.title}
     </Heading>
 
-    <Column fillWidth gap="l" marginBottom="xl">
+    <Column fillWidth gap="l" marginBottom="l">
       {about.projects.skills.map((project, index) => (
         <Column
           key={`${project.title}-${index}`}
