@@ -182,6 +182,9 @@ const about: About = {
           <>
             Building a project that benefits the people.
           </>,
+          <>
+            Building a interactive quiz website page for Generus.
+          </>,
         ],
         images: [],
       },
