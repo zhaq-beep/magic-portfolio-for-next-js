@@ -28,6 +28,7 @@ import {
   Badge,
   BlockQuote,
   AutoScroll,
+  Fade,
 } from "@once-ui-system/core";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -192,6 +193,7 @@ const components = {
   Badge,
   BlockQuote,
   AutoScroll,
+  Fade,
   Heading,
   Text,
   CodeBlock,
