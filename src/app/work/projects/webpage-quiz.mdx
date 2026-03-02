@@ -56,6 +56,56 @@ Dengan sistem kuis digital ini, diharapkan pembelajaran menjadi lebih aktif, ser
   </div>
 </AutoScroll>
 
+## Apa Kata Mereka? 🗣️
+<AutoScroll paddingY="24" gap="32">
+  {[
+    {
+      text: "Masyaalloh, gud banget programmnya.",
+      name: "Rinto GB Kediri",
+      avatar: "/images/rinto.jpg",
+    },
+    {
+      text: "Generus jadi lebih semangat belajar.",
+      name: "Mba Nurul",
+      avatar: "/images/avatar.jpg",
+    },
+    {
+      text: "Tampilannya simple tapi powerfull.",
+      name: "Mas Fajar",
+      avatar: "/images/avatar.jpg",
+    },
+  ]
+  .concat([
+    {
+      text: "Masyaalloh, gud banget programmnya.",
+      name: "Rinto GB Kediri",
+      avatar: "/images/rinto.jpg",
+    },
+    {
+      text: "Generus jadi lebih semangat belajar.",
+      name: "Mba Nurul",
+      avatar: "/images/avatar.jpg",
+    },
+    {
+      text: "Tampilannya simple tapi powerfull.",
+      name: "Mas Fajar",
+      avatar: "/images/avatar.jpg",
+    },
+  ])
+  .map((item, i) => (
+    <div key={i} style={{ minWidth: "420px" }}>
+      <BlockQuote
+        author={{
+          name: item.name,
+          avatar: item.avatar,
+        }}
+      >
+        “{item.text}”
+      </BlockQuote>
+    </div>
+  ))}
+</AutoScroll>
+
 ## Lihat Tampilan 😎
 
 <Column fillWidth gap="16">
