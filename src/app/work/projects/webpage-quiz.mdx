@@ -13,6 +13,63 @@ team:
 // link: "https://www.linkedin.com/in/mufid-zhaqie/"
 ---
 
+## Kata Mereka 🗣️
+
+<div style={{ position: "relative" }}>
+
+  <Fade 
+    zIndex="1"
+    to="right"
+    fillHeight
+    width="64"
+    position="absolute"
+    left="0"
+    top="0"
+  />
+
+  <AutoScroll speed="medium" paddingY="24" gap="32">
+  {[
+    {
+      text: "Masyaalloh, gud banget programnya.",
+      name: "Rinto GB Kediri",
+      avatar: "/images/icon.jpg",
+    },
+    {
+      text: "Tadi nyoba, asli bagus ini.",
+      name: "Rigan MT Bogor",
+      avatar: "/images/icon.jpg",
+    },
+    {
+      text: "Keren bang jek, cocok buat murajaah😁.",
+      name: "Rudi Ex. Database Kediri",
+      avatar: "/images/icon.jpg",
+    },
+  ].map((item, i) => (
+    <div key={i} style={{ minWidth: "320px" }}>
+      <BlockQuote
+        author={{
+          name: item.name,
+          avatar: item.avatar,
+        }}
+      >
+        “{item.text}”
+      </BlockQuote>
+    </div>
+  ))}
+</AutoScroll>
+
+  <Fade 
+    zIndex="1"
+    to="left"
+    fillHeight
+    width="64"
+    position="absolute"
+    right="0"
+    top="0"
+  />
+
+</div>
+
 ## Pendahuluan ✨
 
 Halaman Web kuis ini dibuat dengan hati💖
@@ -57,7 +114,7 @@ Dengan sistem kuis digital ini, diharapkan pembelajaran menjadi lebih aktif, ser
     top="0"
   />
 
-  <AutoScroll speed="slow" paddingY="24" gap="32">
+  <AutoScroll speed="medium" paddingY="24" gap="32">
   {[
     {
       text: "Masyaalloh, gud banget programnya.",
