@@ -15,7 +15,7 @@ team:
 
 ## Kata Mereka 🗣️
 
-<div style={{ position: "relative" }}>
+<div style={{ position: "relative", overflow: "hidden" }}>
 
   <Fade 
     zIndex="1"
@@ -28,36 +28,44 @@ team:
     separator="none"
   />
 
-  <AutoScroll speed="medium" paddingY="24" gap="32">
-  {[
-    {
-      text: "Masyaalloh, gud banget programnya.",
-      name: "Rinto GB Kediri",
-      avatar: "/images/icon.jpg",
-    },
-    {
-      text: "Tadi nyoba, asli bagus ini.",
-      name: "Rigan MT Bogor",
-      avatar: "/images/icon.jpg",
-    },
-    {
-      text: "Keren bang jek, cocok buat murajaah😁.",
-      name: "Rudi Ex. Database Kediri",
-      avatar: "/images/icon.jpg",
-    },
-  ].map((item, i) => (
-    <div key={i} style={{ minWidth: "320px" }}>
-      <BlockQuote
-        author={{
-          name: item.name,
-          avatar: item.avatar,
-        }}
-      >
-        “{item.text}”
-      </BlockQuote>
-    </div>
-  ))}
-</AutoScroll>
+  <AutoScroll speed="slow" paddingY="24" gap="32">
+    {[
+      {
+        text: "Masyaalloh, gud banget programnya.",
+        name: "Rinto GB Kediri",
+        avatar: "/images/icon.jpg",
+      },
+      {
+        text: "Tadi nyoba, asli bagus ini.",
+        name: "Rigan MT Bogor",
+        avatar: "/images/icon.jpg",
+      },
+      {
+        text: "Keren bang jek, cocok buat murajaah😁.",
+        name: "Rudi Ex. Database Kediri",
+        avatar: "/images/icon.jpg",
+      },
+    ].map((item, i) => (
+      <div key={i} style={{ minWidth: "400px" }}>
+        <BlockQuote 
+          border="neutral-alpha-medium"
+          background="surface"
+          radius="xl"
+          padding="l"
+          align="left"
+          separator="none"
+          author={{
+            name: item.name,
+            avatar: item.avatar,
+          }}
+        >
+          <Text variant="heading-default-l">
+            “{item.text}”
+          </Text>
+        </BlockQuote>
+      </div>
+    ))}
+  </AutoScroll>
 
   <Fade 
     zIndex="1"
