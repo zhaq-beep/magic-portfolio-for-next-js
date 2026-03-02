@@ -7,13 +7,11 @@ export default function Testimonials() {
     {
       text: "Masyaalloh, gud banget programnya.",
       name: "Rinto",
-      role: "GB Kediri",
       avatar: "/images/icon.jpg",
     },
     {
       text: "Tadi nyoba, asli bagus ini.",
       name: "Rigan",
-      role: "MT Bogor",
       avatar: "/images/icon.jpg",
     },
   ]
@@ -26,7 +24,6 @@ export default function Testimonials() {
             separator="none"
             author={{
               name: item.name,
-              role: item.role,
               avatar: item.avatar,
             }}
           >
