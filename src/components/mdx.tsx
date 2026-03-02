@@ -27,6 +27,7 @@ import {
   Line,
   Badge,
   BlockQuote,
+  AutoScroll,
 } from "@once-ui-system/core";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -190,6 +191,7 @@ const components = {
   hr: createHR as any,
   Badge,
   BlockQuote,
+  AutoScroll,
   Heading,
   Text,
   CodeBlock,
