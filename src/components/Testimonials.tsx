@@ -1,6 +1,6 @@
 "use client"
 
-import { BlockQuote, Text, AutoScroll } from "once-ui"
+import { BlockQuote, Text, AutoScroll } from "@once-ui-system/core"
 
 export default function Testimonials() {
   const items = [
