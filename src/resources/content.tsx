@@ -763,6 +763,38 @@ const about: About = {
 //          },
 //        ],
       },
+      {
+        company: "Dasar-Dasar Implementasi Kecerdasan Artifisial", // 004
+        timeframe: "Aug 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Digital Talent Scholarship | ID Kredensial:
+              <SmartLink href="https://myskill.id/" selected> 
+                2299748850-12319
+              </SmartLink>
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-004.jpg"
+              id="badge-3"
+              title="View"
+              icon="document"
+              effect={true}
+              arrow={true}
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-004.jpg",
+//          alt: "Certificate 11",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
     ],
   },
   
