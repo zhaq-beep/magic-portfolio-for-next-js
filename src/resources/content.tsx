@@ -75,7 +75,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/worksheet/",
+    href: "/project/worksheet/",
   },
   subline: (
     <>
@@ -833,7 +833,7 @@ const about: About = {
         description: (
           <Row gap="12" vertical="center">
             <Badge
-              href="/work"
+              href="/project"
               id="badge-2"
               title="Catch me 🫵"
               icon="rocket"
@@ -856,7 +856,7 @@ const blog: Blog = {
 };
 
 const work: Work = {
-  path: "/work",
+  path: "/project",
   label: "Project",
   title: `Project – ${person.name}`,
   description: `Display of several projects by ${person.name}, a ${person.role} at one of Majelis Taklim in Depok City who is passionate about making a positive impact while remaining grounded. He provides simple and elegant design solutions, with work spanning digital interfaces, interactive experiences, and the intersection of design and technology.`,
