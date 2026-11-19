@@ -11,8 +11,9 @@ import {
   Meta,
   Schema,
   Row,
+  SmartLink,
 } from "@once-ui-system/core";
-import { baseURL, about, person, social } from "@/resources";
+import { baseURL, about, gallery, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
@@ -511,6 +512,12 @@ export default function About() {
         </Column>
       ))}
     </Column>
+
+    <Row fillWidth marginBottom="l">
+      <SmartLink href={gallery.path} suffixIcon="arrowRight">
+        View all {gallery.certificates.length} certificates
+      </SmartLink>
+    </Row>
   </>
 )}
 
