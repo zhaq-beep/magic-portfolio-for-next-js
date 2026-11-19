@@ -90,24 +90,19 @@ export default function GalleryView() {
             </Column>
             <Grid columns="2" s={{ columns: 1 }} gap="16" fillWidth>
               {items.map((item) => (
-                <Column
-                  key={item.src}
-                  fillWidth
-                  radius="l"
-                  border="neutral-alpha-weak"
-                  background="surface"
-                  overflow="hidden"
-                >
+                <Column key={item.src} fillWidth gap="12">
                   <Media
                     enlarge
                     src={item.src}
                     alt={`Certificate: ${item.title}, ${item.issuer}`}
                     aspectRatio="3 / 2"
                     objectFit="contain"
+                    radius="l"
+                    border="neutral-alpha-weak"
                     background="neutral-alpha-weak"
                     sizes="(max-width: 560px) 100vw, 50vw"
                   />
-                  <Column padding="16" gap="8">
+                  <Column paddingX="4" gap="4">
                     <Text variant="heading-strong-m" wrap="balance">
                       {item.title}
                     </Text>
