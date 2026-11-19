@@ -218,7 +218,7 @@ export default function About() {
             
             <Row className={styles.blockAlign} paddingTop="8" fitWidth>
               <Button
-                href="/cv.pdf"
+                href="/cv-mufid-zhaqie-maulana-nov.pdf"
                 label="Download CV"
                 size="s"
                 variant="primary"
