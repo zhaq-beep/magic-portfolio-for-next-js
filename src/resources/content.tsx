@@ -188,6 +188,32 @@ const about: About = {
         ],
         images: [],
       },
+      {
+        company: "J&T Express - DC Bojong Kembar, Sukabumi",
+        timeframe: "Nov 2026 - Present",
+        role: "Administrator",
+        achievements: [
+          <>
+            Participating in the daily activities of the implementing unit.
+          </>,
+          <>
+            Managing and updating incoming and outgoing employee data to ensure accurate and organized personnel administration records.
+          </>,
+          <>
+            Processing employee ID number requests and updates according to administrative needs.
+          </>,
+          <>
+            Compiling, checking, and preparing payment reports from the system using Microsoft Excel.
+          </>,
+          <>
+            Serving customers in the shipping transaction process and helping meet their basic shipping needs.
+          </>,
+          <>
+            Supporting smooth daily operations through data management and careful, systematic administrative work.
+          </>,
+        ],
+        images: [],
+      },
     ],
   },
 
@@ -858,5 +884,7 @@ const gallery: Gallery = {
     { src: "/images/certificate/certificate-014.jpg", alt: "image", orientation: "horizontal" },
   ],
 };
+
+export { person, social, newsletter, home, about, blog, work, gallery };
 
 export { person, social, newsletter, home, about, blog, work, gallery };
