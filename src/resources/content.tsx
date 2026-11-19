@@ -330,50 +330,31 @@ const about: About = {
     title: "Certificates 📑",
     experiences: [
       {
-        company: "Share Data Through the Art of Visualization", // 013
-        timeframe: "Oct 2025",
+        company: "Accounting and Management Training", // 000
+        timeframe: "Jan 2022 - Present",
         role: (
           <Row gap="8" vertical="center">
             <Text variant="body-default-s">
-              Google, Coursera | ID Kredensial: 
-               <SmartLink href="https://www.coursera.org/account/accomplishments/records/ZLGC969SUWAU" selected>
-                 ZLGC969SUWAU
-               </SmartLink>
+              Pondok Pesantren Wali Barokah Kota Kediri
             </Text>
-            <Badge
-              href="/images/certificate/certificate-013.jpg"
-              id="badge-3"
-              title="View"
-              icon="document"
-              effect={true}
-              arrow={true}
-              textVariant="label-default-s"
-            />
           </Row>
         ),
         achievements: [],
         images: [],
-//          {
-//          src: "/images/gallery/certificate-1.jpg",
-//          alt: "Certificate 1",
-//          width: 16,
-//          height: 12,
-//          },
-//        ],
       },
       {
-        company: "Fundamental Project Management", // 010
-        timeframe: "Aug 2025",
+        company: "Microsoft Excel Essentials", // 012
+        timeframe: "Jul 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
             <Text variant="body-default-s">
-              Digital Talent Scholarship | ID Kredensial: 
-              <SmartLink href="https://digitalent.komdigi.go.id/cek-sertifikat?registrasi=19510935840-686" selected>
-                19510935840-686
-              </SmartLink>  
+              Alison | ID Kredensial: 
+              <SmartLink href="https://alison.com/certification/check/ba47f91070" selected>
+                50447968
+              </SmartLink>
             </Text>
             <Badge
-              href="/images/certificate/certificate-010.jpg"
+              href="/images/certificate/certificate-012.jpg"
               id="badge-3"
               title="View"
               icon="document"
@@ -385,17 +366,10 @@ const about: About = {
         ),
         achievements: [],
         images: [],
-//          {
-//          src: "/images/gallery/certificate-10.jpg",
-//          alt: "Certificate 10",
-//          width: 16,
-//          height: 12,
-//          },
-//        ],
       },
       {
         company: "Study Case Bootcamp Data Analyst with Excel", // 008
-        timeframe: "Aug 2025",
+        timeframe: "Aug 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
             <Text variant="body-default-s">
@@ -426,18 +400,18 @@ const about: About = {
 //        ],
       },
       {
-        company: "Microsoft Excel Essentials", // 012
-        timeframe: "Jul 2025",
+        company: "Ask Questions to Make Data-Driven Decisions", // 002
+        timeframe: "Sep 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
             <Text variant="body-default-s">
-              Alison | ID Kredensial: 
-              <SmartLink href="https://alison.com/certification/check/ba47f91070" selected>
-                50447968
+              Google, Coursera | ID Kredensial: 
+              <SmartLink href="https://www.coursera.org/account/accomplishments/verify/OYEETYUO0CE6" selected>
+                OYEETYUO0CE6 
               </SmartLink>
             </Text>
             <Badge
-              href="/images/certificate/certificate-012.jpg"
+              href="/images/certificate/certificate-002.jpg"
               id="badge-3"
               title="View"
               icon="document"
@@ -449,19 +423,362 @@ const about: About = {
         ),
         achievements: [],
         images: [],
+//          {
+//          src: "/images/gallery/certificate-2.jpg",
+//          alt: "Certificate 10",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
       },
       {
-        company: "Accounting and Management Training", // 000
-        timeframe: "Jan 2022 - Present",
+        company: "Process Data from Dirty to Clean", // 009
+        timeframe: "Oct 2025 - Present",
         role: (
           <Row gap="8" vertical="center">
             <Text variant="body-default-s">
-              Pondok Pesantren Wali Barokah Kota Kediri
+              Google, Coursera | ID Kredensial: 
+              <SmartLink href="https://www.coursera.org/account/accomplishments/verify/C0IWDGT054W1" selected>
+                C0IWDGT054W1 
+              </SmartLink>
             </Text>
+            <Badge
+              href="/images/certificate/certificate-009.jpg"
+              id="badge-3"
+              title="View"
+              icon="document"
+              effect={true}
+              arrow={true}
+              textVariant="label-default-s"
+            />
           </Row>
         ),
         achievements: [],
         images: [],
+//          {
+//          src: "/images/gallery/certificate-2.jpg",
+//          alt: "Certificate 10",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "Fundamental Project Management", // 010
+        timeframe: "Aug 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Digital Talent Scholarship | ID Kredensial: 
+              <SmartLink href="https://digitalent.komdigi.go.id/cek-sertifikat?registrasi=19510935840-686" selected>
+                19510935840-686
+              </SmartLink>  
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-010.jpg"
+              id="badge-3"
+              title="View"
+              icon="document"
+              effect={true}
+              arrow={true}
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-10.jpg",
+//          alt: "Certificate 10",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "Intro to Data Analytics", // 001
+        timeframe: "Aug 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              RevoU | ID Kredensial: 
+               <SmartLink href="https://certificates.revou.tech/" selected>
+                 DAMC-28072025-01-1-00107
+               </SmartLink>
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-001.jpg"
+              id="badge-3"
+              title="View"
+              icon="document"
+              effect={true}
+              arrow={true}
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-1.jpg",
+//          alt: "Certificate 1",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "Prepare Data for Exploration", // 014
+        timeframe: "Sep 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Google, Coursera | ID Kredensial: 
+               <SmartLink href="https://www.coursera.org/account/accomplishments/verify/897PDFIQTLRU" selected>
+                 897PDFIQTLRU
+               </SmartLink>
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-014.jpg"
+              id="badge-3"
+              title="View"
+              icon="document"
+              effect={true}
+              arrow={true}
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-14.jpg",
+//          alt: "Certificate 1",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "Analyze Data to Answer Questions", // 005
+        timeframe: "Oct 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Google, Coursera | ID Kredensial: 
+               <SmartLink href="https://www.coursera.org/account/accomplishments/records/9J2XVH4H1XDJ" selected>
+                 9J2XVH4H1XDJ
+               </SmartLink>
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-005.jpg"
+             id="badge-3"
+              title="View"
+              icon="document"
+              effect={true}
+              arrow={true}
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-1.jpg",
+//          alt: "Certificate 1",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "Share Data Through the Art of Visualization", // 013
+        timeframe: "Oct 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Google, Coursera | ID Kredensial: 
+               <SmartLink href="https://www.coursera.org/account/accomplishments/records/ZLGC969SUWAU" selected>
+                 ZLGC969SUWAU
+               </SmartLink>
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-013.jpg"
+              id="badge-3"
+              title="View"
+              icon="document"
+              effect={true}
+              arrow={true}
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-1.jpg",
+//          alt: "Certificate 1",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "Foundations: Data, Data, Everywhere", // 003
+        timeframe: "Sep 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Google, Coursera | ID Kredensial:
+              <SmartLink href="https://www.coursera.org/account/accomplishments/records/SLGLDCP97UIO" selected>
+                SLGLDCP97UIO
+              </SmartLink>
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-003.jpg"
+              id="badge-3"
+              title="View"
+              icon="document"
+              effect={true}
+              arrow={true}
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-3.jpg",
+//          alt: "Certificate 3",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "Free Class: Data Science", // 006
+        timeframe: "Sep 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Dibimbing
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-006.jpg"
+              id="badge-3"
+              title="View"
+              icon="document"
+              effect={true}
+              arrow={true}
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-6.jpg",
+//          alt: "Certificate 6",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "Short Class: Data Analysis Fundamental", // 011
+        timeframe: "Aug 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              MySkill | ID Kredensial:
+              <SmartLink href="https://myskill.id/" selected> 
+                270794/DTA/LM/08/2025
+              </SmartLink>
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-011.jpg"
+              id="badge-3"
+              title="View"
+              icon="document"
+              effect={true}
+              arrow={true}
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-11.jpg",
+//          alt: "Certificate 11",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "Aplikasi Design Grafis bagi Guru dan Tenaga Kependidikan", // 007
+        timeframe: "Jul 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              MySkill | ID Kredensial:
+              <SmartLink href="https://digitalent.komdigi.go.id/cek-sertifikat?registrasi=19410570850-145" selected> 
+                19410570850-145
+              </SmartLink>
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-007.jpg"
+              id="badge-3"
+              title="View"
+              icon="document"
+              effect={true}
+              arrow={true}
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-004.jpg",
+//          alt: "Certificate 11",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
+      },
+      {
+        company: "Short Class: Designing Using Canva", // 004
+        timeframe: "Aug 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              MySkill | ID Kredensial:
+              <SmartLink href="https://myskill.id/" selected> 
+                278114/GFD/LM/08/2025
+              </SmartLink>
+            </Text>
+            <Badge
+              href="/images/certificate/certificate-004.jpg"
+              id="badge-3"
+              title="View"
+              icon="document"
+              effect={true}
+              arrow={true}
+              textVariant="label-default-s"
+            />
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-004.jpg",
+//          alt: "Certificate 11",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
       },
       {
         company: "Dasar-Dasar Implementasi Kecerdasan Artifisial", // 004
