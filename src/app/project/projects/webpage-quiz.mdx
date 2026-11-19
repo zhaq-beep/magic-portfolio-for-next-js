@@ -1,0 +1,184 @@
+---
+title: "Quizkuy - Webpage Quiz for Generus"
+publishedAt: "2026-02-16"
+summary: "Membuat webpage kuis interaktif untuk para Generus."
+images:
+  - "/images/quiz/webpagequiz1.jpg"
+  - "/images/quiz/webpagequiz2.jpg"
+team:
+  - name: "Zhaq Project"
+    role: "Muballigh"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://zhaqproject.vercel.app/"
+// link: "https://www.linkedin.com/in/mufid-zhaqie/"
+---
+
+Kata mereka tentang Quizkuy ini 🗣️
+
+<div style={{ position: "relative", overflow: "hidden" }}>
+
+  <Fade 
+    zIndex="1"
+    to="right"
+    fillHeight
+    width="64"
+    position="absolute"
+    left="0"
+    top="0"
+    separator="none"
+  />
+
+  <AutoScroll speed="medium" paddingY="24" gap="32">
+    {[
+      {
+        text: "Masyaalloh, gud banget programnya.",
+        name: "Rinto | GB Kediri",
+        role: "GB Kediri",
+        avatar: "/images/icon.jpg",
+      },
+      {
+        text: "Tadi nyoba, asli bagus ini.",
+        name: "Rigan | MT Bogor",
+        role: "MT Bogor",
+        avatar: "/images/icon.jpg",
+      },
+      {
+        text: "Sudah oke. Bank soal diperbanyak lagi.",
+        name: "Rizal | Ex. GB Kediri",
+        role: "MT Bogor",
+        avatar: "/images/icon.jpg",
+      },
+      {
+        text: "Keren bang jek, cocok buat murajaah😁.",
+        name: "Rudi | Ex. Database Kediri",
+        role: "Ex. Database Kediri",
+        avatar: "/images/icon.jpg",
+      },
+    ].map((item, i) => (
+      <div key={i} style={{ minWidth: "280px" }}>
+        <BlockQuote 
+          align="center"
+          separator="none"
+          author={{
+            name: item.name,
+            role: item.role,
+            avatar: item.avatar,
+          }}
+        >
+          <Text variant="body-default-l">
+            “{item.text}”
+          </Text>
+        </BlockQuote>
+      </div>
+    ))}
+  </AutoScroll>
+
+  <Fade 
+    zIndex="1"
+    to="left"
+    fillHeight
+    width="64"
+    position="absolute"
+    right="0"
+    top="0"
+    separator="none"
+  />
+
+</div>
+
+## Pendahuluan ✨
+
+<Text>
+  Webpage ini dibuat dengan <span style={{ color: "hotpink" }}>hati💖</span>
+</Text>
+
+Webpage ini dirancang dengan tampilan yang simple, sistematis, dan menarik untuk membantu Generus belajar dengan cara yang lebih menyenangkan dan interaktif. Setiap kuis dibuat agar Generus dapat berlatih, memahami materi, serta menguji pemahaman secara langsung dari materi yang disampaikan oleh Mas Muballigh atau Mba Muballighot.
+
+Dengan sistem kuis digital ini, diharapkan pembelajaran menjadi lebih aktif, seru, dan mudah dipahami.
+
+🎮 Mode: 1. Mode Santai (ngga ada waktu♾️ ), 2. Mode Latihan (ada waktu ⏳) <br />
+📱 Akses: Bisa melalui HP, Tablet, atau Laptop <br />
+🧠 Sistem: Soal pilihan ganda & evaluasi di akhir <br />
+🚀 Siap dimainkan kapan saja <br />
+
+## Kategori Kuis 👀
+
+- **Pengetahuan Akidah**: Membantu Generus memahami dasar-dasar Akidah sebagai pondasi keimanan yang kuat melalui soal-soal interaktif yang mudah dipahami.
+- **Hukum Tajwid**: Mengajak Generus belajar dan menguji pemahaman tentang hukum bacaan Al-Qur’an agar dapat membaca dengan benar dan tartil.
+- **29 Karakter Luhur**: Membantu Generus memahami serta menerapkan nilai-nilai karakter luhur dalam kehidupan sehari-hari.
+- **Tentang Solat**: Menguji pemahaman Generus mulai dari kesucian, tata cara, bacaan, hingga ketentuan solat wajib dan sunnah.
+- **Hafalan Surat**: Membantu Generus mengingat, memahami, dan menguatkan hafalan surat-surat Al-Qur’an melalui latihan soal yang terarah.
+- **Hafalan Do’a**: Mengajak Generus untuk menghafal dan memahami doa-doa harian serta adab dalam kehidupan sehari-hari.
+- **Ramadan Quiz** {" "}<InlineCode background="success-alpha-weak" border="success-alpha-medium">
+    New Quiz🚀
+  </InlineCode>{" "}: Menguji pemahaman Generus tentang pengetahuan, hukum, hikmah, keutamaan puasa, dan ibadah-ibadah di bulan Ramadan.
+- **Hafalan Dalil** {" "}<InlineCode background="accent-alpha-weak" border="accent-alpha-medium">
+    Coming Soon👀
+  </InlineCode>{" "}: Melatih Generus dalam mengingat dan memahami dalil-dalil sebagai penguat materi pembelajaran.
+- **Simulasi Munaqosah** {" "}<InlineCode background="accent-alpha-weak" border="accent-alpha-medium">
+    Coming Soon👀
+  </InlineCode>{" "}: Kuis latihan yang dirancang sebagai simulasi persiapan munaqosah agar Generus lebih siap dan percaya diri dalam menghadapi munaqosah.
+
+## Fitur-fitur Quizkuy 🚀
+
+- **Halaman Website**: Lebih kenceng satset watwet dari sebelumnya 💨 desain webpage kuis GA JADUL, alias udah modern dan mobile responsive🔥
+- **Sistem Login**: Generus bisa buat akun generus masing-masing. Mau main? tinggal Login akunnya aja💯
+- **Tabel Ranking**: Generus bisa ngeliat klasemen/ranking skor dari generus daerah lain😎 (jadinya bisa belajar sambil asah jiwa juang dan jiwa bersaing dalam kebaikan 🚀)
+- **Tabel History**: Generus bisa ngeliat kuis apa aja yang baru dimainin
+- **Halaman Kuis**: Ada dukungan Gambar dan Audio di dalam soal kuis, sehingga para generus bisa ngeliat dan menganalisa mana sih gambar/arahan Audio yang tepat?
+- **Bank Soal Kuis**: Soal quiz FRESH, artinya soal quiznya banyak yang diperbarui dari yang sebelumnya 👀
+- **Review Jawaban**: Generus bisa liat hasil/review jawaban kuis yang udah di kerjain, apa itu benar? Atau salah
+- **Halaman Profil**: Generus bisa lihat profil sendiri sudah sejauh mana dia menyelesaikan kuis, generus bisa ngeliat Ranking ke- berapa?, Total Skor yang dikumpulkan, Total Kuis yang dimainkan
+- **Sertifikat Apresiasi**: Di menu profil, generus bisa dapet dan unduh sertifikat sebagai apresiasi telah memainkan kuis di platform Quizkuy, ini tujuannya agar generus bisa lebih semangat dalam belajar dan meningkatkan ilmunya🚀
+- **Menu FAQ**: Bisa liat pertanyaan dan jawaban tentang "Quizkuy"
+
+## Lihat Tampilan 😎
+
+<Column fillWidth gap="16">
+
+  {/* Row 1 */}
+  <Row fillWidth gap="16" s={{ direction: "column" }}>
+    <Row flex="3">
+      <Media
+        enlarge
+        src="/images/quiz/webpagequiz1.jpg"
+        alt="Kuis"
+        radius="m"
+        border="neutral-alpha-medium"
+      />
+    </Row>
+
+    <Row flex="3">
+      <Media
+        enlarge
+        src="/images/quiz/webpagequiz2.jpg"
+        alt="Kuis"
+        radius="m"
+        border="neutral-alpha-medium"
+      />
+    </Row>
+  </Row>
+
+</Column>
+
+## Siap uji kemampuanmu?🚀
+
+Para generus dapat langsung mulai bermain kuis yang tersedia di halaman quiz.
+Pilih kategori yang ingin dipelajari, jawab setiap pertanyaan dengan teliti, dan lihat hasilnya secara langsung 🚀
+
+Hayyukk manfaatkan kesempatan ini untuk belajar sambil bermain. Semoga semakin semangat belajar dan mendapatkan ilmu yang barokah 💖
+
+<Badge id="badge-1" href="https://quizkuy.page.gd/" title="Mainin di sini" icon="rocket" effect={true} arrow={true} paddingX="12" paddingY="8" onBackground="brand-medium" background="brand-alpha-weak" textVariant="label-default-s" />
+
+---
+<BlockQuote
+  preline="Rasulullah SAW bersabda,"
+  subline="H.R Muslim"
+  author={{
+    name: "Zhaq Project",
+    avatar: "/images/avatar.jpg",
+  }}>
+  “Jika seorang manusia mati, maka terputuslah darinya semua amalnya kecuali dari tiga hal; dari sedekah jariyah atau ilmu yang diambil manfaatnya atau anak shalih yang mendoakannya.”
+</BlockQuote>
+
+---
