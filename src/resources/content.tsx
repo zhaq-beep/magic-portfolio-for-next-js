@@ -874,6 +874,7 @@ const gallery: Gallery = {
       issuer: "Google, via Coursera",
       category: "Data & Excel",
       date: "2025-10-27",
+      verifyUrl: "https://coursera.org/verify/ZLGC969SUWAU",
     },
     {
       src: "/images/certificate/certificate-005.jpg",
@@ -881,6 +882,7 @@ const gallery: Gallery = {
       issuer: "Google, via Coursera",
       category: "Data & Excel",
       date: "2025-10-14",
+      verifyUrl: "https://coursera.org/verify/9J2XVH4H1XDJ",
     },
     {
       src: "/images/certificate/certificate-009.jpg",
@@ -888,6 +890,7 @@ const gallery: Gallery = {
       issuer: "Google, via Coursera",
       category: "Data & Excel",
       date: "2025-10-06",
+      verifyUrl: "https://coursera.org/verify/C0IWDGT054W1",
     },
     {
       src: "/images/certificate/certificate-014.jpg",
@@ -895,6 +898,7 @@ const gallery: Gallery = {
       issuer: "Google, via Coursera",
       category: "Data & Excel",
       date: "2025-09-27",
+      verifyUrl: "https://coursera.org/verify/897PDFIQTLRU",
     },
     {
       src: "/images/certificate/certificate-002.jpg",
@@ -902,6 +906,7 @@ const gallery: Gallery = {
       issuer: "Google, via Coursera",
       category: "Data & Excel",
       date: "2025-09-21",
+      verifyUrl: "https://coursera.org/verify/OYEETYUO0CE6",
     },
     {
       src: "/images/certificate/certificate-003.jpg",
@@ -909,6 +914,7 @@ const gallery: Gallery = {
       issuer: "Google, via Coursera",
       category: "Data & Excel",
       date: "2025-09-18",
+      verifyUrl: "https://coursera.org/verify/SLGLDCP97UIO",
     },
     {
       src: "/images/certificate/certificate-010.jpg",
@@ -917,6 +923,7 @@ const gallery: Gallery = {
       category: "Project management",
       date: "2025-08-20",
       detail: "10 hours of training, 14–20 Aug 2025",
+      verifyUrl: "https://digitalent.komdigi.go.id/cek-sertifikat?registrasi=19510935840-686",
     },
     {
       src: "/images/certificate/certificate-004.jpg",
@@ -932,6 +939,7 @@ const gallery: Gallery = {
       issuer: "DQLab",
       category: "Data & Excel",
       date: "2025-08-05",
+      verifyUrl: "https://academy.dqlab.id/certificate/pdf/DQLABMB7EXCUWSTFE",
     },
     {
       src: "/images/certificate/certificate-011.jpg",
@@ -964,6 +972,7 @@ const gallery: Gallery = {
       category: "Design",
       date: "2025-06-25",
       detail: "30 hours of training, 20–25 Jun 2025",
+      verifyUrl: "https://digitalent.komdigi.go.id/cek-sertifikat?registrasi=19410570850-145",
     },
     {
       src: "/images/certificate/certificate-006.jpg",
