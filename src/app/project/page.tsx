@@ -1,6 +1,7 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
-import { Projects } from "@/components/work/Projects";
+import { ProjectsIndex } from "@/components/work/ProjectsIndex";
+import { getPosts } from "@/utils/utils";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -13,8 +14,10 @@ export async function generateMetadata() {
 }
 
 export default function Work() {
+  const count = getPosts(["src", "app", "project", "projects"]).length;
+
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="l" paddingTop="24" paddingX="l" gap="48" s={{ paddingX: "16" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -28,10 +31,16 @@ export default function Work() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-        {work.title}
-      </Heading>
-      <Projects />
+      <Column gap="12" maxWidth="s">
+        <Heading as="h1" variant="display-strong-m">
+          Projects
+        </Heading>
+        <Text variant="body-default-l" onBackground="neutral-weak" wrap="balance">
+          {count} projects: learning materials, print designs, and web experiments made for Generus
+          and Majelis Taklim.
+        </Text>
+      </Column>
+      <ProjectsIndex />
     </Column>
   );
 }
