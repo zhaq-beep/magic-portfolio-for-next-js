@@ -90,7 +90,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Getting to know ${person.firstName} ${person.lastName}, an Administrator at J&T Express and a student at Universitas Terbuka who is also building skills in data analysis and graphic design.`,
+  description: `Getting to know ${person.firstName} ${person.lastName}, an Administrator at J&T Express and an Information Systems student at Universitas Terbuka who is also building skills in data analysis and graphic design.`,
 
   tableOfContent: {
     display: true,
@@ -112,7 +112,7 @@ const about: About = {
     description: (
       <>
         Mufid Zhaqie is an Administrator at J&T Express, DC Bojong Kembar, Sukabumi, where he manages employee data and
-        prepares payment reports in Microsoft Excel. He is also a student at Universitas Terbuka and is building skills in data
+        prepares payment reports in Microsoft Excel. He is also an Information Systems student at Universitas Terbuka and is building skills in data
         analysis and graphic design. Alongside that, he serves as a Muballigh at one of Majelis Taklim in Depok City.
       </>
     ),
@@ -223,7 +223,7 @@ const about: About = {
     institutions: [
       {
         name: "Universitas Terbuka",
-        description: <>Currently a student.</>,
+        description: <>Currently studying Information Systems.</>,
       },
       {
         name: "Build the Project",
@@ -449,6 +449,42 @@ const about: About = {
         ),
         achievements: [],
         images: [],
+      },
+      {
+        company: "Accounting and Management Training", // 000
+        timeframe: "Jan 2022 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Pondok Pesantren Wali Barokah Kota Kediri
+            </Text>
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+      },
+      {
+        company: "Dasar-Dasar Implementasi Kecerdasan Artifisial", // 004
+        timeframe: "Aug 2025 - Present",
+        role: (
+          <Row gap="8" vertical="center">
+            <Text variant="body-default-s">
+              Digital Talent Scholarship | ID Kredensial:
+              <SmartLink href="https://myskill.id/" selected> 
+                2299748850-12319
+              </SmartLink>
+            </Text>
+          </Row>
+        ),
+        achievements: [],
+        images: [],
+//          {
+//          src: "/images/gallery/certificate-004.jpg",
+//          alt: "Certificate 11",
+//          width: 16,
+//          height: 12,
+//          },
+//        ],
       },
     ],
   },
