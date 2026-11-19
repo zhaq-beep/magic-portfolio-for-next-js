@@ -215,6 +215,16 @@ export default function About() {
                   )}
               </Row>
             )}
+            
+            <Row className={styles.blockAlign} paddingTop="8" fitWidth>
+              <Button
+                href="/cv.pdf"
+                label="Download CV"
+                size="s"
+                variant="primary"
+                weight="default"
+              />
+            </Row>
           </Column>
         
           {about.intro.display && (
