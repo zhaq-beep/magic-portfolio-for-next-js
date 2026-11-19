@@ -320,17 +320,30 @@ export interface Blog extends BasePageConfig {}
 export interface Work extends BasePageConfig {}
 
 /**
- * Gallery page configuration.
- * @description Configuration for the Gallery page, including metadata, navigation label, and image list.
+ * A single certificate shown on the Certificates page.
+ */
+export interface Certificate {
+  /** Image path inside /public, e.g. /images/certificate/certificate-001.jpg */
+  src: string;
+  /** Course or training name */
+  title: string;
+  /** Who issued it */
+  issuer: string;
+  /** Used for the filter chips, e.g. "Data & Excel" */
+  category: string;
+  /** Completion date as YYYY-MM-DD. Used for sorting and the month heading. Leave out if unknown. */
+  date?: string;
+  /** Optional extra line, e.g. hours, score, or course period */
+  detail?: string;
+  /** Optional link to verify the credential online */
+  verifyUrl?: string;
+}
+
+/**
+ * Certificates page configuration.
+ * @description Configuration for the Certificates page, including metadata, navigation label, and certificate list.
  */
 export interface Gallery extends BasePageConfig {
-  /** List of images in the gallery */
-  images: Array<{
-    /** Image source path */
-    src: string;
-    /** Image alt text */
-    alt: string;
-    /** Image orientation (horizontal/vertical) */
-    orientation: string;
-  }>;
+  /** List of certificates */
+  certificates: Certificate[];
 }
