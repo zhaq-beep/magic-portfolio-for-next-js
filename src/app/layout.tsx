@@ -8,7 +8,7 @@ import {
   Background,
   Column,
   Flex,
-  opacity,
+  Opacity,
   RevealFx,
   SpacingToken,
 } from "@once-ui-system/core";
