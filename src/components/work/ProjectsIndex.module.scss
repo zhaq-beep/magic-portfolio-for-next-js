@@ -1,0 +1,74 @@
+.card {
+  position: relative;
+}
+
+.frame {
+  overflow: hidden;
+  border-radius: var(--radius-l);
+  border: 1px solid var(--neutral-alpha-weak);
+  background: var(--neutral-alpha-weak);
+}
+
+.image {
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.card:hover .image,
+.card:focus-within .image {
+  transform: scale(1.04);
+}
+
+// Stretched link: the whole card is clickable through the title link.
+.card .title {
+  color: var(--neutral-on-background-strong);
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: var(--radius-l);
+  }
+
+  &:focus-visible::after {
+    outline: 2px solid var(--brand-border-strong);
+    outline-offset: 6px;
+  }
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow {
+  display: inline-flex;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .arrow,
+.card:focus-within .arrow {
+  transform: translateX(4px);
+}
+
+// Keeps an external link clickable above the stretched title link.
+.external {
+  position: relative;
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image,
+  .arrow {
+    transition: none;
+  }
+
+  .card:hover .image,
+  .card:focus-within .image,
+  .card:hover .arrow,
+  .card:focus-within .arrow {
+    transform: none;
+  }
+}
