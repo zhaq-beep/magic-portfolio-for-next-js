@@ -863,7 +863,7 @@ const work: Work = {
 };
 
 const gallery: Gallery = {
-  path: "/gallery",
+  path: "/certificates",
   label: "Certificates",
   title: `Certificates – ${person.name}`,
   description: `a showcase cerfiticates by ${person.name}`,
