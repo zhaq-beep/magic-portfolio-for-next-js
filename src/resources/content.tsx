@@ -111,9 +111,12 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Mufid Zhaqie is an Administrator at J&T Express, DC Bojong Kembar, Sukabumi, where he manages employee data and
-        prepares payment reports in Microsoft Excel. He is also an Information Systems student at Universitas Terbuka and is building skills in data
-        analysis and graphic design. Alongside that, he serves as a Muballigh at one of Majelis Taklim in Depok City.
+        Mufid Zhaqie is an Administrator at J&T Express, DC Bojong Kembar, Sukabumi, 
+        where he manages employee data and prepares payment reports. 
+        He is also an Information Systems student at Universitas Terbuka, 
+        developing his skills in data analysis and graphic design. 
+        Previously, he served as a Muballigh at a Majelis Taklim in Depok City, 
+        contributing to Islamic education and community development.
       </>
     ),
   },
