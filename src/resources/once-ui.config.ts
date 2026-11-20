@@ -13,6 +13,9 @@ import {
 } from "@/types";
 import { home } from "./index";
 
+import { Plus_Jakarta_Sans } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
+
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
 const baseURL: string = "https://zhaqproject.vercel.app";
 
@@ -43,19 +46,19 @@ const protectedRoutes: ProtectedRoutesConfig = {
 import { Geist } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
 
-const heading = Geist({
+const heading = Plus_Jakarta_Sans({
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
 });
 
-const body = Geist({
+const body = Plus_Jakarta_Sans({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
-const label = Geist({
+const label = Plus_Jakarta_Sans({
   variable: "--font-label",
   subsets: ["latin"],
   display: "swap",
